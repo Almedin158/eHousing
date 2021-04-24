@@ -1,5 +1,5 @@
-﻿using eHousing.Model.Model;
-using eHousing.Model.Model.Request;
+﻿using eHousing.Model;
+using eHousing.Model.Request;
 using eHousing.WinUI.Forms.User;
 using eHousing.WinUI.Helper;
 using System;

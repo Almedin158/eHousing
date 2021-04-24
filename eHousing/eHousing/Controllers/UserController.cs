@@ -1,6 +1,6 @@
 ﻿using eHousing.Interface;
-using eHousing.Model.Model;
-using eHousing.Model.Model.Request;
+using eHousing.Model;
+using eHousing.Model.Request;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

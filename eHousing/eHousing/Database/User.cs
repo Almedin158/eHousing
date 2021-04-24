@@ -17,6 +17,9 @@ namespace eHousing.Database
         public string Username { get; set; }
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
-        public virtual ICollection<UserRoles> UserRoles { get; set; }
+        public List<UserRoles> UserRoles { get; set; }
+        public List<Estate> Estate { get; set; }
+        public int FavoriteEstateId { get; set; }
+        public List<FavoriteEstate> FavoriteEstate { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using eHousing.Database;
 using eHousing.Interface;
-using eHousing.Model.Model;
-using eHousing.Model.Model.Request;
+using eHousing.Model;
+using eHousing.Model.Request;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

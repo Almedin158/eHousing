@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using eHousing.Database;
-using eHousing.Model.Model;
+using eHousing.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

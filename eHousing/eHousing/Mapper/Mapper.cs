@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using eHousing.Database;
-using eHousing.Model.Model;
-using eHousing.Model.Model.Request;
+using eHousing.Model;
+using eHousing.Model.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,11 @@ namespace eHousing.Mapper
     {
         public Mapper()
         {
+            CreateMap<City, MCity>();
+            CreateMap<City, CityUpsertRequest>().ReverseMap();
+
+            //CreateMap<Estate, MEstate>();
+            //CreateMap<Estate, EstateUpsertRequest>().ReverseMap();
 
             CreateMap<Role, MRole>();
             CreateMap<UserRoles, MUserRoles>();

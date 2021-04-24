@@ -1,4 +1,4 @@
-﻿using eHousing.Model.Model;
+﻿using eHousing.Model;
 using eHousing.WinUI.Forms.User;
 using eHousing.WinUI.Helper;
 using System;

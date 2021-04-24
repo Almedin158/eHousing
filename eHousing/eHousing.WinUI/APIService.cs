@@ -1,6 +1,5 @@
 ﻿using eHousing.Model;
-using eHousing.Model.Model;
-using eHousing.Model.Model.Request;
+using eHousing.Model.Request;
 using Flurl.Http;
 using System;
 using System.Collections.Generic;

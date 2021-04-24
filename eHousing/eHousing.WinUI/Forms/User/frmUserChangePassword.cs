@@ -1,5 +1,5 @@
-﻿using eHousing.Model.Model;
-using eHousing.Model.Model.Request;
+﻿using eHousing.Model;
+using eHousing.Model.Request;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

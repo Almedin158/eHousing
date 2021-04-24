@@ -1,23 +1,17 @@
 using eHousing.Database;
 using eHousing.Interface;
-using eHousing.Model.Model;
+using eHousing.Model;
+using eHousing.Model.Request;
 using eHousing.Security;
 using eHousing.Service;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace eHousing
 {
@@ -70,7 +64,8 @@ namespace eHousing
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
-
+            //services.AddScoped<ICRUDService<MBuyCourse, BuyCourseSearchRequest, BuyCourseRequest, BuyCourseRequest>, BuyCourseService>();
+            services.AddScoped<ICRUDService<MCity, CitySearchRequest, CityUpsertRequest, CityUpsertRequest>, CityService>();
             services.AddScoped<IBaseService<MRole, object>, RoleService>();
             services.AddScoped<IUserService, UserService>();
 

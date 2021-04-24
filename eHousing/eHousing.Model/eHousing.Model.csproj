@@ -45,15 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\MRole.cs" />
-    <Compile Include="Model\MUser.cs" />
-    <Compile Include="Model\MUserRoles.cs" />
-    <Compile Include="Model\Request\RoleSearchRequest.cs" />
-    <Compile Include="Model\Request\UserAuthenticationRequest.cs" />
-    <Compile Include="Model\Request\UserSearchRequest.cs" />
-    <Compile Include="Model\Request\UserUpsertRequest.cs" />
+    <Compile Include="MCity.cs" />
+    <Compile Include="MEstate.cs" />
+    <Compile Include="MEstateStatus.cs" />
+    <Compile Include="MEstateType.cs" />
+    <Compile Include="MPicture.cs" />
+    <Compile Include="MRole.cs" />
+    <Compile Include="MStreet.cs" />
+    <Compile Include="MUser.cs" />
+    <Compile Include="MUserRoles.cs" />
     <Compile Include="ObjectExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\CitySearchRequest.cs" />
+    <Compile Include="Request\CityUpsertRequest.cs" />
+    <Compile Include="Request\RoleSearchRequest.cs" />
+    <Compile Include="Request\UserAuthenticationRequest.cs" />
+    <Compile Include="Request\UserSearchRequest.cs" />
+    <Compile Include="Request\UserUpsertRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
