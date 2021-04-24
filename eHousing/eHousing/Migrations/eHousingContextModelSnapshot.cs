@@ -19,7 +19,7 @@ namespace eHousing.Migrations
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("eHousing.Database.DataModel.City", b =>
+            modelBuilder.Entity("eHousing.Database.City", b =>
                 {
                     b.Property<int>("CityId")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,7 @@ namespace eHousing.Migrations
                     b.ToTable("Cities");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.Estate", b =>
+            modelBuilder.Entity("eHousing.Database.Estate", b =>
                 {
                     b.Property<int>("EstateId")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace eHousing.Migrations
                     b.ToTable("Estates");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.EstateStatus", b =>
+            modelBuilder.Entity("eHousing.Database.EstateStatus", b =>
                 {
                     b.Property<int>("EstateStatusId")
                         .ValueGeneratedOnAdd()
@@ -105,7 +105,7 @@ namespace eHousing.Migrations
                     b.ToTable("EstateStatuses");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.EstateType", b =>
+            modelBuilder.Entity("eHousing.Database.EstateType", b =>
                 {
                     b.Property<int>("EstateTypeId")
                         .ValueGeneratedOnAdd()
@@ -120,7 +120,7 @@ namespace eHousing.Migrations
                     b.ToTable("EstateTypes");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.FavoriteEstate", b =>
+            modelBuilder.Entity("eHousing.Database.FavoriteEstate", b =>
                 {
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -135,7 +135,7 @@ namespace eHousing.Migrations
                     b.ToTable("FavoriteEstates");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.Picture", b =>
+            modelBuilder.Entity("eHousing.Database.Picture", b =>
                 {
                     b.Property<int>("PictureId")
                         .ValueGeneratedOnAdd()
@@ -153,26 +153,6 @@ namespace eHousing.Migrations
                     b.HasIndex("EstateId");
 
                     b.ToTable("Pictures");
-                });
-
-            modelBuilder.Entity("eHousing.Database.DataModel.Street", b =>
-                {
-                    b.Property<int>("StreetId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CityId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("StreetName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StreetId");
-
-                    b.HasIndex("CityId");
-
-                    b.ToTable("Streets");
                 });
 
             modelBuilder.Entity("eHousing.Database.Role", b =>
@@ -200,6 +180,26 @@ namespace eHousing.Migrations
                             RoleId = 2,
                             Name = "User"
                         });
+                });
+
+            modelBuilder.Entity("eHousing.Database.Street", b =>
+                {
+                    b.Property<int>("StreetId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StreetName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StreetId");
+
+                    b.HasIndex("CityId");
+
+                    b.ToTable("Streets");
                 });
 
             modelBuilder.Entity("eHousing.Database.User", b =>
@@ -245,8 +245,8 @@ namespace eHousing.Migrations
                             FavoriteEstateId = 0,
                             FirstName = "Admin",
                             LastName = "Admin",
-                            PasswordHash = "/MJxO3L/8o4RA85gsKoIMxst1lg=",
-                            PasswordSalt = "aPsp9jedYecWZCzRoeGu4Q==",
+                            PasswordHash = "CgaGn/TRnBEQPxOX4996cMZ9n4g=",
+                            PasswordSalt = "l6lY0A8T5qj/us/qNLzGLA==",
                             PhoneNumber = "0603317627",
                             Username = "Admin"
                         });
@@ -288,15 +288,15 @@ namespace eHousing.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.Estate", b =>
+            modelBuilder.Entity("eHousing.Database.Estate", b =>
                 {
-                    b.HasOne("eHousing.Database.DataModel.EstateType", "EstateType")
+                    b.HasOne("eHousing.Database.EstateType", "EstateType")
                         .WithMany()
                         .HasForeignKey("EstateTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eHousing.Database.DataModel.Street", "Street")
+                    b.HasOne("eHousing.Database.Street", "Street")
                         .WithMany()
                         .HasForeignKey("StreetId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -315,9 +315,9 @@ namespace eHousing.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.EstateStatus", b =>
+            modelBuilder.Entity("eHousing.Database.EstateStatus", b =>
                 {
-                    b.HasOne("eHousing.Database.DataModel.Estate", "Estate")
+                    b.HasOne("eHousing.Database.Estate", "Estate")
                         .WithMany("EstateStatus")
                         .HasForeignKey("EstateId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -326,9 +326,9 @@ namespace eHousing.Migrations
                     b.Navigation("Estate");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.FavoriteEstate", b =>
+            modelBuilder.Entity("eHousing.Database.FavoriteEstate", b =>
                 {
-                    b.HasOne("eHousing.Database.DataModel.Estate", "Estate")
+                    b.HasOne("eHousing.Database.Estate", "Estate")
                         .WithMany()
                         .HasForeignKey("EstateId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -345,9 +345,9 @@ namespace eHousing.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.Picture", b =>
+            modelBuilder.Entity("eHousing.Database.Picture", b =>
                 {
-                    b.HasOne("eHousing.Database.DataModel.Estate", "Estate")
+                    b.HasOne("eHousing.Database.Estate", "Estate")
                         .WithMany("Picture")
                         .HasForeignKey("EstateId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -356,9 +356,9 @@ namespace eHousing.Migrations
                     b.Navigation("Estate");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.Street", b =>
+            modelBuilder.Entity("eHousing.Database.Street", b =>
                 {
-                    b.HasOne("eHousing.Database.DataModel.City", "City")
+                    b.HasOne("eHousing.Database.City", "City")
                         .WithMany("Street")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -386,12 +386,12 @@ namespace eHousing.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.City", b =>
+            modelBuilder.Entity("eHousing.Database.City", b =>
                 {
                     b.Navigation("Street");
                 });
 
-            modelBuilder.Entity("eHousing.Database.DataModel.Estate", b =>
+            modelBuilder.Entity("eHousing.Database.Estate", b =>
                 {
                     b.Navigation("EstateStatus");
 

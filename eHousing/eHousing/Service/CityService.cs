@@ -41,19 +41,19 @@ namespace eHousing.Service
 
         //    return _mapper.Map<MCity>(entity);
         //}
-        public override async Task<MCity> Insert(CityUpsertRequest request)
-        {
-            if (await _context.Cities.AnyAsync(i => i.CityName == request.CityName))
-            {
-                throw new UserException("City with that name already exists!");
-            }
-            var entity = _mapper.Map<City>(request);//Mapira sto sam poslao preko swaggera/winui forme u bazu podataka
+        //public override async Task<MCity> Insert(CityUpsertRequest request)
+        //{
+        //    if (await _context.Cities.AnyAsync(i => i.CityName == request.CityName))
+        //    {
+        //        throw new UserException("City with that name already exists!");
+        //    }
+        //    var entity = _mapper.Map<City>(request);//Mapira sto sam poslao preko swaggera/winui forme u bazu podataka
 
-            _context.Set<City>().Add(entity);//Dodaje u bazu pomocu .Set koji mora specificirati o kojoj klasi se radi
-            await _context.SaveChangesAsync();//Isto kao i SaveChanges(); Sacuva podatke u bazu
+        //    _context.Set<City>().Add(entity);//Dodaje u bazu pomocu .Set koji mora specificirati o kojoj klasi se radi
+        //    await _context.SaveChangesAsync();//Isto kao i SaveChanges(); Sacuva podatke u bazu
 
-            return _mapper.Map<MCity>(entity);//Mapira sta vraca swagger
-        }
+        //    return _mapper.Map<MCity>(entity);//Mapira sta vraca swagger
+        //}
         //public override async Task<MCity> Update(int ID, CityUpsertRequest request)
         //{
         //    var category = await _context.Cities.FindAsync(ID);

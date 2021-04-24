@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace eHousing.Migrations
 {
-    public partial class V1 : Migration
+    public partial class Version1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -230,7 +230,7 @@ namespace eHousing.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "Email", "FavoriteEstateId", "FirstName", "LastName", "PasswordHash", "PasswordSalt", "PhoneNumber", "Username" },
-                values: new object[] { 1, "admin@ehousing.com", 0, "Admin", "Admin", "/MJxO3L/8o4RA85gsKoIMxst1lg=", "aPsp9jedYecWZCzRoeGu4Q==", "0603317627", "Admin" });
+                values: new object[] { 1, "admin@ehousing.com", 0, "Admin", "Admin", "CgaGn/TRnBEQPxOX4996cMZ9n4g=", "l6lY0A8T5qj/us/qNLzGLA==", "0603317627", "Admin" });
 
             migrationBuilder.InsertData(
                 table: "UserRoles",
