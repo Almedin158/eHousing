@@ -1,4 +1,5 @@
 ﻿using eHousing.Model;
+using eHousing.WinUI.Forms.City;
 using eHousing.WinUI.Forms.User;
 using eHousing.WinUI.Helper;
 using System;
@@ -127,6 +128,18 @@ namespace eHousing.WinUI
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUserDetails frm = new frmUserDetails(_user,_user.UserId);
+            frm.Show();
+        }
+
+        private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCityAdd frm = new frmCityAdd();
+            frm.Show();
+        }
+
+        private void getToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCityGet frm = new frmCityGet();
             frm.Show();
         }
     }

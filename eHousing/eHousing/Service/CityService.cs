@@ -21,18 +21,18 @@ namespace eHousing.Service
             _context = context;
             _mapper = mapper;
         }
-        //public override async Task<List<MCity>> Get(CitySearchRequest request)
-        //{
-        //    var query = _context.Cities.AsQueryable().OrderBy(c => c.CityName);
+        public override async Task<List<MCity>> Get(CitySearchRequest request)
+        {
+            var query = _context.Cities.AsQueryable().OrderBy(c => c.CityName);
 
-        //    if (!string.IsNullOrWhiteSpace(request?.CityName))
-        //    {
-        //        query = query.Where(x => x.CityName.StartsWith(request.CityName)).OrderBy(c => c.CityName);
-        //    }
-        //    var list = await query.ToListAsync();
+            if (!string.IsNullOrWhiteSpace(request?.CityName))
+            {
+                query = query.Where(x => x.CityName.StartsWith(request.CityName.ToUpper())).OrderBy(c => c.CityName);
+            }
+            var list = await query.ToListAsync();
 
-        //    return _mapper.Map<List<MCity>>(list);
-        //}
+            return _mapper.Map<List<MCity>>(list);
+        }
         //public override async Task<MCity> GetById(int ID)
         //{
         //    var entity = await _context.Cities
