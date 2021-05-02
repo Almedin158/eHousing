@@ -88,6 +88,7 @@ namespace eHousing.WinUI.Forms.City
             this.Controls.Add(this.txtSearch);
             this.Name = "frmCityGet";
             this.Text = "frmCityGet";
+            this.Load += new System.EventHandler(this.frmCityGet_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).EndInit();
             this.ResumeLayout(false);

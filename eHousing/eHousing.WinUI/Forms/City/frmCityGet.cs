@@ -44,5 +44,11 @@ namespace eHousing.WinUI.Forms.City
             frmCityDetails frm = new frmCityDetails(int.Parse(Id.ToString()));
             frm.Show();
         }
+
+        private async void frmCityGet_Load(object sender, EventArgs e)
+        {
+            var result = await cityService.Get<List<MCity>>(null);
+            dgvCity.DataSource = result;
+        }
     }
 }

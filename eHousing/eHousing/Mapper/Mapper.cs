@@ -13,11 +13,14 @@ namespace eHousing.Mapper
     {
         public Mapper()
         {
+            CreateMap<EstateType, MEstateType>();
+            CreateMap<EstateType, EstateTypeUpsertRequest>().ReverseMap();
+
+            CreateMap<Street, MStreet>();
+            CreateMap<Street, StreetUpsertRequest>().ReverseMap();
+
             CreateMap<City, MCity>();
             CreateMap<City, CityUpsertRequest>().ReverseMap();
-
-            //CreateMap<Estate, MEstate>();
-            //CreateMap<Estate, EstateUpsertRequest>().ReverseMap();
 
             CreateMap<Role, MRole>();
             CreateMap<UserRoles, MUserRoles>();

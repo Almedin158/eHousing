@@ -20,7 +20,9 @@ namespace eHousing.Database
         public int FloorSpace { get; set; }
         public int NumberOfRooms { get; set; }
         public bool PetsAllowed { get; set; }
+        public DateTime CreationDate { get; set; }
         public List<EstateStatus> EstateStatus { get; set; }
+        public byte[] Image { get; set; }
         public List<Picture> Picture { get; set; }
     }
     //CRUD Desktop zovi sacu

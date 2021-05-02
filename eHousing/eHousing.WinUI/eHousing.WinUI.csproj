@@ -77,6 +77,42 @@
     <Compile Include="Forms\City\frmCityGet.Designer.cs">
       <DependentUpon>frmCityGet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EstateType\frmEstateTypeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EstateType\frmEstateTypeAdd.Designer.cs">
+      <DependentUpon>frmEstateTypeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EstateType\frmEstateTypeGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EstateType\frmEstateTypeGet.Designer.cs">
+      <DependentUpon>frmEstateTypeGet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EstateType\frmEstateTypeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EstateType\frmEstateTypeDetails.Designer.cs">
+      <DependentUpon>frmEstateTypeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estate\frmEstateAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estate\frmEstateAdd.Designer.cs">
+      <DependentUpon>frmEstateAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Street\frmStreetAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Street\frmStreetAdd.Designer.cs">
+      <DependentUpon>frmStreetAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Street\frmStreetDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Street\frmStreetDetails.Designer.cs">
+      <DependentUpon>frmStreetDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\User\frmUserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +143,7 @@
     <Compile Include="frmIndex.Designer.cs">
       <DependentUpon>frmIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Helper\SignedInUser.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -124,6 +161,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\City\frmCityGet.resx">
       <DependentUpon>frmCityGet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EstateType\frmEstateTypeAdd.resx">
+      <DependentUpon>frmEstateTypeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EstateType\frmEstateTypeGet.resx">
+      <DependentUpon>frmEstateTypeGet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EstateType\frmEstateTypeDetails.resx">
+      <DependentUpon>frmEstateTypeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estate\frmEstateAdd.resx">
+      <DependentUpon>frmEstateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Street\frmStreetAdd.resx">
+      <DependentUpon>frmStreetAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Street\frmStreetDetails.resx">
+      <DependentUpon>frmStreetDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User\frmUserAdd.resx">
       <DependentUpon>frmUserAdd.cs</DependentUpon>

@@ -10,5 +10,6 @@ namespace eHousing.Model
     {
         public int EstateTypeId { get; set; }
         public string EstateTypeName { get; set; }
+        public byte[] Image { get; set; }
     }
 }

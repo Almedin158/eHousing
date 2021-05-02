@@ -1,5 +1,7 @@
 ﻿using eHousing.Model;
 using eHousing.WinUI.Forms.City;
+using eHousing.WinUI.Forms.Estate;
+using eHousing.WinUI.Forms.EstateType;
 using eHousing.WinUI.Forms.User;
 using eHousing.WinUI.Helper;
 using System;
@@ -140,6 +142,24 @@ namespace eHousing.WinUI
         private void getToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmCityGet frm = new frmCityGet();
+            frm.Show();
+        }
+
+        private void addEstateTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstateTypeAdd frm = new frmEstateTypeAdd();
+            frm.Show();
+        }
+
+        private void getEstateTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstateTypeGet frm = new frmEstateTypeGet();
+            frm.Show();
+        }
+
+        private void estateAddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstateAdd frm = new frmEstateAdd(_user);
             frm.Show();
         }
     }

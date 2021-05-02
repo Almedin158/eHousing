@@ -65,6 +65,8 @@ namespace eHousing
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
             //services.AddScoped<ICRUDService<MBuyCourse, BuyCourseSearchRequest, BuyCourseRequest, BuyCourseRequest>, BuyCourseService>();
+            services.AddScoped<ICRUDService<MEstateType, EstateTypeSearchRequest, EstateTypeUpsertRequest, EstateTypeUpsertRequest>, EstateTypeService>();
+            services.AddScoped<ICRUDService<MStreet, StreetSearchRequest, StreetUpsertRequest, StreetUpsertRequest>, StreetService>();
             services.AddScoped<ICRUDService<MCity, CitySearchRequest, CityUpsertRequest, CityUpsertRequest>, CityService>();
             services.AddScoped<IBaseService<MRole, object>, RoleService>();
             services.AddScoped<IUserService, UserService>();

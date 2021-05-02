@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eHousing.Database;
 
 namespace eHousing.Migrations
 {
     [DbContext(typeof(eHousingContext))]
-    partial class eHousingContextModelSnapshot : ModelSnapshot
+    [Migration("20210430192649_V2")]
+    partial class V2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,9 +43,6 @@ namespace eHousing.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("EstateDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -55,9 +54,6 @@ namespace eHousing.Migrations
 
                     b.Property<int>("FloorSpace")
                         .HasColumnType("int");
-
-                    b.Property<byte[]>("Image")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("NumberOfRooms")
                         .HasColumnType("int");
@@ -254,8 +250,8 @@ namespace eHousing.Migrations
                             FavoriteEstateId = 0,
                             FirstName = "Admin",
                             LastName = "Admin",
-                            PasswordHash = "EhWymHgSWNLcCJmdt47v2s/AfCM=",
-                            PasswordSalt = "jAwBhEsWJmrORohCU0iv7g==",
+                            PasswordHash = "Jmvv850fGtJGCKYmfMMs3qZIj84=",
+                            PasswordSalt = "7GwmsjTzfjWUfhV08LNmtw==",
                             PhoneNumber = "0603317627",
                             Username = "Admin"
                         });

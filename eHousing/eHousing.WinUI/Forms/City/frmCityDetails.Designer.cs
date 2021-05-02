@@ -35,6 +35,7 @@ namespace eHousing.WinUI.Forms.City
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvStreets = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnAddStreet = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStreets)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +88,7 @@ namespace eHousing.WinUI.Forms.City
             this.dgvStreets.RowTemplate.Height = 24;
             this.dgvStreets.Size = new System.Drawing.Size(540, 278);
             this.dgvStreets.TabIndex = 0;
+            this.dgvStreets.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvStreets_MouseDoubleClick);
             // 
             // btnSave
             // 
@@ -98,11 +100,22 @@ namespace eHousing.WinUI.Forms.City
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnAddStreet
+            // 
+            this.btnAddStreet.Location = new System.Drawing.Point(295, 432);
+            this.btnAddStreet.Name = "btnAddStreet";
+            this.btnAddStreet.Size = new System.Drawing.Size(127, 54);
+            this.btnAddStreet.TabIndex = 5;
+            this.btnAddStreet.Text = "Add Street";
+            this.btnAddStreet.UseVisualStyleBackColor = true;
+            this.btnAddStreet.Click += new System.EventHandler(this.btnAddStreet_Click);
+            // 
             // frmCityDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 498);
+            this.Controls.Add(this.btnAddStreet);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -126,5 +139,6 @@ namespace eHousing.WinUI.Forms.City
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvStreets;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnAddStreet;
     }
 }

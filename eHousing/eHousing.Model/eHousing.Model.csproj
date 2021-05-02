@@ -58,7 +58,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\CitySearchRequest.cs" />
     <Compile Include="Request\CityUpsertRequest.cs" />
+    <Compile Include="Request\EstateTypeSearchRequest.cs" />
+    <Compile Include="Request\EstateTypeUpsertRequest.cs" />
     <Compile Include="Request\RoleSearchRequest.cs" />
+    <Compile Include="Request\StreetSearchRequest.cs" />
+    <Compile Include="Request\StreetUpsertRequest.cs" />
     <Compile Include="Request\UserAuthenticationRequest.cs" />
     <Compile Include="Request\UserSearchRequest.cs" />
     <Compile Include="Request\UserUpsertRequest.cs" />
