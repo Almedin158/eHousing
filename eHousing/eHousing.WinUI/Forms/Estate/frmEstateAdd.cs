@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace eHousing.WinUI.Forms.Estate
             SignedInUser.User = _user;
             InitializeComponent();
         }
+
+        EstateUpsertRequest request = new EstateUpsertRequest();
 
         private async void frmEstateAdd_Load(object sender, EventArgs e)
         {
@@ -57,6 +60,40 @@ namespace eHousing.WinUI.Forms.Estate
             cbStreet.DataSource = streets;
             cbStreet.ValueMember = "StreetId";
             cbStreet.DisplayMember = "StreetName";
+        }
+
+        private void btnBrowsePicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(open.FileName);
+                var fileName = open.FileName;
+                var file = File.ReadAllBytes(fileName);
+                request.Image = file;
+
+                Image img = Image.FromFile(fileName);
+                pictureBox1.Image = img;
+                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private async void btnSave_Click(object sender, EventArgs e)
+        {
+            request.StreetId=Convert.ToInt32(cbStreet.SelectedValue);
+            request.EstateTypeId= Convert.ToInt32(cbEstateType.SelectedValue);
+            request.EstateName = txtEstateName.Text;
+            request.Price = Convert.ToInt32(txtPrice.Text);
+            request.FloorSpace = Convert.ToInt32(txtFloorSpace.Text);
+            request.NumberOfRooms = Convert.ToInt32(txtNumberOfRooms.Text);
+            request.PetsAllowed = cbPetsAllowed.Checked;
+            request.EstateDescription = txtEstateDescription.Text;
+            request.UserId = _user.UserId;
+            request.CreationDate = DateTime.Now;
+            await estateService.Insert<MEstate>(request);
+            MessageBox.Show("Estate type added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

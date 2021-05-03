@@ -162,5 +162,11 @@ namespace eHousing.WinUI
             frmEstateAdd frm = new frmEstateAdd(_user);
             frm.Show();
         }
+
+        private void getEstateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstateGet frm = new frmEstateGet();
+            frm.Show();
+        }
     }
 }

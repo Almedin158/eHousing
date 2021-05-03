@@ -120,6 +120,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnBrowsePicture.TabIndex = 7;
             this.btnBrowsePicture.Text = "Browse Picture";
             this.btnBrowsePicture.UseVisualStyleBackColor = true;
+            this.btnBrowsePicture.Click += new System.EventHandler(this.btnBrowsePicture_Click);
             // 
             // txtEstateName
             // 
@@ -220,6 +221,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmEstateAdd
             // 

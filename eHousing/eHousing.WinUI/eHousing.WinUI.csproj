@@ -101,6 +101,12 @@
     <Compile Include="Forms\Estate\frmEstateAdd.Designer.cs">
       <DependentUpon>frmEstateAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Estate\frmEstateGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estate\frmEstateGet.Designer.cs">
+      <DependentUpon>frmEstateGet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Street\frmStreetAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Estate\frmEstateAdd.resx">
       <DependentUpon>frmEstateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estate\frmEstateGet.resx">
+      <DependentUpon>frmEstateGet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Street\frmStreetAdd.resx">
       <DependentUpon>frmStreetAdd.cs</DependentUpon>

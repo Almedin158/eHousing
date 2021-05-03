@@ -46,8 +46,10 @@ namespace eHousing.WinUI
             this.addEstateTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getEstateTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estateAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getEstateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myEstatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -158,31 +160,26 @@ namespace eHousing.WinUI
             // addEstateTypeToolStripMenuItem
             // 
             this.addEstateTypeToolStripMenuItem.Name = "addEstateTypeToolStripMenuItem";
-            this.addEstateTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addEstateTypeToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.addEstateTypeToolStripMenuItem.Text = "Add Estate Type";
             this.addEstateTypeToolStripMenuItem.Click += new System.EventHandler(this.addEstateTypeToolStripMenuItem_Click);
             // 
             // getEstateTypeToolStripMenuItem
             // 
             this.getEstateTypeToolStripMenuItem.Name = "getEstateTypeToolStripMenuItem";
-            this.getEstateTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.getEstateTypeToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.getEstateTypeToolStripMenuItem.Text = "Get Estate Type";
             this.getEstateTypeToolStripMenuItem.Click += new System.EventHandler(this.getEstateTypeToolStripMenuItem_Click);
             // 
             // estateToolStripMenuItem1
             // 
             this.estateToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estateAddToolStripMenuItem});
+            this.estateAddToolStripMenuItem,
+            this.getEstateToolStripMenuItem,
+            this.myEstatesToolStripMenuItem});
             this.estateToolStripMenuItem1.Name = "estateToolStripMenuItem1";
             this.estateToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.estateToolStripMenuItem1.Text = "Estate";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
-            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
             // estateAddToolStripMenuItem
             // 
@@ -190,6 +187,26 @@ namespace eHousing.WinUI
             this.estateAddToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.estateAddToolStripMenuItem.Text = "Add Estate";
             this.estateAddToolStripMenuItem.Click += new System.EventHandler(this.estateAddToolStripMenuItem_Click);
+            // 
+            // getEstateToolStripMenuItem
+            // 
+            this.getEstateToolStripMenuItem.Name = "getEstateToolStripMenuItem";
+            this.getEstateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.getEstateToolStripMenuItem.Text = "Get Estate";
+            this.getEstateToolStripMenuItem.Click += new System.EventHandler(this.getEstateToolStripMenuItem_Click);
+            // 
+            // myEstatesToolStripMenuItem
+            // 
+            this.myEstatesToolStripMenuItem.Name = "myEstatesToolStripMenuItem";
+            this.myEstatesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.myEstatesToolStripMenuItem.Text = "My Estates";
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -231,6 +248,8 @@ namespace eHousing.WinUI
         private System.Windows.Forms.ToolStripMenuItem addEstateTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getEstateTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estateAddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getEstateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem myEstatesToolStripMenuItem;
     }
 }
 

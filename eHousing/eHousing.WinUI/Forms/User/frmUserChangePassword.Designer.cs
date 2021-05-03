@@ -60,9 +60,9 @@ namespace eHousing.WinUI.Forms.User
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 17);
+            this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Old Password";
+            this.label2.Text = "New Password";
             // 
             // txtNewPassword
             // 
@@ -77,9 +77,9 @@ namespace eHousing.WinUI.Forms.User
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.Size = new System.Drawing.Size(183, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Old Password";
+            this.label3.Text = "New Password Confirmation";
             // 
             // txtNewPasswordConfirmation
             // 
