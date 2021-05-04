@@ -53,6 +53,7 @@ namespace eHousing.WinUI.Forms.User
             else
             {
                 clbRoles.Visible = false;
+                btnDelete.Visible = false;
             }
 
             var rolesList = clbRoles.Items.Cast<MRole>().Select(i => i.RoleId).ToList();
@@ -96,7 +97,7 @@ namespace eHousing.WinUI.Forms.User
                 };
 
                 await userService.Update<MUser>(_Id, request);
-                MessageBox.Show("User have been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("User has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

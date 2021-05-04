@@ -57,9 +57,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "City";
+            this.label1.Text = "Choose City:";
             // 
             // cbCity
             // 
@@ -73,7 +73,7 @@ namespace eHousing.WinUI.Forms.Estate
             // cbStreet
             // 
             this.cbStreet.FormattingEnabled = true;
-            this.cbStreet.Location = new System.Drawing.Point(12, 82);
+            this.cbStreet.Location = new System.Drawing.Point(12, 81);
             this.cbStreet.Name = "cbStreet";
             this.cbStreet.Size = new System.Drawing.Size(224, 24);
             this.cbStreet.TabIndex = 3;
@@ -83,14 +83,14 @@ namespace eHousing.WinUI.Forms.Estate
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Street";
+            this.label2.Text = "Choose Street:";
             // 
             // cbEstateType
             // 
             this.cbEstateType.FormattingEnabled = true;
-            this.cbEstateType.Location = new System.Drawing.Point(13, 139);
+            this.cbEstateType.Location = new System.Drawing.Point(12, 139);
             this.cbEstateType.Name = "cbEstateType";
             this.cbEstateType.Size = new System.Drawing.Size(223, 24);
             this.cbEstateType.TabIndex = 5;
@@ -100,9 +100,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 17);
+            this.label3.Size = new System.Drawing.Size(140, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Estate type";
+            this.label3.Text = "Choose Estate Type:";
             // 
             // pictureBox1
             // 
@@ -134,18 +134,18 @@ namespace eHousing.WinUI.Forms.Estate
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 17);
+            this.label4.Size = new System.Drawing.Size(130, 17);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Estate name";
+            this.label4.Text = "Insert Estate name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 223);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 17);
+            this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Price";
+            this.label5.Text = "Insert Price:";
             // 
             // txtPrice
             // 
@@ -159,9 +159,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 412);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 17);
+            this.label6.Size = new System.Drawing.Size(166, 17);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Estate description";
+            this.label6.Text = "Insert Estate Description:";
             // 
             // txtEstateDescription
             // 
@@ -176,9 +176,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(13, 278);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 17);
+            this.label7.Size = new System.Drawing.Size(127, 17);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Floor space";
+            this.label7.Text = "Insert Floor Space:";
             // 
             // txtFloorSpace
             // 
@@ -192,9 +192,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(13, 327);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 17);
+            this.label8.Size = new System.Drawing.Size(168, 17);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Number of rooms";
+            this.label8.Text = "Insert Number Of Rooms:";
             // 
             // txtNumberOfRooms
             // 

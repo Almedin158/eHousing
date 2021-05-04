@@ -36,14 +36,14 @@ namespace eHousing.WinUI.Forms.City
             // 
             // txtCityName
             // 
-            this.txtCityName.Location = new System.Drawing.Point(12, 55);
+            this.txtCityName.Location = new System.Drawing.Point(12, 46);
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Size = new System.Drawing.Size(349, 22);
             this.txtCityName.TabIndex = 0;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(232, 188);
+            this.btnSave.Location = new System.Drawing.Point(235, 74);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(129, 60);
             this.btnSave.TabIndex = 1;
@@ -54,17 +54,17 @@ namespace eHousing.WinUI.Forms.City
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.Size = new System.Drawing.Size(115, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "City Name";
+            this.label1.Text = "Insert City Name:";
             // 
             // frmCityAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 260);
+            this.ClientSize = new System.Drawing.Size(371, 141);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCityName);

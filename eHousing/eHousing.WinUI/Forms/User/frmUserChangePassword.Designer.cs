@@ -43,7 +43,7 @@ namespace eHousing.WinUI.Forms.User
             this.txtOldPassword.Location = new System.Drawing.Point(12, 43);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.PasswordChar = '*';
-            this.txtOldPassword.Size = new System.Drawing.Size(199, 22);
+            this.txtOldPassword.Size = new System.Drawing.Size(325, 22);
             this.txtOldPassword.TabIndex = 0;
             // 
             // label1
@@ -51,25 +51,25 @@ namespace eHousing.WinUI.Forms.User
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(138, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Old Password";
+            this.label1.Text = "Insert Old Password:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.Size = new System.Drawing.Size(143, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "New Password";
+            this.label2.Text = "Insert New Password:";
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(11, 128);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(199, 22);
+            this.txtNewPassword.Size = new System.Drawing.Size(326, 22);
             this.txtNewPassword.TabIndex = 2;
             // 
             // label3
@@ -77,21 +77,21 @@ namespace eHousing.WinUI.Forms.User
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 17);
+            this.label3.Size = new System.Drawing.Size(226, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "New Password Confirmation";
+            this.label3.Text = "Insert New Password Confirmation:";
             // 
             // txtNewPasswordConfirmation
             // 
             this.txtNewPasswordConfirmation.Location = new System.Drawing.Point(11, 212);
             this.txtNewPasswordConfirmation.Name = "txtNewPasswordConfirmation";
             this.txtNewPasswordConfirmation.PasswordChar = '*';
-            this.txtNewPasswordConfirmation.Size = new System.Drawing.Size(199, 22);
+            this.txtNewPasswordConfirmation.Size = new System.Drawing.Size(326, 22);
             this.txtNewPasswordConfirmation.TabIndex = 4;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(183, 275);
+            this.btnSave.Location = new System.Drawing.Point(205, 240);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(132, 50);
             this.btnSave.TabIndex = 6;
@@ -103,7 +103,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 337);
+            this.ClientSize = new System.Drawing.Size(349, 300);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNewPasswordConfirmation);

@@ -36,20 +36,6 @@ namespace eHousing.WinUI.Forms.EstateType
                 var result = await estateTypeService.Get<List<MEstateType>>(request);
                 dgvEstateType.DataSource = result;//Izbaci error ako slika nije dodata ranije
             }
-            //if (txtSearch == null)
-            //{
-            //    var result = await cityService.Get<List<MCity>>(null);
-            //    dgvCity.DataSource = result;
-            //}
-            //else
-            //{
-            //    var request = new CitySearchRequest()
-            //    {
-            //        CityName = txtSearch.Text
-            //    };
-            //    var result = await cityService.Get<List<MCity>>(request);
-            //    dgvCity.DataSource = result;
-            //}
         }
 
         private void dgvEstateType_MouseDoubleClick(object sender, MouseEventArgs e)

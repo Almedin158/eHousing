@@ -44,16 +44,16 @@ namespace eHousing.WinUI.Forms.Estate
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(19, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "City";
+            this.label1.Text = "Choose City:";
             // 
             // cbCity
             // 
             this.cbCity.FormattingEnabled = true;
-            this.cbCity.Location = new System.Drawing.Point(13, 34);
+            this.cbCity.Location = new System.Drawing.Point(19, 34);
             this.cbCity.Name = "cbCity";
             this.cbCity.Size = new System.Drawing.Size(249, 24);
             this.cbCity.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace eHousing.WinUI.Forms.Estate
             // cbStreet
             // 
             this.cbStreet.FormattingEnabled = true;
-            this.cbStreet.Location = new System.Drawing.Point(12, 87);
+            this.cbStreet.Location = new System.Drawing.Point(18, 87);
             this.cbStreet.Name = "cbStreet";
             this.cbStreet.Size = new System.Drawing.Size(249, 24);
             this.cbStreet.TabIndex = 3;
@@ -71,16 +71,16 @@ namespace eHousing.WinUI.Forms.Estate
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 66);
+            this.label2.Location = new System.Drawing.Point(18, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Street";
+            this.label2.Text = "Choose Street:";
             // 
             // cbEstateType
             // 
             this.cbEstateType.FormattingEnabled = true;
-            this.cbEstateType.Location = new System.Drawing.Point(12, 141);
+            this.cbEstateType.Location = new System.Drawing.Point(18, 141);
             this.cbEstateType.Name = "cbEstateType";
             this.cbEstateType.Size = new System.Drawing.Size(249, 24);
             this.cbEstateType.TabIndex = 5;
@@ -89,11 +89,11 @@ namespace eHousing.WinUI.Forms.Estate
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 120);
+            this.label3.Location = new System.Drawing.Point(18, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 17);
+            this.label3.Size = new System.Drawing.Size(140, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Estate Type";
+            this.label3.Text = "Choose Estate Type:";
             // 
             // groupBox1
             // 
@@ -118,6 +118,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.dgvEstates.RowTemplate.Height = 24;
             this.dgvEstates.Size = new System.Drawing.Size(829, 331);
             this.dgvEstates.TabIndex = 0;
+            this.dgvEstates.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvEstates_MouseDoubleClick);
             // 
             // frmEstateGet
             // 

@@ -45,6 +45,7 @@ namespace eHousing.WinUI.Forms.User
             this.btnDelete = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnChangePassword = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,18 +62,18 @@ namespace eHousing.WinUI.Forms.User
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "First Name";
+            this.label1.Text = "First Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Last Name";
+            this.label2.Text = "Last Name:";
             this.label2.UseCompatibleTextRendering = true;
             // 
             // txtLastName
@@ -88,9 +89,9 @@ namespace eHousing.WinUI.Forms.User
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Email";
+            this.label3.Text = "Email:";
             // 
             // txtEmail
             // 
@@ -105,9 +106,9 @@ namespace eHousing.WinUI.Forms.User
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 248);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 17);
+            this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Phone Number";
+            this.label4.Text = "Phone Number:";
             // 
             // txtPhoneNumber
             // 
@@ -122,9 +123,9 @@ namespace eHousing.WinUI.Forms.User
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 335);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(77, 17);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Username";
+            this.label5.Text = "Username:";
             // 
             // txtUsername
             // 
@@ -177,11 +178,21 @@ namespace eHousing.WinUI.Forms.User
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(429, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Roles:";
+            // 
             // frmUserDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 562);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
@@ -222,5 +233,6 @@ namespace eHousing.WinUI.Forms.User
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -55,8 +55,8 @@ namespace eHousing.WinUI.Forms.User
 
                 await userService.Update<MUser>(_Id, request);
 
-                MessageBox.Show("Password succesfully changed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                MessageBox.Show("Password succesfully changed, please reopen the application and relogin.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
             }
             catch
             {

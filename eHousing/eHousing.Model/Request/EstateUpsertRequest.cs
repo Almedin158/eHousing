@@ -9,11 +9,11 @@ namespace eHousing.Model.Request
     public class EstateUpsertRequest
     {
         public int StreetId { get; set; }
-        public MStreet Street { get; set; }
+        //public MStreet Street { get; set; }
         public int EstateTypeId { get; set; }
-        public MEstateType EstateType { get; set; }
+        //public MEstateType EstateType { get; set; }//Prouzrokuje error pri updateovanju.
         public int UserId { get; set; }
-        public MUser User { get; set; }
+        //public MUser User { get; set; }
         public int Price { get; set; }
         public string EstateName { get; set; }
         public string EstateDescription { get; set; }

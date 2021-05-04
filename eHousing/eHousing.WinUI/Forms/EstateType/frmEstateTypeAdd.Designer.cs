@@ -50,9 +50,9 @@ namespace eHousing.WinUI.Forms.EstateType
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 17);
+            this.label1.Size = new System.Drawing.Size(168, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Estate Type Name";
+            this.label1.Text = "Insert Estate Type Name:";
             // 
             // pictureBox1
             // 
@@ -91,7 +91,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 330);
+            this.ClientSize = new System.Drawing.Size(433, 317);
             this.Controls.Add(this.btnBrowsePicture);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pictureBox1);

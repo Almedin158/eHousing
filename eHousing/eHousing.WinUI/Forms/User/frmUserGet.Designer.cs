@@ -31,14 +31,15 @@ namespace eHousing.WinUI.Forms.User
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
@@ -74,23 +75,6 @@ namespace eHousing.WinUI.Forms.User
             this.dgvUsers.Size = new System.Drawing.Size(769, 314);
             this.dgvUsers.TabIndex = 0;
             this.dgvUsers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvUsers_MouseDoubleClick);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(713, 74);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(16, 74);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(691, 22);
-            this.txtSearch.TabIndex = 2;
             // 
             // UserId
             // 
@@ -147,11 +131,38 @@ namespace eHousing.WinUI.Forms.User
             this.PhoneNumber.ReadOnly = true;
             this.PhoneNumber.Width = 125;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(713, 74);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(16, 74);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(691, 22);
+            this.txtSearch.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search User By Name:";
+            // 
             // frmUserGet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.groupBox1);
@@ -177,5 +188,6 @@ namespace eHousing.WinUI.Forms.User
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.Label label1;
     }
 }

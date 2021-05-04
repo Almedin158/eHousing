@@ -42,14 +42,14 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.txtEstateTypeName.Location = new System.Drawing.Point(12, 45);
             this.txtEstateTypeName.Name = "txtEstateTypeName";
-            this.txtEstateTypeName.Size = new System.Drawing.Size(216, 22);
+            this.txtEstateTypeName.Size = new System.Drawing.Size(285, 22);
             this.txtEstateTypeName.TabIndex = 0;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(119, 287);
+            this.btnUpdate.Location = new System.Drawing.Point(174, 287);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(123, 23);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -60,15 +60,15 @@ namespace eHousing.WinUI.Forms.EstateType
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 17);
+            this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Estate Type Name";
+            this.label1.Text = "Estate Type Name:";
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(12, 287);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 23);
+            this.btnDelete.Size = new System.Drawing.Size(130, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(285, 175);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -86,7 +86,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.btnBrowsePicture.Location = new System.Drawing.Point(12, 258);
             this.btnBrowsePicture.Name = "btnBrowsePicture";
-            this.btnBrowsePicture.Size = new System.Drawing.Size(216, 23);
+            this.btnBrowsePicture.Size = new System.Drawing.Size(285, 23);
             this.btnBrowsePicture.TabIndex = 6;
             this.btnBrowsePicture.Text = "Browse Picture";
             this.btnBrowsePicture.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 322);
+            this.ClientSize = new System.Drawing.Size(309, 322);
             this.Controls.Add(this.btnBrowsePicture);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDelete);

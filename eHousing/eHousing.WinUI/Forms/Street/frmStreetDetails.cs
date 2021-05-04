@@ -26,15 +26,6 @@ namespace eHousing.WinUI.Forms.Street
         {
             var street = await streetService.GetById<MStreet>(_Id);
             txtStreetName.Text = street.StreetName;
-            //var EstateSearchRequest = new EstateSearchRequest
-            //{
-            //    StreetId = _Id
-            //};
-
-            //var estates = await estateService.Get<List<MEstate>>(EstateSearchRequest);
-
-            //dgvEstates.DataSource = estates;
-            //Nakon dodavanje Ulica, ulice treba da se izlistaju u dgv vezane za taj grad
         }
 
         private async void btnSave_Click(object sender, EventArgs e)

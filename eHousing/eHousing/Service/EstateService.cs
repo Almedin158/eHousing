@@ -39,5 +39,17 @@ namespace eHousing.Service
             var list = await query.ToListAsync();
             return _mapper.Map<List<MEstate>>(list);
         }
+        public override async Task<MEstate> Update(int ID, EstateUpsertRequest request)
+        {
+            var entity = _context.Set<Estate>().Find(ID);
+            _context.Set<Estate>().Attach(entity);
+            _context.Set<Estate>().Update(entity);
+
+            _mapper.Map(request, entity);
+
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<MEstate>(entity);
+        }
     }
 }

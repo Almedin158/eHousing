@@ -106,5 +106,12 @@ namespace eHousing.WinUI.Forms.Estate
             };
             await LoadList(request);
         }
+
+        private void dgvEstates_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int Id = Convert.ToInt32(dgvEstates.CurrentRow.Cells["EstateId"].Value);
+            frmEstateDetails frm = new frmEstateDetails(int.Parse(Id.ToString()));
+            frm.Show();
+        }
     }
 }

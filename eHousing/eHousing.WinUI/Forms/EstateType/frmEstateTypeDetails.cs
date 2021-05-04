@@ -36,10 +36,7 @@ namespace eHousing.WinUI.Forms.EstateType
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             txtEstateTypeName.Text = estateType.EstateTypeName;
-            var StreetSearchRequest = new EstateTypeSearchRequest
-            {
-                EstateTypeName= txtEstateTypeName.Text
-            };
+           
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
@@ -47,6 +44,7 @@ namespace eHousing.WinUI.Forms.EstateType
             var estateType = await estateTypeService.GetById<MEstateType>(_Id);
 
             request.EstateTypeName = txtEstateTypeName.Text;
+            request.Image = pictureBox1.Image != null ? ImageHelper.SystemDrawingToByteArray(pictureBox1.Image) : null;
             await estateTypeService.Update<MEstateType>(_Id, request);
             MessageBox.Show("Estate type has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
@@ -57,7 +55,7 @@ namespace eHousing.WinUI.Forms.EstateType
             if (MessageBox.Show("Do you really want to delete this estate type?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 await estateTypeService.Delete<dynamic>(_Id);
-                MessageBox.Show("City succesfully deleted.");
+                MessageBox.Show("Estate type succesfully deleted.");
             }
             this.Close();
         }
@@ -75,7 +73,6 @@ namespace eHousing.WinUI.Forms.EstateType
 
                 Image img = Image.FromFile(fileName);
                 pictureBox1.Image = img;
-                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
     }

@@ -33,20 +33,21 @@ namespace eHousing.WinUI.Forms.City
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCity = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(13, 13);
+            this.txtSearch.Location = new System.Drawing.Point(16, 32);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(617, 22);
+            this.txtSearch.Size = new System.Drawing.Size(600, 22);
             this.txtSearch.TabIndex = 0;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(636, 13);
+            this.btnSave.Location = new System.Drawing.Point(633, 32);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(152, 23);
             this.btnSave.TabIndex = 1;
@@ -62,6 +63,7 @@ namespace eHousing.WinUI.Forms.City
             this.groupBox1.Size = new System.Drawing.Size(775, 378);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cities";
             // 
             // dgvCity
             // 
@@ -78,11 +80,21 @@ namespace eHousing.WinUI.Forms.City
             this.dgvCity.TabIndex = 0;
             this.dgvCity.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvCity_MouseDoubleClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search City By Name:";
+            // 
             // frmCityGet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSearch);
@@ -102,5 +114,6 @@ namespace eHousing.WinUI.Forms.City
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCity;
+        private System.Windows.Forms.Label label1;
     }
 }

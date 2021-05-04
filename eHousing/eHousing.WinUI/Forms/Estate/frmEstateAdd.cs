@@ -75,7 +75,6 @@ namespace eHousing.WinUI.Forms.Estate
 
                 Image img = Image.FromFile(fileName);
                 pictureBox1.Image = img;
-                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
@@ -92,7 +91,7 @@ namespace eHousing.WinUI.Forms.Estate
             request.UserId = _user.UserId;
             request.CreationDate = DateTime.Now;
             await estateService.Insert<MEstate>(request);
-            MessageBox.Show("Estate type added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Estate added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }
