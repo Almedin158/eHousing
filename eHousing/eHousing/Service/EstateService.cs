@@ -24,17 +24,24 @@ namespace eHousing.Service
         {
             var query = _context.Estates.AsQueryable().OrderBy(c => c.EstateName);
 
-            if (request.CityId != 0)
+            if (request.UserId != 0)
             {
-                query = (IOrderedQueryable<Estate>)query.Where(x => x.Street.CityId == request.CityId);
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.UserId == request.UserId);
             }
-            if (request.StreetId != 0)
+            else
             {
-                query = (IOrderedQueryable<Estate>)query.Where(x => x.StreetId == request.StreetId);
-            }
-            if (request.EstateTypeId != 0)
-            {
-                query = (IOrderedQueryable<Estate>)query.Where(x => x.EstateTypeId == request.EstateTypeId);
+                if (request.CityId != 0)
+                {
+                    query = (IOrderedQueryable<Estate>)query.Where(x => x.Street.CityId == request.CityId);
+                }
+                if (request.StreetId != 0)
+                {
+                    query = (IOrderedQueryable<Estate>)query.Where(x => x.StreetId == request.StreetId);
+                }
+                if (request.EstateTypeId != 0)
+                {
+                    query = (IOrderedQueryable<Estate>)query.Where(x => x.EstateTypeId == request.EstateTypeId);
+                }
             }
             var list = await query.ToListAsync();
             return _mapper.Map<List<MEstate>>(list);

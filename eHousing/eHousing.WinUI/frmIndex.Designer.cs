@@ -147,7 +147,7 @@ namespace eHousing.WinUI
             this.addEstateTypeToolStripMenuItem,
             this.getEstateTypeToolStripMenuItem});
             this.estateTypeToolStripMenuItem.Name = "estateTypeToolStripMenuItem";
-            this.estateTypeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.estateTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.estateTypeToolStripMenuItem.Text = "Estate Type";
             // 
             // addEstateTypeToolStripMenuItem
@@ -171,28 +171,29 @@ namespace eHousing.WinUI
             this.getEstateToolStripMenuItem,
             this.myEstatesToolStripMenuItem});
             this.estateToolStripMenuItem1.Name = "estateToolStripMenuItem1";
-            this.estateToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
+            this.estateToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.estateToolStripMenuItem1.Text = "Estate";
             // 
             // estateAddToolStripMenuItem
             // 
             this.estateAddToolStripMenuItem.Name = "estateAddToolStripMenuItem";
-            this.estateAddToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.estateAddToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.estateAddToolStripMenuItem.Text = "Add Estate";
             this.estateAddToolStripMenuItem.Click += new System.EventHandler(this.estateAddToolStripMenuItem_Click);
             // 
             // getEstateToolStripMenuItem
             // 
             this.getEstateToolStripMenuItem.Name = "getEstateToolStripMenuItem";
-            this.getEstateToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.getEstateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.getEstateToolStripMenuItem.Text = "Get Estate";
             this.getEstateToolStripMenuItem.Click += new System.EventHandler(this.getEstateToolStripMenuItem_Click);
             // 
             // myEstatesToolStripMenuItem
             // 
             this.myEstatesToolStripMenuItem.Name = "myEstatesToolStripMenuItem";
-            this.myEstatesToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.myEstatesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.myEstatesToolStripMenuItem.Text = "My Estates";
+            this.myEstatesToolStripMenuItem.Click += new System.EventHandler(this.myEstatesToolStripMenuItem_Click);
             // 
             // editProfileToolStripMenuItem
             // 

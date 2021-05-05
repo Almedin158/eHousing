@@ -49,6 +49,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnBrowsePicture = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnPhotoGallery = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,7 +181,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 450);
+            this.label6.Location = new System.Drawing.Point(14, 419);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 17);
             this.label6.TabIndex = 29;
@@ -188,7 +189,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtEstateDescription
             // 
-            this.txtEstateDescription.Location = new System.Drawing.Point(12, 473);
+            this.txtEstateDescription.Location = new System.Drawing.Point(15, 442);
             this.txtEstateDescription.Multiline = true;
             this.txtEstateDescription.Name = "txtEstateDescription";
             this.txtEstateDescription.Size = new System.Drawing.Size(643, 125);
@@ -214,7 +215,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(489, 440);
+            this.btnSave.Location = new System.Drawing.Point(495, 572);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 26);
             this.btnSave.TabIndex = 32;
@@ -222,11 +223,21 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnPhotoGallery
+            // 
+            this.btnPhotoGallery.Location = new System.Drawing.Point(489, 410);
+            this.btnPhotoGallery.Name = "btnPhotoGallery";
+            this.btnPhotoGallery.Size = new System.Drawing.Size(163, 26);
+            this.btnPhotoGallery.TabIndex = 33;
+            this.btnPhotoGallery.Text = "Photo Gallery";
+            this.btnPhotoGallery.UseVisualStyleBackColor = true;
+            // 
             // frmEstateDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 610);
+            this.Controls.Add(this.btnPhotoGallery);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBrowsePicture);
             this.Controls.Add(this.pictureBox1);
@@ -278,5 +289,6 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.Button btnBrowsePicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPhotoGallery;
     }
 }
