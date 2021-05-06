@@ -34,6 +34,8 @@ namespace eHousing.WinUI.Forms.City
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCity = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.CityId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +72,9 @@ namespace eHousing.WinUI.Forms.City
             this.dgvCity.AllowUserToAddRows = false;
             this.dgvCity.AllowUserToDeleteRows = false;
             this.dgvCity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CityId,
+            this.CityName});
             this.dgvCity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCity.Location = new System.Drawing.Point(3, 18);
             this.dgvCity.Name = "dgvCity";
@@ -88,6 +93,25 @@ namespace eHousing.WinUI.Forms.City
             this.label1.Size = new System.Drawing.Size(145, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Search City By Name:";
+            // 
+            // CityId
+            // 
+            this.CityId.DataPropertyName = "CityId";
+            this.CityId.HeaderText = "CityId";
+            this.CityId.MinimumWidth = 6;
+            this.CityId.Name = "CityId";
+            this.CityId.ReadOnly = true;
+            this.CityId.Visible = false;
+            this.CityId.Width = 125;
+            // 
+            // CityName
+            // 
+            this.CityName.DataPropertyName = "CityName";
+            this.CityName.HeaderText = "City Name";
+            this.CityName.MinimumWidth = 6;
+            this.CityName.Name = "CityName";
+            this.CityName.ReadOnly = true;
+            this.CityName.Width = 125;
             // 
             // frmCityGet
             // 
@@ -115,5 +139,7 @@ namespace eHousing.WinUI.Forms.City
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCity;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CityId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CityName;
     }
 }

@@ -34,6 +34,9 @@ namespace eHousing.WinUI.Forms.EstateType
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.EstateTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EstateTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstateType)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +56,10 @@ namespace eHousing.WinUI.Forms.EstateType
             this.dgvEstateType.AllowUserToAddRows = false;
             this.dgvEstateType.AllowUserToDeleteRows = false;
             this.dgvEstateType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstateType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EstateTypeId,
+            this.Image,
+            this.EstateTypeName});
             this.dgvEstateType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEstateType.Location = new System.Drawing.Point(3, 18);
             this.dgvEstateType.Name = "dgvEstateType";
@@ -89,6 +96,36 @@ namespace eHousing.WinUI.Forms.EstateType
             this.label1.TabIndex = 3;
             this.label1.Text = "Search Estate Type By Name:";
             // 
+            // EstateTypeId
+            // 
+            this.EstateTypeId.DataPropertyName = "EstateTypeId";
+            this.EstateTypeId.HeaderText = "EstateTypeId";
+            this.EstateTypeId.MinimumWidth = 6;
+            this.EstateTypeId.Name = "EstateTypeId";
+            this.EstateTypeId.ReadOnly = true;
+            this.EstateTypeId.Visible = false;
+            this.EstateTypeId.Width = 125;
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "Image";
+            this.Image.MinimumWidth = 6;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Image.Width = 125;
+            // 
+            // EstateTypeName
+            // 
+            this.EstateTypeName.DataPropertyName = "EstateTypeName";
+            this.EstateTypeName.HeaderText = "Estate Type Name";
+            this.EstateTypeName.MinimumWidth = 6;
+            this.EstateTypeName.Name = "EstateTypeName";
+            this.EstateTypeName.ReadOnly = true;
+            this.EstateTypeName.Width = 125;
+            // 
             // frmEstateTypeGet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -114,5 +151,8 @@ namespace eHousing.WinUI.Forms.EstateType
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstateTypeId;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstateTypeName;
     }
 }

@@ -36,6 +36,10 @@ namespace eHousing.WinUI.Forms.City
             this.dgvStreets = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAddStreet = new System.Windows.Forms.Button();
+            this.StreetId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StreetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CityId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStreets)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +85,11 @@ namespace eHousing.WinUI.Forms.City
             this.dgvStreets.AllowUserToAddRows = false;
             this.dgvStreets.AllowUserToDeleteRows = false;
             this.dgvStreets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStreets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StreetId,
+            this.StreetName,
+            this.CityId,
+            this.City});
             this.dgvStreets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStreets.Location = new System.Drawing.Point(3, 18);
             this.dgvStreets.Name = "dgvStreets";
@@ -110,6 +119,45 @@ namespace eHousing.WinUI.Forms.City
             this.btnAddStreet.Text = "Add Street";
             this.btnAddStreet.UseVisualStyleBackColor = true;
             this.btnAddStreet.Click += new System.EventHandler(this.btnAddStreet_Click);
+            // 
+            // StreetId
+            // 
+            this.StreetId.DataPropertyName = "StreetId";
+            this.StreetId.HeaderText = "StreetId";
+            this.StreetId.MinimumWidth = 6;
+            this.StreetId.Name = "StreetId";
+            this.StreetId.ReadOnly = true;
+            this.StreetId.Visible = false;
+            this.StreetId.Width = 125;
+            // 
+            // StreetName
+            // 
+            this.StreetName.DataPropertyName = "StreetName";
+            this.StreetName.HeaderText = "Street Name";
+            this.StreetName.MinimumWidth = 6;
+            this.StreetName.Name = "StreetName";
+            this.StreetName.ReadOnly = true;
+            this.StreetName.Width = 125;
+            // 
+            // CityId
+            // 
+            this.CityId.DataPropertyName = "CityId";
+            this.CityId.HeaderText = "CityId";
+            this.CityId.MinimumWidth = 6;
+            this.CityId.Name = "CityId";
+            this.CityId.ReadOnly = true;
+            this.CityId.Visible = false;
+            this.CityId.Width = 125;
+            // 
+            // City
+            // 
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "City";
+            this.City.MinimumWidth = 6;
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
+            this.City.Visible = false;
+            this.City.Width = 125;
             // 
             // frmCityDetails
             // 
@@ -141,5 +189,9 @@ namespace eHousing.WinUI.Forms.City
         private System.Windows.Forms.DataGridView dgvStreets;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAddStreet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StreetId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StreetName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CityId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
     }
 }
