@@ -23,7 +23,7 @@ namespace eHousing.Service
         }
         public override async Task<List<MCity>> Get(CitySearchRequest request)
         {
-            var query = _context.Cities.AsQueryable().OrderBy(c => c.CityName);
+            var query = _context.Cities.Include(x=>x.Street).AsQueryable().OrderBy(c => c.CityName);
 
             if (!string.IsNullOrWhiteSpace(request?.CityName))
             {

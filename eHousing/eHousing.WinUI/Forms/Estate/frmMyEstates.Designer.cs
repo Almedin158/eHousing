@@ -88,6 +88,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.dgvMyEstates.RowHeadersWidth = 51;
             this.dgvMyEstates.Size = new System.Drawing.Size(769, 404);
             this.dgvMyEstates.TabIndex = 0;
+            this.dgvMyEstates.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvMyEstates_MouseDoubleClick);
             // 
             // EstateId
             // 

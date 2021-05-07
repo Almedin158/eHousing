@@ -62,6 +62,8 @@
     <Compile Include="Request\EstateTypeSearchRequest.cs" />
     <Compile Include="Request\EstateTypeUpsertRequest.cs" />
     <Compile Include="Request\EstateUpsertRequest.cs" />
+    <Compile Include="Request\PictureSearchRequest.cs" />
+    <Compile Include="Request\PictureUpsertRequest.cs" />
     <Compile Include="Request\RoleSearchRequest.cs" />
     <Compile Include="Request\StreetSearchRequest.cs" />
     <Compile Include="Request\StreetUpsertRequest.cs" />

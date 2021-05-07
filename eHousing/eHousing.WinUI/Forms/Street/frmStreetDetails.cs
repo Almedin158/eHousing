@@ -15,6 +15,7 @@ namespace eHousing.WinUI.Forms.Street
     public partial class frmStreetDetails : Form
     {
         private readonly APIService streetService = new APIService("Street");
+        private readonly APIService estateService = new APIService("Estate");
         private readonly int _Id;
         public frmStreetDetails(int Id)
         {
@@ -26,6 +27,13 @@ namespace eHousing.WinUI.Forms.Street
         {
             var street = await streetService.GetById<MStreet>(_Id);
             txtStreetName.Text = street.StreetName;
+            EstateSearchRequest request = new EstateSearchRequest
+            {
+                StreetId = _Id
+            };
+            var result = await estateService.Get<List<MEstate>>(request);
+            dgvEstates.AutoGenerateColumns = false;
+            dgvEstates.DataSource = result;
         }
 
         private async void btnSave_Click(object sender, EventArgs e)

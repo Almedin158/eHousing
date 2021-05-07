@@ -231,6 +231,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnPhotoGallery.TabIndex = 33;
             this.btnPhotoGallery.Text = "Photo Gallery";
             this.btnPhotoGallery.UseVisualStyleBackColor = true;
+            this.btnPhotoGallery.Click += new System.EventHandler(this.btnPhotoGallery_Click);
             // 
             // frmEstateDetails
             // 

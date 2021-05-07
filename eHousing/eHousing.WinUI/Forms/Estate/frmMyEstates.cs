@@ -31,5 +31,12 @@ namespace eHousing.WinUI.Forms.Estate
             var result = await estateService.Get<List<MEstate>>(request);
             dgvMyEstates.DataSource = result;
         }
+
+        private void dgvMyEstates_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int Id = Convert.ToInt32(dgvMyEstates.CurrentRow.Cells["EstateId"].Value);
+            frmEstateDetails frm = new frmEstateDetails(int.Parse(Id.ToString()));
+            frm.Show();
+        }
     }
 }

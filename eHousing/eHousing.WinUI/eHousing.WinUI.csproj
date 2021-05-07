@@ -107,6 +107,12 @@
     <Compile Include="Forms\Estate\frmEstateDetails.Designer.cs">
       <DependentUpon>frmEstateDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Estate\frmEstateGallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estate\frmEstateGallery.Designer.cs">
+      <DependentUpon>frmEstateGallery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Estate\frmEstateGet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Estate\frmEstateDetails.resx">
       <DependentUpon>frmEstateDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estate\frmEstateGallery.resx">
+      <DependentUpon>frmEstateGallery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Estate\frmEstateGet.resx">
       <DependentUpon>frmEstateGet.cs</DependentUpon>

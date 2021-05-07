@@ -100,5 +100,11 @@ namespace eHousing.WinUI.Forms.Estate
             MessageBox.Show("Estate has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void btnPhotoGallery_Click(object sender, EventArgs e)
+        {
+            frmEstateGallery frm = new frmEstateGallery(_Id);
+            frm.Show();
+        }
     }
 }
