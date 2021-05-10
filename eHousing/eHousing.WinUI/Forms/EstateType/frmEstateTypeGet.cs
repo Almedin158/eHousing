@@ -44,5 +44,10 @@ namespace eHousing.WinUI.Forms.EstateType
             frmEstateTypeDetails frm = new frmEstateTypeDetails(int.Parse(Id.ToString()));
             frm.Show();
         }
+
+        private void frmEstateTypeGet_Load(object sender, EventArgs e)
+        {
+            dgvEstateType.RowTemplate.Height = 90;
+        }
     }
 }

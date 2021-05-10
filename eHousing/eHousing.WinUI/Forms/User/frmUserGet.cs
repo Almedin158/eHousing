@@ -52,6 +52,7 @@ namespace eHousing.WinUI.Forms.User
 
         private async void frmUserGet_Load(object sender, EventArgs e)
         {
+            dgvUsers.RowTemplate.Height = 90;
             dgvUsers.AutoGenerateColumns = false;
             var result = await _service.Get<List<MUser>>(null);
             dgvUsers.DataSource = result;

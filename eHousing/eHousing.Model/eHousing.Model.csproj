@@ -59,6 +59,7 @@
     <Compile Include="Request\CitySearchRequest.cs" />
     <Compile Include="Request\CityUpsertRequest.cs" />
     <Compile Include="Request\EstateSearchRequest.cs" />
+    <Compile Include="Request\EstateStatusUpsertRequest.cs" />
     <Compile Include="Request\EstateTypeSearchRequest.cs" />
     <Compile Include="Request\EstateTypeUpsertRequest.cs" />
     <Compile Include="Request\EstateUpsertRequest.cs" />

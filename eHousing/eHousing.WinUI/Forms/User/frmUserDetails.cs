@@ -52,6 +52,7 @@ namespace eHousing.WinUI.Forms.User
             }
             else
             {
+                label6.Visible = false;
                 clbRoles.Visible = false;
                 btnDelete.Visible = false;
             }

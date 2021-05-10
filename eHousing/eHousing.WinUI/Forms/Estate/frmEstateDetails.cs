@@ -106,5 +106,15 @@ namespace eHousing.WinUI.Forms.Estate
             frmEstateGallery frm = new frmEstateGallery(_Id);
             frm.Show();
         }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you really want to delete this Estate?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                await estateService.Delete<dynamic>(_Id);
+                MessageBox.Show("Estate succesfully deleted.");
+            }
+            this.Close();
+        }
     }
 }

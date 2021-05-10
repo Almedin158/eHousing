@@ -104,9 +104,14 @@ namespace eHousing.Migrations
                     b.Property<DateTime>("OccupiedTill")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("EstateStatusId");
 
                     b.HasIndex("EstateId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("EstateStatuses");
                 });
@@ -254,8 +259,8 @@ namespace eHousing.Migrations
                             FavoriteEstateId = 0,
                             FirstName = "Admin",
                             LastName = "Admin",
-                            PasswordHash = "EhWymHgSWNLcCJmdt47v2s/AfCM=",
-                            PasswordSalt = "jAwBhEsWJmrORohCU0iv7g==",
+                            PasswordHash = "CLre7lOo5tdu+jwNPDNQfoQfH5g=",
+                            PasswordSalt = "ls23XoEWN9Y0N5KXqIT7IA==",
                             PhoneNumber = "0603317627",
                             Username = "Admin"
                         });
@@ -332,7 +337,15 @@ namespace eHousing.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("eHousing.Database.User", "User")
+                        .WithMany("EstateStatus")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Estate");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("eHousing.Database.FavoriteEstate", b =>
@@ -415,6 +428,8 @@ namespace eHousing.Migrations
             modelBuilder.Entity("eHousing.Database.User", b =>
                 {
                     b.Navigation("Estate");
+
+                    b.Navigation("EstateStatus");
 
                     b.Navigation("FavoriteEstate");
 

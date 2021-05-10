@@ -50,6 +50,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnPhotoGallery = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,11 +234,22 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnPhotoGallery.UseVisualStyleBackColor = true;
             this.btnPhotoGallery.Click += new System.EventHandler(this.btnPhotoGallery_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(15, 573);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(163, 26);
+            this.btnDelete.TabIndex = 34;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmEstateDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 610);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnPhotoGallery);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBrowsePicture);
@@ -291,5 +303,6 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPhotoGallery;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -124,6 +124,9 @@ namespace eHousing.WinUI
                 usersToolStripMenuItem.Visible = false;
                 getToolStripMenuItem.Visible = false;
                 addToolStripMenuItem.Visible = false;
+                cityToolStripMenuItem.Visible = false;
+                estateTypeToolStripMenuItem.Visible = false;
+                getEstateToolStripMenuItem.Visible = false;
             }
         }
 

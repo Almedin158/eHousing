@@ -31,12 +31,12 @@ namespace eHousing.WinUI.Forms.EstateType
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEstateType = new System.Windows.Forms.DataGridView();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.EstateTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.EstateTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstateType)).BeginInit();
             this.SuspendLayout();
@@ -70,32 +70,6 @@ namespace eHousing.WinUI.Forms.EstateType
             this.dgvEstateType.TabIndex = 0;
             this.dgvEstateType.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvEstateType_MouseDoubleClick);
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(13, 40);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(772, 22);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(666, 68);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(119, 47);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Search Estate Type By Name:";
-            // 
             // EstateTypeId
             // 
             this.EstateTypeId.DataPropertyName = "EstateTypeId";
@@ -126,6 +100,32 @@ namespace eHousing.WinUI.Forms.EstateType
             this.EstateTypeName.ReadOnly = true;
             this.EstateTypeName.Width = 125;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(13, 40);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(772, 22);
+            this.txtSearch.TabIndex = 1;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(666, 68);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(119, 47);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search Estate Type By Name:";
+            // 
             // frmEstateTypeGet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -137,6 +137,7 @@ namespace eHousing.WinUI.Forms.EstateType
             this.Controls.Add(this.groupBox1);
             this.Name = "frmEstateTypeGet";
             this.Text = "EstateTypeGet";
+            this.Load += new System.EventHandler(this.frmEstateTypeGet_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstateType)).EndInit();
             this.ResumeLayout(false);

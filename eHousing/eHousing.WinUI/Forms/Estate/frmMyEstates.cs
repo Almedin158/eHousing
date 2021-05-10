@@ -24,6 +24,7 @@ namespace eHousing.WinUI.Forms.Estate
 
         private async void frmMyEstates_Load(object sender, EventArgs e)
         {
+            dgvMyEstates.RowTemplate.Height = 90;
             var request = new EstateUpsertRequest
             {
                 UserId = _Id

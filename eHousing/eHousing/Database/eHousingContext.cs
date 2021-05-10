@@ -25,7 +25,7 @@ namespace eHousing.Database
         public DbSet<FavoriteEstate> FavoriteEstates { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FavoriteEstate>().HasKey(f => new { f.UserId, f.EstateId });
+            modelBuilder.Entity<FavoriteEstate>().HasKey(f => new { f.UserId, f.EstateId });//Prvi nacin dodjeljivanja primarnog kljuca
             OnModelCreatingPartial(modelBuilder);
         }
 

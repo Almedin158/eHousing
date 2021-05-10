@@ -25,6 +25,7 @@ namespace eHousing.WinUI.Forms.Estate
 
         private async void frmEstateGet_Load(object sender, EventArgs e)
         {
+            dgvEstates.RowTemplate.Height = 90;
             await LoadList();
         }
 

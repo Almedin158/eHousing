@@ -25,6 +25,7 @@ namespace eHousing.WinUI.Forms.Estate
 
         private async void frmEstateGallery_Load(object sender, EventArgs e)
         {
+            dgvGallery.RowTemplate.Height = 90;
             PictureSearchRequest request = new PictureSearchRequest
             {
                 EstateId = _Id
