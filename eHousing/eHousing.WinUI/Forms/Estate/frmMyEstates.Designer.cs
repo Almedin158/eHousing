@@ -32,6 +32,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvMyEstates = new System.Windows.Forms.DataGridView();
             this.EstateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsOccupied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.FloorSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +68,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.dgvMyEstates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMyEstates.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EstateId,
+            this.IsOccupied,
             this.CreationDate,
             this.Image,
             this.FloorSpace,
@@ -99,6 +101,17 @@ namespace eHousing.WinUI.Forms.Estate
             this.EstateId.ReadOnly = true;
             this.EstateId.Visible = false;
             this.EstateId.Width = 125;
+            // 
+            // IsOccupied
+            // 
+            this.IsOccupied.DataPropertyName = "IsOccupied";
+            this.IsOccupied.HeaderText = "Occupied";
+            this.IsOccupied.MinimumWidth = 6;
+            this.IsOccupied.Name = "IsOccupied";
+            this.IsOccupied.ReadOnly = true;
+            this.IsOccupied.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IsOccupied.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.IsOccupied.Width = 125;
             // 
             // CreationDate
             // 
@@ -236,7 +249,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 454);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMyEstates";
             this.Text = "frmMyEstates";
@@ -252,6 +265,7 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvMyEstates;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstateId;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn IsOccupied;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreationDate;
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn FloorSpace;

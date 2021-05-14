@@ -51,6 +51,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnSave = new System.Windows.Forms.Button();
             this.btnPhotoGallery = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.cbOccupied = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,7 +183,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 419);
+            this.label6.Location = new System.Drawing.Point(9, 444);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 17);
             this.label6.TabIndex = 29;
@@ -190,10 +191,10 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtEstateDescription
             // 
-            this.txtEstateDescription.Location = new System.Drawing.Point(15, 442);
+            this.txtEstateDescription.Location = new System.Drawing.Point(12, 470);
             this.txtEstateDescription.Multiline = true;
             this.txtEstateDescription.Name = "txtEstateDescription";
-            this.txtEstateDescription.Size = new System.Drawing.Size(643, 125);
+            this.txtEstateDescription.Size = new System.Drawing.Size(648, 125);
             this.txtEstateDescription.TabIndex = 28;
             // 
             // btnBrowsePicture
@@ -216,7 +217,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(495, 572);
+            this.btnSave.Location = new System.Drawing.Point(497, 601);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 26);
             this.btnSave.TabIndex = 32;
@@ -226,7 +227,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnPhotoGallery
             // 
-            this.btnPhotoGallery.Location = new System.Drawing.Point(489, 410);
+            this.btnPhotoGallery.Location = new System.Drawing.Point(491, 439);
             this.btnPhotoGallery.Name = "btnPhotoGallery";
             this.btnPhotoGallery.Size = new System.Drawing.Size(163, 26);
             this.btnPhotoGallery.TabIndex = 33;
@@ -236,7 +237,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(15, 573);
+            this.btnDelete.Location = new System.Drawing.Point(12, 601);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(163, 26);
             this.btnDelete.TabIndex = 34;
@@ -244,11 +245,22 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // cbOccupied
+            // 
+            this.cbOccupied.AutoSize = true;
+            this.cbOccupied.Location = new System.Drawing.Point(12, 411);
+            this.cbOccupied.Name = "cbOccupied";
+            this.cbOccupied.Size = new System.Drawing.Size(98, 21);
+            this.cbOccupied.TabIndex = 35;
+            this.cbOccupied.Text = "Occupied?";
+            this.cbOccupied.UseVisualStyleBackColor = true;
+            // 
             // frmEstateDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 610);
+            this.ClientSize = new System.Drawing.Size(670, 643);
+            this.Controls.Add(this.cbOccupied);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnPhotoGallery);
             this.Controls.Add(this.btnSave);
@@ -304,5 +316,6 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPhotoGallery;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.CheckBox cbOccupied;
     }
 }

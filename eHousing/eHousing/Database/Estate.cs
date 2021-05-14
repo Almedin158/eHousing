@@ -24,6 +24,6 @@ namespace eHousing.Database
         public List<EstateStatus> EstateStatus { get; set; }
         public byte[] Image { get; set; }
         public List<Picture> Picture { get; set; }
+        public bool IsOccupied { get; set; }
     }
-    //CRUD Desktop zovi sacu
 }

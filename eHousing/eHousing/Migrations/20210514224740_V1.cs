@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace eHousing.Migrations
 {
-    public partial class V3 : Migration
+    public partial class V1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -129,7 +129,8 @@ namespace eHousing.Migrations
                     NumberOfRooms = table.Column<int>(type: "int", nullable: false),
                     PetsAllowed = table.Column<bool>(type: "bit", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                    Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    IsOccupied = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -162,9 +163,9 @@ namespace eHousing.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     EstateId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
+                    Months = table.Column<int>(type: "int", nullable: false),
                     OccupiedSince = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    OccupiedTill = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsOccupied = table.Column<bool>(type: "bit", nullable: false)
+                    OccupiedTill = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -240,7 +241,7 @@ namespace eHousing.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "Email", "FavoriteEstateId", "FirstName", "LastName", "PasswordHash", "PasswordSalt", "PhoneNumber", "Username" },
-                values: new object[] { 1, "admin@ehousing.com", 0, "Admin", "Admin", "CLre7lOo5tdu+jwNPDNQfoQfH5g=", "ls23XoEWN9Y0N5KXqIT7IA==", "0603317627", "Admin" });
+                values: new object[] { 1, "admin@ehousing.com", 0, "Admin", "Admin", "OXiGq6sQCwNcasRkDjeLwTEgZI4=", "hG2BapBZgiBmRlvn1wrUXw==", "0603317627", "Admin" });
 
             migrationBuilder.InsertData(
                 table: "UserRoles",

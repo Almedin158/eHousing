@@ -41,14 +41,8 @@ namespace eHousing.WinUI.Forms.Estate
             txtPrice.Text = estate.Price.ToString();
             txtFloorSpace.Text = estate.FloorSpace.ToString();
             txtNumberOfRooms.Text = estate.NumberOfRooms.ToString();
-            if (estate.PetsAllowed==true)
-            {
-                cbPetsAllowed.Checked = true;
-            }
-            else
-            {
-                cbPetsAllowed.Checked = false;
-            }
+            cbPetsAllowed.Checked = estate.PetsAllowed;
+            cbOccupied.Checked = estate.IsOccupied;
             txtEstateDescription.Text = estate.EstateDescription;
             if (estate.Image.Length > 3)
             {
@@ -83,14 +77,8 @@ namespace eHousing.WinUI.Forms.Estate
             request.Price =Convert.ToInt32(txtPrice.Text);
             request.FloorSpace = Convert.ToInt32(txtFloorSpace.Text);
             request.NumberOfRooms = Convert.ToInt32(txtNumberOfRooms.Text);
-            if (estate.PetsAllowed == true)
-            {
-                request.PetsAllowed = true;
-            }
-            else
-            {
-                cbPetsAllowed.Checked = false;
-            }
+            request.IsOccupied = cbOccupied.Checked;
+            request.PetsAllowed = cbPetsAllowed.Checked;
             request.EstateDescription = txtEstateDescription.Text;
             request.Image = pictureBox1.Image != null ? ImageHelper.SystemDrawingToByteArray(pictureBox1.Image) : null;
             request.UserId = estate.UserId;

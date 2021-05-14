@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eHousing.Database;
 
 namespace eHousing.Migrations
 {
     [DbContext(typeof(eHousingContext))]
-    partial class eHousingContextModelSnapshot : ModelSnapshot
+    [Migration("20210514224740_V1")]
+    partial class V1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -262,8 +264,8 @@ namespace eHousing.Migrations
                             FavoriteEstateId = 0,
                             FirstName = "Admin",
                             LastName = "Admin",
-                            PasswordHash = "wbt1dI5LE35nLRpUg5XPxhRD4Qc=",
-                            PasswordSalt = "41rJCYoJZui/tkq4wXpqdg==",
+                            PasswordHash = "OXiGq6sQCwNcasRkDjeLwTEgZI4=",
+                            PasswordSalt = "hG2BapBZgiBmRlvn1wrUXw==",
                             PhoneNumber = "0603317627",
                             Username = "Admin"
                         });

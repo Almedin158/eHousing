@@ -90,6 +90,7 @@ namespace eHousing.WinUI.Forms.Estate
             request.EstateDescription = txtEstateDescription.Text;
             request.UserId = _user.UserId;
             request.CreationDate = DateTime.Now;
+            request.IsOccupied = false;
             await estateService.Insert<MEstate>(request);
             MessageBox.Show("Estate added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();

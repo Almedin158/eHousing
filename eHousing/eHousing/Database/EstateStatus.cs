@@ -14,8 +14,8 @@ namespace eHousing.Database
         public Estate Estate { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public DateTime OccupiedSince { get; set; }
-        public DateTime OccupiedTill { get; set; }
-        public bool IsOccupied { get; set; }
+        public int Months { get; set; }
+        public DateTime OccupiedSince { get; set; } //Set to date of moving into estate
+        public DateTime OccupiedTill { get; set; } //Set to date of moving out of estate
     }
 }

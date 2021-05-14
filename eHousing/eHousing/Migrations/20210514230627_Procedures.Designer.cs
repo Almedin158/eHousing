@@ -10,8 +10,8 @@ using eHousing.Database;
 namespace eHousing.Migrations
 {
     [DbContext(typeof(eHousingContext))]
-    [Migration("20210510125907_V3")]
-    partial class V3
+    [Migration("20210514230627_Procedures")]
+    partial class Procedures
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,6 +61,9 @@ namespace eHousing.Migrations
                     b.Property<byte[]>("Image")
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<bool>("IsOccupied")
+                        .HasColumnType("bit");
+
                     b.Property<int>("NumberOfRooms")
                         .HasColumnType("int");
 
@@ -97,8 +100,8 @@ namespace eHousing.Migrations
                     b.Property<int>("EstateId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsOccupied")
-                        .HasColumnType("bit");
+                    b.Property<int>("Months")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("OccupiedSince")
                         .HasColumnType("datetime2");
@@ -261,8 +264,8 @@ namespace eHousing.Migrations
                             FavoriteEstateId = 0,
                             FirstName = "Admin",
                             LastName = "Admin",
-                            PasswordHash = "CLre7lOo5tdu+jwNPDNQfoQfH5g=",
-                            PasswordSalt = "ls23XoEWN9Y0N5KXqIT7IA==",
+                            PasswordHash = "wbt1dI5LE35nLRpUg5XPxhRD4Qc=",
+                            PasswordSalt = "41rJCYoJZui/tkq4wXpqdg==",
                             PhoneNumber = "0603317627",
                             Username = "Admin"
                         });

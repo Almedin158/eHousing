@@ -38,6 +38,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEstates = new System.Windows.Forms.DataGridView();
             this.EstateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsOccupied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstateDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,6 +127,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.dgvEstates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstates.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EstateId,
+            this.IsOccupied,
             this.Price,
             this.EstateName,
             this.EstateDescription,
@@ -158,6 +160,17 @@ namespace eHousing.WinUI.Forms.Estate
             this.EstateId.ReadOnly = true;
             this.EstateId.Visible = false;
             this.EstateId.Width = 125;
+            // 
+            // IsOccupied
+            // 
+            this.IsOccupied.DataPropertyName = "IsOccupied";
+            this.IsOccupied.HeaderText = "Occupied";
+            this.IsOccupied.MinimumWidth = 6;
+            this.IsOccupied.Name = "IsOccupied";
+            this.IsOccupied.ReadOnly = true;
+            this.IsOccupied.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IsOccupied.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.IsOccupied.Width = 125;
             // 
             // Price
             // 
@@ -315,6 +328,7 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvEstates;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstateId;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn IsOccupied;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstateName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstateDescription;

@@ -24,5 +24,6 @@ namespace eHousing.Model.Request
         public List<MEstateStatus> EstateStatus { get; set; }
         public byte[] Image { get; set; }
         public List<MPicture> Picture { get; set; }
+        public bool IsOccupied { get; set; }
     }
 }
