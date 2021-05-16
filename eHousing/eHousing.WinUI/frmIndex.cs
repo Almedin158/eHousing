@@ -4,6 +4,7 @@ using eHousing.WinUI.Forms.Estate;
 using eHousing.WinUI.Forms.EstateType;
 using eHousing.WinUI.Forms.User;
 using eHousing.WinUI.Helper;
+using eHousing.WinUI.ReportForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -127,6 +128,7 @@ namespace eHousing.WinUI
                 cityToolStripMenuItem.Visible = false;
                 estateTypeToolStripMenuItem.Visible = false;
                 getEstateToolStripMenuItem.Visible = false;
+                reportsToolStripMenuItem.Visible = false;
             }
         }
 
@@ -175,6 +177,24 @@ namespace eHousing.WinUI
         private void myEstatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMyEstates frm = new frmMyEstates(_user.UserId);
+            frm.Show();
+        }
+
+        private void topThreeEstatesWithMostRentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTop3EstatesWithMostRents frm = new frmTop3EstatesWithMostRents();
+            frm.Show();
+        }
+
+        private void lastFiveEstateRentersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLast5EstateRenters frm = new frmLast5EstateRenters();
+            frm.Show();
+        }
+
+        private void estateDetailsReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstateRentDetails frm = new frmEstateRentDetails();
             frm.Show();
         }
     }

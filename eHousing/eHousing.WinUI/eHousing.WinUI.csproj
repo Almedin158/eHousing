@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Flurl, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\eHousing\packages\Flurl.3.0.1\lib\net461\Flurl.dll</HintPath>
     </Reference>
@@ -61,7 +67,10 @@
       <HintPath>..\eHousing\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\eHousing\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -77,6 +86,60 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIService.cs" />
+    <Compile Include="DataSources\dsEstateRentDetails.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstateRentDetails.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsEstateRentDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstateRentDetails.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsEstateRentDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstateRentDetails.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsLast5EstateRenters.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLast5EstateRenters.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsLast5EstateRenters.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLast5EstateRenters.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsLast5EstateRenters.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLast5EstateRenters.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsTop3EstatesWithMostRents.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTop3EstatesWithMostRents.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsTop3EstatesWithMostRents.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTop3EstatesWithMostRents.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\dsTop3EstatesWithMostRents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTop3EstatesWithMostRents.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\EstateRentDetails_Result.cs">
+      <DependentUpon>dsEstateRentDetails.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\Last5EstateRenters_Result.cs">
+      <DependentUpon>dsLast5EstateRenters.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\Top3EstatesWithMostRents_Result.cs">
+      <DependentUpon>dsTop3EstatesWithMostRents.tt</DependentUpon>
+    </Compile>
     <Compile Include="Forms\City\frmCityAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +258,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForms\frmEstateRentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmEstateRentDetails.Designer.cs">
+      <DependentUpon>frmEstateRentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\frmLast5EstateRenters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmLast5EstateRenters.Designer.cs">
+      <DependentUpon>frmLast5EstateRenters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\frmTop3EstatesWithMostRents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmTop3EstatesWithMostRents.Designer.cs">
+      <DependentUpon>frmTop3EstatesWithMostRents.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Forms\City\frmCityAdd.resx">
       <DependentUpon>frmCityAdd.cs</DependentUpon>
@@ -263,7 +344,43 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportForms\frmEstateRentDetails.resx">
+      <DependentUpon>frmEstateRentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\frmLast5EstateRenters.resx">
+      <DependentUpon>frmLast5EstateRenters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\frmTop3EstatesWithMostRents.resx">
+      <DependentUpon>frmTop3EstatesWithMostRents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptEstateRentDetails.rdlc" />
+    <EmbeddedResource Include="Reports\rptLast5EstateRenters.rdlc" />
+    <EmbeddedResource Include="Reports\rptTop3EstatesWithMostRents.rdlc" />
+    <EntityDeploy Include="DataSources\dsTop3EstatesWithMostRents.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dsTop3EstatesWithMostRents.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataSources\dsLast5EstateRenters.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dsLast5EstateRenters.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataSources\dsEstateRentDetails.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dsEstateRentDetails.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataSources\dsEstateRentDetails.edmx.diagram">
+      <DependentUpon>dsEstateRentDetails.edmx</DependentUpon>
+    </None>
+    <None Include="DataSources\dsLast5EstateRenters.edmx.diagram">
+      <DependentUpon>dsLast5EstateRenters.edmx</DependentUpon>
+    </None>
+    <None Include="DataSources\dsTop3EstatesWithMostRents.edmx.diagram">
+      <DependentUpon>dsTop3EstatesWithMostRents.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\eHousing.WinUI.DataSources.EstateRentDetails_Result.datasource" />
+    <None Include="Properties\DataSources\eHousing.WinUI.DataSources.Last5EstateRenters_Result.datasource" />
+    <None Include="Properties\DataSources\eHousing.WinUI.DataSources.Top3EstatesWithMostRents_Result.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -284,6 +401,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataSources\dsEstateRentDetails.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dsEstateRentDetails.edmx</DependentUpon>
+      <LastGenOutput>dsEstateRentDetails.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataSources\dsEstateRentDetails.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dsEstateRentDetails.edmx</DependentUpon>
+      <LastGenOutput>dsEstateRentDetails.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataSources\dsLast5EstateRenters.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dsLast5EstateRenters.edmx</DependentUpon>
+      <LastGenOutput>dsLast5EstateRenters.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataSources\dsLast5EstateRenters.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dsLast5EstateRenters.edmx</DependentUpon>
+      <LastGenOutput>dsLast5EstateRenters.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataSources\dsTop3EstatesWithMostRents.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dsTop3EstatesWithMostRents.edmx</DependentUpon>
+      <LastGenOutput>dsTop3EstatesWithMostRents.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataSources\dsTop3EstatesWithMostRents.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dsTop3EstatesWithMostRents.edmx</DependentUpon>
+      <LastGenOutput>dsTop3EstatesWithMostRents.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -298,10 +445,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DataSources\" />
-    <Folder Include="ReportForms\" />
-    <Folder Include="Reports\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

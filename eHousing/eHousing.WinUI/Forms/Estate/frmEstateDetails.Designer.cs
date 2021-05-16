@@ -52,6 +52,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnPhotoGallery = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cbOccupied = new System.Windows.Forms.CheckBox();
+            this.btnEstateReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,11 +256,21 @@ namespace eHousing.WinUI.Forms.Estate
             this.cbOccupied.Text = "Occupied?";
             this.cbOccupied.UseVisualStyleBackColor = true;
             // 
+            // btnEstateReport
+            // 
+            this.btnEstateReport.Location = new System.Drawing.Point(322, 438);
+            this.btnEstateReport.Name = "btnEstateReport";
+            this.btnEstateReport.Size = new System.Drawing.Size(163, 26);
+            this.btnEstateReport.TabIndex = 36;
+            this.btnEstateReport.Text = "Estate Report";
+            this.btnEstateReport.UseVisualStyleBackColor = true;
+            // 
             // frmEstateDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 643);
+            this.Controls.Add(this.btnEstateReport);
             this.Controls.Add(this.cbOccupied);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnPhotoGallery);
@@ -317,5 +328,6 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.Button btnPhotoGallery;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.CheckBox cbOccupied;
+        private System.Windows.Forms.Button btnEstateReport;
     }
 }

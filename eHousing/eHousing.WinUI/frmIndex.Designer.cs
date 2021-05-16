@@ -48,7 +48,11 @@ namespace eHousing.WinUI
             this.estateAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getEstateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myEstatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.topThreeEstatesWithMostRentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lastFiveEstateRentersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estateDetailsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +82,7 @@ namespace eHousing.WinUI
             this.usersToolStripMenuItem,
             this.cityToolStripMenuItem,
             this.estateToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.editProfileToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -121,14 +126,14 @@ namespace eHousing.WinUI
             // addToolStripMenuItem1
             // 
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-            this.addToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem1.Size = new System.Drawing.Size(120, 26);
             this.addToolStripMenuItem1.Text = "Add";
             this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
             // 
             // getToolStripMenuItem1
             // 
             this.getToolStripMenuItem1.Name = "getToolStripMenuItem1";
-            this.getToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.getToolStripMenuItem1.Size = new System.Drawing.Size(120, 26);
             this.getToolStripMenuItem1.Text = "Get";
             this.getToolStripMenuItem1.Click += new System.EventHandler(this.getToolStripMenuItem1_Click);
             // 
@@ -147,7 +152,7 @@ namespace eHousing.WinUI
             this.addEstateTypeToolStripMenuItem,
             this.getEstateTypeToolStripMenuItem});
             this.estateTypeToolStripMenuItem.Name = "estateTypeToolStripMenuItem";
-            this.estateTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estateTypeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.estateTypeToolStripMenuItem.Text = "Estate Type";
             // 
             // addEstateTypeToolStripMenuItem
@@ -171,29 +176,53 @@ namespace eHousing.WinUI
             this.getEstateToolStripMenuItem,
             this.myEstatesToolStripMenuItem});
             this.estateToolStripMenuItem1.Name = "estateToolStripMenuItem1";
-            this.estateToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.estateToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
             this.estateToolStripMenuItem1.Text = "Estate";
             // 
             // estateAddToolStripMenuItem
             // 
             this.estateAddToolStripMenuItem.Name = "estateAddToolStripMenuItem";
-            this.estateAddToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estateAddToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.estateAddToolStripMenuItem.Text = "Add Estate";
             this.estateAddToolStripMenuItem.Click += new System.EventHandler(this.estateAddToolStripMenuItem_Click);
             // 
             // getEstateToolStripMenuItem
             // 
             this.getEstateToolStripMenuItem.Name = "getEstateToolStripMenuItem";
-            this.getEstateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.getEstateToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.getEstateToolStripMenuItem.Text = "Get Estate";
             this.getEstateToolStripMenuItem.Click += new System.EventHandler(this.getEstateToolStripMenuItem_Click);
             // 
             // myEstatesToolStripMenuItem
             // 
             this.myEstatesToolStripMenuItem.Name = "myEstatesToolStripMenuItem";
-            this.myEstatesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.myEstatesToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.myEstatesToolStripMenuItem.Text = "My Estates";
             this.myEstatesToolStripMenuItem.Click += new System.EventHandler(this.myEstatesToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.topThreeEstatesWithMostRentsToolStripMenuItem,
+            this.lastFiveEstateRentersToolStripMenuItem,
+            this.estateDetailsReportToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // topThreeEstatesWithMostRentsToolStripMenuItem
+            // 
+            this.topThreeEstatesWithMostRentsToolStripMenuItem.Name = "topThreeEstatesWithMostRentsToolStripMenuItem";
+            this.topThreeEstatesWithMostRentsToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.topThreeEstatesWithMostRentsToolStripMenuItem.Text = "Top three estates with most rents";
+            this.topThreeEstatesWithMostRentsToolStripMenuItem.Click += new System.EventHandler(this.topThreeEstatesWithMostRentsToolStripMenuItem_Click);
+            // 
+            // lastFiveEstateRentersToolStripMenuItem
+            // 
+            this.lastFiveEstateRentersToolStripMenuItem.Name = "lastFiveEstateRentersToolStripMenuItem";
+            this.lastFiveEstateRentersToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.lastFiveEstateRentersToolStripMenuItem.Text = "Last five estate renters";
+            this.lastFiveEstateRentersToolStripMenuItem.Click += new System.EventHandler(this.lastFiveEstateRentersToolStripMenuItem_Click);
             // 
             // editProfileToolStripMenuItem
             // 
@@ -201,6 +230,13 @@ namespace eHousing.WinUI
             this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
             this.editProfileToolStripMenuItem.Text = "Edit profile";
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
+            // 
+            // estateDetailsReportToolStripMenuItem
+            // 
+            this.estateDetailsReportToolStripMenuItem.Name = "estateDetailsReportToolStripMenuItem";
+            this.estateDetailsReportToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.estateDetailsReportToolStripMenuItem.Text = "Estate details";
+            this.estateDetailsReportToolStripMenuItem.Click += new System.EventHandler(this.estateDetailsReportToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -243,6 +279,10 @@ namespace eHousing.WinUI
         private System.Windows.Forms.ToolStripMenuItem estateAddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getEstateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myEstatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem topThreeEstatesWithMostRentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lastFiveEstateRentersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estateDetailsReportToolStripMenuItem;
     }
 }
 
