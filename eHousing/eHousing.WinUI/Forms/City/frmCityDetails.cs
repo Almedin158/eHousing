@@ -1,6 +1,7 @@
 ﻿using eHousing.Model;
 using eHousing.Model.Request;
 using eHousing.WinUI.Forms.Street;
+using eHousing.WinUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,8 @@ namespace eHousing.WinUI.Forms.City
             await cityService.Update<MCity>(_Id, request);
             MessageBox.Show("City has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+            frmCityGet frm = new frmCityGet();
+            frm.Show();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
@@ -71,6 +74,18 @@ namespace eHousing.WinUI.Forms.City
             int Id = Convert.ToInt32(dgvStreets.CurrentRow.Cells["StreetId"].Value);
             frmStreetDetails frm = new frmStreetDetails(int.Parse(Id.ToString()));
             frm.Show();
+        }
+        private void txtCityName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCityName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtCityName, Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtCityName, null);
+            }
         }
     }
 }

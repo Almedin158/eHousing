@@ -1,6 +1,8 @@
 ﻿using eHousing.Model;
 using eHousing.Model.Request;
 using eHousing.WinUI.Helper;
+using eHousing.WinUI.Properties;
+using eHousing.WinUI.ReportForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +73,7 @@ namespace eHousing.WinUI.Forms.Estate
         {
             var estate = await estateService.GetById<MEstate>(_Id);
 
+            if (ValidateChildren()) {
             request.StreetId = estate.StreetId;
             request.EstateTypeId = estate.EstateTypeId;
             request.EstateName = txtEstateName.Text;
@@ -83,9 +86,9 @@ namespace eHousing.WinUI.Forms.Estate
             request.Image = pictureBox1.Image != null ? ImageHelper.SystemDrawingToByteArray(pictureBox1.Image) : null;
             request.UserId = estate.UserId;
             request.CreationDate = estate.CreationDate;
-            //request.User = estate.User;
             await estateService.Update<MEstate>(_Id, request);
             MessageBox.Show("Estate has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             this.Close();
         }
 
@@ -103,6 +106,112 @@ namespace eHousing.WinUI.Forms.Estate
                 MessageBox.Show("Estate succesfully deleted.");
             }
             this.Close();
+        }
+        private void txtEstateName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEstateName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEstateName, Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtEstateName, null);
+            }
+        }
+        private void txtEstateDescription_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEstateDescription.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEstateDescription, Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtEstateDescription, null);
+            }
+        }
+        private void txtPrice_Validating(object sender, CancelEventArgs e)
+        {
+            string price = txtPrice.Text.ToString();
+            if (string.IsNullOrWhiteSpace(txtPrice.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPrice, "Price field can't be empty");
+            }
+            else
+            {
+                errorProvider1.SetError(txtPrice, null);
+                if (IsDigitsOnly(price) == false)
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtPrice, "You can't use letters!");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtPrice, null);
+                }
+            }
+        }
+        private void txtFloorSpace_Validating(object sender, CancelEventArgs e)
+        {
+            string floorspace = txtFloorSpace.Text.ToString();
+            if (string.IsNullOrWhiteSpace(txtFloorSpace.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFloorSpace, "Price field can't be empty");
+            }
+            else
+            {
+                errorProvider1.SetError(txtFloorSpace, null);
+                if (IsDigitsOnly(floorspace) == false)
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtFloorSpace, "You can't use letters!");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtFloorSpace, null);
+                }
+            }
+        }
+        private void txtNumberOfRooms_Validating(object sender, CancelEventArgs e)
+        {
+            string numberOfRooms = txtNumberOfRooms.Text.ToString();
+            if (string.IsNullOrWhiteSpace(txtNumberOfRooms.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNumberOfRooms, "Price field can't be empty");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNumberOfRooms, null);
+                if (IsDigitsOnly(numberOfRooms) == false)
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtNumberOfRooms, "You can't use letters!");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtNumberOfRooms, null);
+                }
+            }
+        }
+        bool IsDigitsOnly(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void btnEstateReport_Click(object sender, EventArgs e)
+        {
+            frmMyEstateRentDetails frm = new frmMyEstateRentDetails(_Id);
+            frm.Show();
         }
     }
 }

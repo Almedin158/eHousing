@@ -29,13 +29,16 @@ namespace eHousing.WinUI.Forms.EstateType
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtEstateTypeName = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBrowsePicture = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstateTypeName
@@ -44,6 +47,7 @@ namespace eHousing.WinUI.Forms.EstateType
             this.txtEstateTypeName.Name = "txtEstateTypeName";
             this.txtEstateTypeName.Size = new System.Drawing.Size(285, 22);
             this.txtEstateTypeName.TabIndex = 0;
+            this.txtEstateTypeName.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateTypeName_Validating);
             // 
             // btnUpdate
             // 
@@ -92,11 +96,15 @@ namespace eHousing.WinUI.Forms.EstateType
             this.btnBrowsePicture.UseVisualStyleBackColor = true;
             this.btnBrowsePicture.Click += new System.EventHandler(this.btnBrowsePicture_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmEstateTypeDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 322);
+            this.ClientSize = new System.Drawing.Size(335, 322);
             this.Controls.Add(this.btnBrowsePicture);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDelete);
@@ -107,6 +115,7 @@ namespace eHousing.WinUI.Forms.EstateType
             this.Text = "frmEstateTypeDetails";
             this.Load += new System.EventHandler(this.frmEstateTypeDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +129,6 @@ namespace eHousing.WinUI.Forms.EstateType
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBrowsePicture;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

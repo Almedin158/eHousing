@@ -1,5 +1,6 @@
 ﻿using eHousing.Model;
 using eHousing.Model.Request;
+using eHousing.WinUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,18 @@ namespace eHousing.WinUI.Forms.Street
             await streetService.Update<MStreet>(_Id, request);
             MessageBox.Show("Street has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+        private void txtStreetName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtStreetName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtStreetName, Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtStreetName, null);
+            }
         }
     }
 }

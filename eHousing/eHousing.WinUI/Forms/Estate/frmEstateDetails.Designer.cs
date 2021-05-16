@@ -29,6 +29,7 @@ namespace eHousing.WinUI.Forms.Estate
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +54,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnDelete = new System.Windows.Forms.Button();
             this.cbOccupied = new System.Windows.Forms.CheckBox();
             this.btnEstateReport = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCity
@@ -132,6 +135,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtNumberOfRooms.Name = "txtNumberOfRooms";
             this.txtNumberOfRooms.Size = new System.Drawing.Size(224, 22);
             this.txtNumberOfRooms.TabIndex = 25;
+            this.txtNumberOfRooms.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumberOfRooms_Validating);
             // 
             // label7
             // 
@@ -148,6 +152,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtFloorSpace.Name = "txtFloorSpace";
             this.txtFloorSpace.Size = new System.Drawing.Size(224, 22);
             this.txtFloorSpace.TabIndex = 23;
+            this.txtFloorSpace.Validating += new System.ComponentModel.CancelEventHandler(this.txtFloorSpace_Validating);
             // 
             // label5
             // 
@@ -164,6 +169,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(224, 22);
             this.txtPrice.TabIndex = 21;
+            this.txtPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrice_Validating);
             // 
             // label4
             // 
@@ -180,6 +186,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtEstateName.Name = "txtEstateName";
             this.txtEstateName.Size = new System.Drawing.Size(224, 22);
             this.txtEstateName.TabIndex = 19;
+            this.txtEstateName.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateName_Validating);
             // 
             // label6
             // 
@@ -197,6 +204,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtEstateDescription.Name = "txtEstateDescription";
             this.txtEstateDescription.Size = new System.Drawing.Size(648, 125);
             this.txtEstateDescription.TabIndex = 28;
+            this.txtEstateDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateDescription_Validating);
             // 
             // btnBrowsePicture
             // 
@@ -264,12 +272,17 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnEstateReport.TabIndex = 36;
             this.btnEstateReport.Text = "Estate Report";
             this.btnEstateReport.UseVisualStyleBackColor = true;
+            this.btnEstateReport.Click += new System.EventHandler(this.btnEstateReport_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmEstateDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 643);
+            this.ClientSize = new System.Drawing.Size(697, 633);
             this.Controls.Add(this.btnEstateReport);
             this.Controls.Add(this.cbOccupied);
             this.Controls.Add(this.btnDelete);
@@ -298,6 +311,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.Text = "frmEstateDetails";
             this.Load += new System.EventHandler(this.frmEstateDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,5 +343,6 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.CheckBox cbOccupied;
         private System.Windows.Forms.Button btnEstateReport;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

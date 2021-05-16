@@ -29,13 +29,16 @@ namespace eHousing.WinUI.Forms.EstateType
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtEstateTypeName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBrowsePicture = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstateTypeName
@@ -44,6 +47,7 @@ namespace eHousing.WinUI.Forms.EstateType
             this.txtEstateTypeName.Name = "txtEstateTypeName";
             this.txtEstateTypeName.Size = new System.Drawing.Size(415, 22);
             this.txtEstateTypeName.TabIndex = 0;
+            this.txtEstateTypeName.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateTypeName_Validating);
             // 
             // label1
             // 
@@ -87,11 +91,15 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmEstateTypeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 317);
+            this.ClientSize = new System.Drawing.Size(464, 313);
             this.Controls.Add(this.btnBrowsePicture);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pictureBox1);
@@ -100,6 +108,7 @@ namespace eHousing.WinUI.Forms.EstateType
             this.Name = "frmEstateTypeAdd";
             this.Text = "EstateTypeAdd";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +122,6 @@ namespace eHousing.WinUI.Forms.EstateType
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBrowsePicture;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -29,19 +29,22 @@ namespace eHousing.WinUI.Forms.City
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtCityName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvStreets = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnAddStreet = new System.Windows.Forms.Button();
             this.StreetId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StreetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CityId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnAddStreet = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStreets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -60,6 +63,7 @@ namespace eHousing.WinUI.Forms.City
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Size = new System.Drawing.Size(538, 22);
             this.txtCityName.TabIndex = 1;
+            this.txtCityName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCityName_Validating);
             // 
             // label1
             // 
@@ -100,26 +104,6 @@ namespace eHousing.WinUI.Forms.City
             this.dgvStreets.TabIndex = 0;
             this.dgvStreets.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvStreets_MouseDoubleClick);
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(431, 377);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(127, 54);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Update";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnAddStreet
-            // 
-            this.btnAddStreet.Location = new System.Drawing.Point(295, 377);
-            this.btnAddStreet.Name = "btnAddStreet";
-            this.btnAddStreet.Size = new System.Drawing.Size(127, 54);
-            this.btnAddStreet.TabIndex = 5;
-            this.btnAddStreet.Text = "Add Street";
-            this.btnAddStreet.UseVisualStyleBackColor = true;
-            this.btnAddStreet.Click += new System.EventHandler(this.btnAddStreet_Click);
-            // 
             // StreetId
             // 
             this.StreetId.DataPropertyName = "StreetId";
@@ -159,11 +143,35 @@ namespace eHousing.WinUI.Forms.City
             this.City.Visible = false;
             this.City.Width = 125;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(431, 377);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(127, 54);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Update";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnAddStreet
+            // 
+            this.btnAddStreet.Location = new System.Drawing.Point(295, 377);
+            this.btnAddStreet.Name = "btnAddStreet";
+            this.btnAddStreet.Size = new System.Drawing.Size(127, 54);
+            this.btnAddStreet.TabIndex = 5;
+            this.btnAddStreet.Text = "Add Street";
+            this.btnAddStreet.UseVisualStyleBackColor = true;
+            this.btnAddStreet.Click += new System.EventHandler(this.btnAddStreet_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmCityDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 440);
+            this.ClientSize = new System.Drawing.Size(593, 439);
             this.Controls.Add(this.btnAddStreet);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);
@@ -175,6 +183,7 @@ namespace eHousing.WinUI.Forms.City
             this.Load += new System.EventHandler(this.frmCityDetails_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStreets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +202,6 @@ namespace eHousing.WinUI.Forms.City
         private System.Windows.Forms.DataGridViewTextBoxColumn StreetName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CityId;
         private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

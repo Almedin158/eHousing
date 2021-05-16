@@ -29,9 +29,12 @@ namespace eHousing.WinUI.Forms.Street
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtStreetName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -50,6 +53,7 @@ namespace eHousing.WinUI.Forms.Street
             this.txtStreetName.Name = "txtStreetName";
             this.txtStreetName.Size = new System.Drawing.Size(265, 22);
             this.txtStreetName.TabIndex = 1;
+            this.txtStreetName.Validating += new System.ComponentModel.CancelEventHandler(this.txtStreetName_Validating);
             // 
             // label1
             // 
@@ -60,16 +64,21 @@ namespace eHousing.WinUI.Forms.Street
             this.label1.TabIndex = 2;
             this.label1.Text = "Insert Street Name:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmStreetAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 94);
+            this.ClientSize = new System.Drawing.Size(312, 92);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtStreetName);
             this.Controls.Add(this.btnSave);
             this.Name = "frmStreetAdd";
             this.Text = "frmStreetAdd";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +89,6 @@ namespace eHousing.WinUI.Forms.Street
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtStreetName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

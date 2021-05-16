@@ -210,7 +210,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(825, 449);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.clbRoles);
             this.Controls.Add(this.btnSave);

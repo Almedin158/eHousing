@@ -29,6 +29,7 @@ namespace eHousing.WinUI.Forms.Street
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtStreetName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,8 +42,10 @@ namespace eHousing.WinUI.Forms.Street
             this.PetsAllowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstateDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -62,6 +65,7 @@ namespace eHousing.WinUI.Forms.Street
             this.txtStreetName.Name = "txtStreetName";
             this.txtStreetName.Size = new System.Drawing.Size(641, 29);
             this.txtStreetName.TabIndex = 1;
+            this.txtStreetName.Validating += new System.ComponentModel.CancelEventHandler(this.txtStreetName_Validating);
             // 
             // groupBox1
             // 
@@ -167,11 +171,15 @@ namespace eHousing.WinUI.Forms.Street
             this.label1.TabIndex = 3;
             this.label1.Text = "Street Name:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmStreetDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 427);
+            this.ClientSize = new System.Drawing.Size(829, 422);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtStreetName);
@@ -181,6 +189,7 @@ namespace eHousing.WinUI.Forms.Street
             this.Load += new System.EventHandler(this.frmStreetDetails_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +209,6 @@ namespace eHousing.WinUI.Forms.Street
         private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfRooms;
         private System.Windows.Forms.DataGridViewTextBoxColumn PetsAllowed;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstateDescription;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

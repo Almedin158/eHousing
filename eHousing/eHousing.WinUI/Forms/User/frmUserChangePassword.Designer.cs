@@ -29,6 +29,7 @@ namespace eHousing.WinUI.Forms.User
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtOldPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@ namespace eHousing.WinUI.Forms.User
             this.label3 = new System.Windows.Forms.Label();
             this.txtNewPasswordConfirmation = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtOldPassword
@@ -45,6 +48,7 @@ namespace eHousing.WinUI.Forms.User
             this.txtOldPassword.PasswordChar = '*';
             this.txtOldPassword.Size = new System.Drawing.Size(325, 22);
             this.txtOldPassword.TabIndex = 0;
+            this.txtOldPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtOldPassword_Validating);
             // 
             // label1
             // 
@@ -71,6 +75,7 @@ namespace eHousing.WinUI.Forms.User
             this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(326, 22);
             this.txtNewPassword.TabIndex = 2;
+            this.txtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPassword_Validating);
             // 
             // label3
             // 
@@ -88,6 +93,7 @@ namespace eHousing.WinUI.Forms.User
             this.txtNewPasswordConfirmation.PasswordChar = '*';
             this.txtNewPasswordConfirmation.Size = new System.Drawing.Size(326, 22);
             this.txtNewPasswordConfirmation.TabIndex = 4;
+            this.txtNewPasswordConfirmation.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPasswordConfirmation_Validating);
             // 
             // btnSave
             // 
@@ -99,11 +105,15 @@ namespace eHousing.WinUI.Forms.User
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmUserChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 300);
+            this.ClientSize = new System.Drawing.Size(375, 299);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNewPasswordConfirmation);
@@ -113,6 +123,7 @@ namespace eHousing.WinUI.Forms.User
             this.Controls.Add(this.txtOldPassword);
             this.Name = "frmUserChangePassword";
             this.Text = "frmUserChangePassword";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +138,6 @@ namespace eHousing.WinUI.Forms.User
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNewPasswordConfirmation;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

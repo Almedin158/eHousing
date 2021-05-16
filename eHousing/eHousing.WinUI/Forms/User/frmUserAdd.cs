@@ -28,6 +28,8 @@ namespace eHousing.WinUI.Forms.User
         {
             var roleList = clbRoles.CheckedItems.Cast<MRole>().Select(i => i.RoleId).ToList();
 
+            if (ValidateChildren()) { 
+
             var request = new UserUpsertRequest()
             {
                 FirstName = txtFirstName.Text,
@@ -42,6 +44,7 @@ namespace eHousing.WinUI.Forms.User
             await userService.Insert<MUser>(request);
             MessageBox.Show("User added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+            }
         }
 
         private async void frmUserAdd_Load(object sender, EventArgs e)
@@ -97,10 +100,10 @@ namespace eHousing.WinUI.Forms.User
         private void txtPhone_Validating(object sender, CancelEventArgs e)
         {
             string phone = txtPhoneNumber.Text.ToString();
-            if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text) || txtPhoneNumber.Text.Length < 9 || txtPhoneNumber.Text.Length > 9)
+            if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text) || txtPhoneNumber.Text.Length < 9 || txtPhoneNumber.Text.Length > 10)
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtPhoneNumber, "Phone number needs to contain 9 digits!");
+                errorProvider1.SetError(txtPhoneNumber, "Phone number needs to contain 9 or 10 digits!");
             }
             else
             {

@@ -191,7 +191,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 562);
+            this.ClientSize = new System.Drawing.Size(724, 562);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnDelete);

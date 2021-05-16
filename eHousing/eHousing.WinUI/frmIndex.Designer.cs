@@ -51,8 +51,8 @@ namespace eHousing.WinUI
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topThreeEstatesWithMostRentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lastFiveEstateRentersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estateDetailsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -224,19 +224,19 @@ namespace eHousing.WinUI
             this.lastFiveEstateRentersToolStripMenuItem.Text = "Last five estate renters";
             this.lastFiveEstateRentersToolStripMenuItem.Click += new System.EventHandler(this.lastFiveEstateRentersToolStripMenuItem_Click);
             // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
-            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
-            // 
             // estateDetailsReportToolStripMenuItem
             // 
             this.estateDetailsReportToolStripMenuItem.Name = "estateDetailsReportToolStripMenuItem";
             this.estateDetailsReportToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
             this.estateDetailsReportToolStripMenuItem.Text = "Estate details";
             this.estateDetailsReportToolStripMenuItem.Click += new System.EventHandler(this.estateDetailsReportToolStripMenuItem_Click);
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
             // frmIndex
             // 
@@ -249,6 +249,7 @@ namespace eHousing.WinUI
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIndex";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmIndex";
             this.Load += new System.EventHandler(this.frmIndex_Load);
             this.statusStrip.ResumeLayout(false);

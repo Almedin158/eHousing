@@ -45,9 +45,11 @@ namespace eHousing.WinUI.Forms.EstateType
             frm.Show();
         }
 
-        private void frmEstateTypeGet_Load(object sender, EventArgs e)
+        private async void frmEstateTypeGet_Load(object sender, EventArgs e)
         {
             dgvEstateType.RowTemplate.Height = 90;
+            var result = await estateTypeService.Get<List<MEstateType>>(null);
+            dgvEstateType.DataSource = result;
         }
     }
 }

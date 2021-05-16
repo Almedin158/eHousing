@@ -1,5 +1,6 @@
 ﻿using eHousing.Model;
 using eHousing.Model.Request;
+using eHousing.WinUI.Properties;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -41,17 +42,31 @@ namespace eHousing.WinUI.Forms.EstateType
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            if (request.Image != null || request.EstateTypeName!=null)
+            
+            if (request.Image != null && txtEstateTypeName.Text!=null)
             {
                 request.EstateTypeName = txtEstateTypeName.Text;
-                await estateTypeService.Insert<MEstateType>(request);//Cini se da je problem kod dodavanja, nema specificne veze sa slikom
+                await estateTypeService.Insert<MEstateType>(request);
                 MessageBox.Show("Estate type added Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Not all fields are correctly inserted", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+            }
+
+            
+        }
+        private void txtEstateTypeName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEstateTypeName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEstateTypeName, Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtEstateTypeName, null);
             }
         }
     }

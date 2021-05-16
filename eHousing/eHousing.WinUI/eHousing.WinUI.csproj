@@ -270,6 +270,12 @@
     <Compile Include="ReportForms\frmLast5EstateRenters.Designer.cs">
       <DependentUpon>frmLast5EstateRenters.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForms\frmMyEstateRentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmMyEstateRentDetails.Designer.cs">
+      <DependentUpon>frmMyEstateRentDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForms\frmTop3EstatesWithMostRents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForms\frmLast5EstateRenters.resx">
       <DependentUpon>frmLast5EstateRenters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\frmMyEstateRentDetails.resx">
+      <DependentUpon>frmMyEstateRentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForms\frmTop3EstatesWithMostRents.resx">
       <DependentUpon>frmTop3EstatesWithMostRents.cs</DependentUpon>

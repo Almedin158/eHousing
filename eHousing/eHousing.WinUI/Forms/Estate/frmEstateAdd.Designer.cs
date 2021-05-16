@@ -29,6 +29,7 @@ namespace eHousing.WinUI.Forms.Estate
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cbCity = new System.Windows.Forms.ComboBox();
             this.cbStreet = new System.Windows.Forms.ComboBox();
@@ -49,7 +50,9 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtNumberOfRooms = new System.Windows.Forms.TextBox();
             this.cbPetsAllowed = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +72,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.cbCity.Size = new System.Drawing.Size(223, 24);
             this.cbCity.TabIndex = 1;
             this.cbCity.SelectedIndexChanged += new System.EventHandler(this.cbCity_SelectedIndexChanged);
+            this.cbCity.Validating += new System.ComponentModel.CancelEventHandler(this.cbCity_Validating);
             // 
             // cbStreet
             // 
@@ -77,6 +81,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.cbStreet.Name = "cbStreet";
             this.cbStreet.Size = new System.Drawing.Size(224, 24);
             this.cbStreet.TabIndex = 3;
+            this.cbStreet.Validating += new System.ComponentModel.CancelEventHandler(this.cbStreet_Validating);
             // 
             // label2
             // 
@@ -94,6 +99,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.cbEstateType.Name = "cbEstateType";
             this.cbEstateType.Size = new System.Drawing.Size(223, 24);
             this.cbEstateType.TabIndex = 5;
+            this.cbEstateType.Validating += new System.ComponentModel.CancelEventHandler(this.cbEstateType_Validating);
             // 
             // label3
             // 
@@ -128,6 +134,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtEstateName.Name = "txtEstateName";
             this.txtEstateName.Size = new System.Drawing.Size(224, 22);
             this.txtEstateName.TabIndex = 8;
+            this.txtEstateName.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateName_Validating);
             // 
             // label4
             // 
@@ -153,6 +160,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(224, 22);
             this.txtPrice.TabIndex = 10;
+            this.txtPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrice_Validating);
             // 
             // label6
             // 
@@ -170,6 +178,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtEstateDescription.Name = "txtEstateDescription";
             this.txtEstateDescription.Size = new System.Drawing.Size(643, 125);
             this.txtEstateDescription.TabIndex = 12;
+            this.txtEstateDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateDescription_Validating);
             // 
             // label7
             // 
@@ -186,6 +195,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtFloorSpace.Name = "txtFloorSpace";
             this.txtFloorSpace.Size = new System.Drawing.Size(224, 22);
             this.txtFloorSpace.TabIndex = 14;
+            this.txtFloorSpace.Validating += new System.ComponentModel.CancelEventHandler(this.txtFloorSpace_Validating);
             // 
             // label8
             // 
@@ -202,6 +212,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.txtNumberOfRooms.Name = "txtNumberOfRooms";
             this.txtNumberOfRooms.Size = new System.Drawing.Size(224, 22);
             this.txtNumberOfRooms.TabIndex = 16;
+            this.txtNumberOfRooms.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumberOfRooms_Validating);
             // 
             // cbPetsAllowed
             // 
@@ -223,11 +234,15 @@ namespace eHousing.WinUI.Forms.Estate
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmEstateAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 620);
+            this.ClientSize = new System.Drawing.Size(686, 620);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbPetsAllowed);
             this.Controls.Add(this.label8);
@@ -252,6 +267,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.Text = "frmEstateAdd";
             this.Load += new System.EventHandler(this.frmEstateAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +295,6 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.TextBox txtNumberOfRooms;
         private System.Windows.Forms.CheckBox cbPetsAllowed;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

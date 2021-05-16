@@ -29,9 +29,12 @@ namespace eHousing.WinUI.Forms.City
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtCityName = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCityName
@@ -40,6 +43,7 @@ namespace eHousing.WinUI.Forms.City
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Size = new System.Drawing.Size(349, 22);
             this.txtCityName.TabIndex = 0;
+            this.txtCityName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCityName_Validating);
             // 
             // btnSave
             // 
@@ -60,16 +64,21 @@ namespace eHousing.WinUI.Forms.City
             this.label1.TabIndex = 2;
             this.label1.Text = "Insert City Name:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmCityAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 141);
+            this.ClientSize = new System.Drawing.Size(396, 143);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCityName);
             this.Name = "frmCityAdd";
             this.Text = "frmCityAdd";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +89,6 @@ namespace eHousing.WinUI.Forms.City
         private System.Windows.Forms.TextBox txtCityName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

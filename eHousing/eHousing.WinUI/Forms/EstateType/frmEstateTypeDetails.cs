@@ -1,6 +1,7 @@
 ﻿using eHousing.Model;
 using eHousing.Model.Request;
 using eHousing.WinUI.Helper;
+using eHousing.WinUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +74,18 @@ namespace eHousing.WinUI.Forms.EstateType
 
                 Image img = Image.FromFile(fileName);
                 pictureBox1.Image = img;
+            }
+        }
+        private void txtEstateTypeName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEstateTypeName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEstateTypeName, Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtEstateTypeName, null);
             }
         }
     }
