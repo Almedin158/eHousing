@@ -39,14 +39,14 @@ namespace eHousing.WinUI.ReportForms
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(802, 493);
             this.reportViewer1.TabIndex = 0;
             // 
             // frmMyEstateRentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmMyEstateRentDetails";
             this.Text = "frmMyEstateRentDetails";

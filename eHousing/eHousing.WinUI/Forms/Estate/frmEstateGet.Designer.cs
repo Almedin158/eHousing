@@ -113,9 +113,9 @@ namespace eHousing.WinUI.Forms.Estate
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvEstates);
-            this.groupBox1.Location = new System.Drawing.Point(16, 245);
+            this.groupBox1.Location = new System.Drawing.Point(18, 180);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(835, 352);
+            this.groupBox1.Size = new System.Drawing.Size(772, 301);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estates";
@@ -147,7 +147,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.dgvEstates.ReadOnly = true;
             this.dgvEstates.RowHeadersWidth = 51;
             this.dgvEstates.RowTemplate.Height = 24;
-            this.dgvEstates.Size = new System.Drawing.Size(829, 331);
+            this.dgvEstates.Size = new System.Drawing.Size(766, 280);
             this.dgvEstates.TabIndex = 0;
             this.dgvEstates.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvEstates_MouseDoubleClick);
             // 
@@ -299,7 +299,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 609);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbEstateType);
             this.Controls.Add(this.label3);

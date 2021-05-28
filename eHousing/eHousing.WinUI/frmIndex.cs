@@ -28,7 +28,7 @@ namespace eHousing.WinUI
             SignedInUser.User = _user;
             InitializeComponent();
         }
-
+        
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -106,13 +106,23 @@ namespace eHousing.WinUI
 
         private void getToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserGet frm = new frmUserGet(_user);
+            //frmUserGet frm = new frmUserGet(_user);
+            //frm.Show();
+            frmUserGet frm = new frmUserGet(_user)
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserAdd frm = new frmUserAdd();
+            frmUserAdd frm = new frmUserAdd()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
@@ -134,68 +144,117 @@ namespace eHousing.WinUI
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserDetails frm = new frmUserDetails(_user,_user.UserId);
+            frmUserDetails frm = new frmUserDetails(_user, _user.UserId)
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void addToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCityAdd frm = new frmCityAdd();
+            frmCityAdd frm = new frmCityAdd()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void getToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCityGet frm = new frmCityGet();
+            frmCityGet frm = new frmCityGet()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void addEstateTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstateTypeAdd frm = new frmEstateTypeAdd();
+            frmEstateTypeAdd frm = new frmEstateTypeAdd()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void getEstateTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstateTypeGet frm = new frmEstateTypeGet();
+            frmEstateTypeGet frm = new frmEstateTypeGet()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void estateAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstateAdd frm = new frmEstateAdd(_user);
+            frmEstateAdd frm = new frmEstateAdd(_user)
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void getEstateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstateGet frm = new frmEstateGet();
+            frmEstateGet frm = new frmEstateGet()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void myEstatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMyEstates frm = new frmMyEstates(_user.UserId);
+            frmMyEstates frm = new frmMyEstates(_user.UserId)
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void topThreeEstatesWithMostRentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTop3EstatesWithMostRents frm = new frmTop3EstatesWithMostRents();
+            frmTop3EstatesWithMostRents frm = new frmTop3EstatesWithMostRents()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void lastFiveEstateRentersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLast5EstateRenters frm = new frmLast5EstateRenters();
+            frmLast5EstateRenters frm = new frmLast5EstateRenters()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
         }
 
         private void estateDetailsReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstateRentDetails frm = new frmEstateRentDetails();
+            frmEstateRentDetails frm = new frmEstateRentDetails()
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
             frm.Show();
+        }
+
+        private void frmIndex_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

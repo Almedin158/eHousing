@@ -221,6 +221,5 @@ namespace eHousing.WinUI.Forms.User
             frmUserChangePassword frm = new frmUserChangePassword(_Id);
             frm.Show();
         }
-
     }
 }

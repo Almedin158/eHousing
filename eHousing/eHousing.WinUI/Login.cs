@@ -40,12 +40,18 @@ namespace eHousing.WinUI
             {
                 var form = new frmIndex(user);
                 form.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Wrong Username Or Password!");
             }
-            //this.Hide();
+            
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

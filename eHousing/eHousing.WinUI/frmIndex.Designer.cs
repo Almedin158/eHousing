@@ -251,6 +251,7 @@ namespace eHousing.WinUI
             this.Name = "frmIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmIndex";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmIndex_FormClosing);
             this.Load += new System.EventHandler(this.frmIndex_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();

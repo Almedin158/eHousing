@@ -49,7 +49,7 @@ namespace eHousing.WinUI.Forms.City
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(16, 377);
+            this.btnDelete.Location = new System.Drawing.Point(16, 427);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 54);
             this.btnDelete.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace eHousing.WinUI.Forms.City
             // 
             this.txtCityName.Location = new System.Drawing.Point(16, 33);
             this.txtCityName.Name = "txtCityName";
-            this.txtCityName.Size = new System.Drawing.Size(538, 22);
+            this.txtCityName.Size = new System.Drawing.Size(767, 22);
             this.txtCityName.TabIndex = 1;
             this.txtCityName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCityName_Validating);
             // 
@@ -79,7 +79,7 @@ namespace eHousing.WinUI.Forms.City
             this.groupBox1.Controls.Add(this.dgvStreets);
             this.groupBox1.Location = new System.Drawing.Point(12, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(546, 299);
+            this.groupBox1.Size = new System.Drawing.Size(778, 349);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Streets";
@@ -100,7 +100,7 @@ namespace eHousing.WinUI.Forms.City
             this.dgvStreets.ReadOnly = true;
             this.dgvStreets.RowHeadersWidth = 51;
             this.dgvStreets.RowTemplate.Height = 24;
-            this.dgvStreets.Size = new System.Drawing.Size(540, 278);
+            this.dgvStreets.Size = new System.Drawing.Size(772, 328);
             this.dgvStreets.TabIndex = 0;
             this.dgvStreets.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvStreets_MouseDoubleClick);
             // 
@@ -145,7 +145,7 @@ namespace eHousing.WinUI.Forms.City
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(431, 377);
+            this.btnSave.Location = new System.Drawing.Point(663, 427);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 54);
             this.btnSave.TabIndex = 4;
@@ -155,7 +155,7 @@ namespace eHousing.WinUI.Forms.City
             // 
             // btnAddStreet
             // 
-            this.btnAddStreet.Location = new System.Drawing.Point(295, 377);
+            this.btnAddStreet.Location = new System.Drawing.Point(527, 427);
             this.btnAddStreet.Name = "btnAddStreet";
             this.btnAddStreet.Size = new System.Drawing.Size(127, 54);
             this.btnAddStreet.TabIndex = 5;
@@ -171,7 +171,7 @@ namespace eHousing.WinUI.Forms.City
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 439);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.btnAddStreet);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);

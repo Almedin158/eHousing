@@ -45,7 +45,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.txtEstateTypeName.Location = new System.Drawing.Point(12, 44);
             this.txtEstateTypeName.Name = "txtEstateTypeName";
-            this.txtEstateTypeName.Size = new System.Drawing.Size(415, 22);
+            this.txtEstateTypeName.Size = new System.Drawing.Size(724, 22);
             this.txtEstateTypeName.TabIndex = 0;
             this.txtEstateTypeName.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateTypeName_Validating);
             // 
@@ -60,15 +60,15 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 101);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 201);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 207);
+            this.pictureBox1.Size = new System.Drawing.Size(331, 280);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(286, 234);
+            this.btnSave.Location = new System.Drawing.Point(650, 408);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 73);
             this.btnSave.TabIndex = 3;
@@ -79,9 +79,9 @@ namespace eHousing.WinUI.Forms.EstateType
             // btnBrowsePicture
             // 
             this.btnBrowsePicture.AllowDrop = true;
-            this.btnBrowsePicture.Location = new System.Drawing.Point(12, 72);
+            this.btnBrowsePicture.Location = new System.Drawing.Point(16, 130);
             this.btnBrowsePicture.Name = "btnBrowsePicture";
-            this.btnBrowsePicture.Size = new System.Drawing.Size(142, 23);
+            this.btnBrowsePicture.Size = new System.Drawing.Size(331, 49);
             this.btnBrowsePicture.TabIndex = 5;
             this.btnBrowsePicture.Text = "Browse Picture";
             this.btnBrowsePicture.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 313);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.btnBrowsePicture);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pictureBox1);

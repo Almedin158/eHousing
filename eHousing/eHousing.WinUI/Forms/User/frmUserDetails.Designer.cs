@@ -138,7 +138,7 @@ namespace eHousing.WinUI.Forms.User
             // clbRoles
             // 
             this.clbRoles.FormattingEnabled = true;
-            this.clbRoles.Location = new System.Drawing.Point(432, 43);
+            this.clbRoles.Location = new System.Drawing.Point(534, 43);
             this.clbRoles.Name = "clbRoles";
             this.clbRoles.Size = new System.Drawing.Size(261, 174);
             this.clbRoles.TabIndex = 10;
@@ -146,9 +146,9 @@ namespace eHousing.WinUI.Forms.User
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(511, 506);
+            this.btnSave.Location = new System.Drawing.Point(534, 411);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(182, 44);
+            this.btnSave.Size = new System.Drawing.Size(261, 44);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(15, 506);
+            this.btnDelete.Location = new System.Drawing.Point(15, 415);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(182, 44);
             this.btnDelete.TabIndex = 12;
@@ -170,9 +170,9 @@ namespace eHousing.WinUI.Forms.User
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(319, 506);
+            this.btnChangePassword.Location = new System.Drawing.Point(272, 411);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(169, 44);
+            this.btnChangePassword.Size = new System.Drawing.Size(256, 44);
             this.btnChangePassword.TabIndex = 30;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@ namespace eHousing.WinUI.Forms.User
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(429, 13);
+            this.label6.Location = new System.Drawing.Point(531, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 17);
             this.label6.TabIndex = 31;
@@ -191,7 +191,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 562);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnDelete);

@@ -79,7 +79,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 68);
+            this.label2.Location = new System.Drawing.Point(13, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtStreet
             // 
-            this.txtStreet.Location = new System.Drawing.Point(12, 88);
+            this.txtStreet.Location = new System.Drawing.Point(12, 79);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.ReadOnly = true;
             this.txtStreet.Size = new System.Drawing.Size(224, 22);
@@ -96,7 +96,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 126);
+            this.label3.Location = new System.Drawing.Point(9, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 17);
             this.label3.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtEstateType
             // 
-            this.txtEstateType.Location = new System.Drawing.Point(12, 146);
+            this.txtEstateType.Location = new System.Drawing.Point(12, 124);
             this.txtEstateType.Name = "txtEstateType";
             this.txtEstateType.ReadOnly = true;
             this.txtEstateType.Size = new System.Drawing.Size(224, 22);
@@ -113,7 +113,7 @@ namespace eHousing.WinUI.Forms.Estate
             // cbPetsAllowed
             // 
             this.cbPetsAllowed.AutoSize = true;
-            this.cbPetsAllowed.Location = new System.Drawing.Point(12, 384);
+            this.cbPetsAllowed.Location = new System.Drawing.Point(299, 33);
             this.cbPetsAllowed.Name = "cbPetsAllowed";
             this.cbPetsAllowed.Size = new System.Drawing.Size(117, 21);
             this.cbPetsAllowed.TabIndex = 27;
@@ -123,7 +123,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 336);
+            this.label8.Location = new System.Drawing.Point(13, 285);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 17);
             this.label8.TabIndex = 26;
@@ -131,7 +131,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtNumberOfRooms
             // 
-            this.txtNumberOfRooms.Location = new System.Drawing.Point(12, 356);
+            this.txtNumberOfRooms.Location = new System.Drawing.Point(12, 305);
             this.txtNumberOfRooms.Name = "txtNumberOfRooms";
             this.txtNumberOfRooms.Size = new System.Drawing.Size(224, 22);
             this.txtNumberOfRooms.TabIndex = 25;
@@ -140,7 +140,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 287);
+            this.label7.Location = new System.Drawing.Point(13, 240);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 24;
@@ -148,7 +148,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtFloorSpace
             // 
-            this.txtFloorSpace.Location = new System.Drawing.Point(12, 307);
+            this.txtFloorSpace.Location = new System.Drawing.Point(12, 260);
             this.txtFloorSpace.Name = "txtFloorSpace";
             this.txtFloorSpace.Size = new System.Drawing.Size(224, 22);
             this.txtFloorSpace.TabIndex = 23;
@@ -157,7 +157,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 232);
+            this.label5.Location = new System.Drawing.Point(13, 195);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 22;
@@ -165,7 +165,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(12, 252);
+            this.txtPrice.Location = new System.Drawing.Point(12, 215);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(224, 22);
             this.txtPrice.TabIndex = 21;
@@ -174,7 +174,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 180);
+            this.label4.Location = new System.Drawing.Point(9, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 20;
@@ -182,7 +182,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtEstateName
             // 
-            this.txtEstateName.Location = new System.Drawing.Point(12, 200);
+            this.txtEstateName.Location = new System.Drawing.Point(12, 169);
             this.txtEstateName.Name = "txtEstateName";
             this.txtEstateName.Size = new System.Drawing.Size(224, 22);
             this.txtEstateName.TabIndex = 19;
@@ -191,7 +191,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 444);
+            this.label6.Location = new System.Drawing.Point(12, 336);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 17);
             this.label6.TabIndex = 29;
@@ -199,18 +199,18 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtEstateDescription
             // 
-            this.txtEstateDescription.Location = new System.Drawing.Point(12, 470);
+            this.txtEstateDescription.Location = new System.Drawing.Point(16, 389);
             this.txtEstateDescription.Multiline = true;
             this.txtEstateDescription.Name = "txtEstateDescription";
-            this.txtEstateDescription.Size = new System.Drawing.Size(648, 125);
+            this.txtEstateDescription.Size = new System.Drawing.Size(784, 69);
             this.txtEstateDescription.TabIndex = 28;
             this.txtEstateDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateDescription_Validating);
             // 
             // btnBrowsePicture
             // 
-            this.btnBrowsePicture.Location = new System.Drawing.Point(489, 326);
+            this.btnBrowsePicture.Location = new System.Drawing.Point(422, 325);
             this.btnBrowsePicture.Name = "btnBrowsePicture";
-            this.btnBrowsePicture.Size = new System.Drawing.Size(164, 23);
+            this.btnBrowsePicture.Size = new System.Drawing.Size(165, 26);
             this.btnBrowsePicture.TabIndex = 31;
             this.btnBrowsePicture.Text = "Browse Picture";
             this.btnBrowsePicture.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(280, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(422, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(374, 286);
             this.pictureBox1.TabIndex = 30;
@@ -226,7 +226,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(497, 601);
+            this.btnSave.Location = new System.Drawing.Point(633, 464);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 26);
             this.btnSave.TabIndex = 32;
@@ -236,7 +236,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnPhotoGallery
             // 
-            this.btnPhotoGallery.Location = new System.Drawing.Point(491, 439);
+            this.btnPhotoGallery.Location = new System.Drawing.Point(633, 325);
             this.btnPhotoGallery.Name = "btnPhotoGallery";
             this.btnPhotoGallery.Size = new System.Drawing.Size(163, 26);
             this.btnPhotoGallery.TabIndex = 33;
@@ -246,7 +246,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(12, 601);
+            this.btnDelete.Location = new System.Drawing.Point(16, 464);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(163, 26);
             this.btnDelete.TabIndex = 34;
@@ -257,7 +257,7 @@ namespace eHousing.WinUI.Forms.Estate
             // cbOccupied
             // 
             this.cbOccupied.AutoSize = true;
-            this.cbOccupied.Location = new System.Drawing.Point(12, 411);
+            this.cbOccupied.Location = new System.Drawing.Point(299, 64);
             this.cbOccupied.Name = "cbOccupied";
             this.cbOccupied.Size = new System.Drawing.Size(98, 21);
             this.cbOccupied.TabIndex = 35;
@@ -266,7 +266,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnEstateReport
             // 
-            this.btnEstateReport.Location = new System.Drawing.Point(322, 438);
+            this.btnEstateReport.Location = new System.Drawing.Point(633, 357);
             this.btnEstateReport.Name = "btnEstateReport";
             this.btnEstateReport.Size = new System.Drawing.Size(163, 26);
             this.btnEstateReport.TabIndex = 36;
@@ -282,7 +282,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 633);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.btnEstateReport);
             this.Controls.Add(this.cbOccupied);
             this.Controls.Add(this.btnDelete);

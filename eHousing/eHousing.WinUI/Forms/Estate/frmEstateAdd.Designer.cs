@@ -112,7 +112,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(282, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(416, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(374, 286);
             this.pictureBox1.TabIndex = 6;
@@ -120,7 +120,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // btnBrowsePicture
             // 
-            this.btnBrowsePicture.Location = new System.Drawing.Point(491, 327);
+            this.btnBrowsePicture.Location = new System.Drawing.Point(626, 306);
             this.btnBrowsePicture.Name = "btnBrowsePicture";
             this.btnBrowsePicture.Size = new System.Drawing.Size(164, 23);
             this.btnBrowsePicture.TabIndex = 7;
@@ -165,7 +165,7 @@ namespace eHousing.WinUI.Forms.Estate
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 412);
+            this.label6.Location = new System.Drawing.Point(9, 399);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 17);
             this.label6.TabIndex = 13;
@@ -173,10 +173,10 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             // txtEstateDescription
             // 
-            this.txtEstateDescription.Location = new System.Drawing.Point(12, 432);
+            this.txtEstateDescription.Location = new System.Drawing.Point(12, 419);
             this.txtEstateDescription.Multiline = true;
             this.txtEstateDescription.Name = "txtEstateDescription";
-            this.txtEstateDescription.Size = new System.Drawing.Size(643, 125);
+            this.txtEstateDescription.Size = new System.Drawing.Size(778, 62);
             this.txtEstateDescription.TabIndex = 12;
             this.txtEstateDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtEstateDescription_Validating);
             // 
@@ -242,7 +242,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 620);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbPetsAllowed);
             this.Controls.Add(this.label8);

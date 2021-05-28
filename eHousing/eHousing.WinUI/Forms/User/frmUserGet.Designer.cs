@@ -49,7 +49,7 @@ namespace eHousing.WinUI.Forms.User
             this.groupBox1.Controls.Add(this.dgvUsers);
             this.groupBox1.Location = new System.Drawing.Point(13, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 335);
+            this.groupBox1.Size = new System.Drawing.Size(777, 378);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Users";
@@ -72,7 +72,7 @@ namespace eHousing.WinUI.Forms.User
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
-            this.dgvUsers.Size = new System.Drawing.Size(769, 314);
+            this.dgvUsers.Size = new System.Drawing.Size(771, 357);
             this.dgvUsers.TabIndex = 0;
             this.dgvUsers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvUsers_MouseDoubleClick);
             // 
@@ -133,7 +133,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(713, 74);
+            this.btnSearch.Location = new System.Drawing.Point(715, 74);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -145,7 +145,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.txtSearch.Location = new System.Drawing.Point(16, 74);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(691, 22);
+            this.txtSearch.Size = new System.Drawing.Size(642, 22);
             this.txtSearch.TabIndex = 2;
             // 
             // label1
@@ -161,7 +161,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 450);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);

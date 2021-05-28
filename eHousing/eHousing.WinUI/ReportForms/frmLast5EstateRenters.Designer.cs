@@ -57,7 +57,7 @@ namespace eHousing.WinUI.ReportForms
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(633, 19);
+            this.btnSearch.Location = new System.Drawing.Point(635, 19);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(155, 24);
             this.btnSearch.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace eHousing.WinUI.ReportForms
             this.reportViewer1.Location = new System.Drawing.Point(13, 49);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(775, 389);
+            this.reportViewer1.Size = new System.Drawing.Size(777, 432);
             this.reportViewer1.TabIndex = 3;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -83,7 +83,7 @@ namespace eHousing.WinUI.ReportForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);

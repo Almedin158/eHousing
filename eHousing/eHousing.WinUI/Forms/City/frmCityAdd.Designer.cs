@@ -41,13 +41,13 @@ namespace eHousing.WinUI.Forms.City
             // 
             this.txtCityName.Location = new System.Drawing.Point(12, 46);
             this.txtCityName.Name = "txtCityName";
-            this.txtCityName.Size = new System.Drawing.Size(349, 22);
+            this.txtCityName.Size = new System.Drawing.Size(743, 22);
             this.txtCityName.TabIndex = 0;
             this.txtCityName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCityName_Validating);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(235, 74);
+            this.btnSave.Location = new System.Drawing.Point(663, 421);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(129, 60);
             this.btnSave.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace eHousing.WinUI.Forms.City
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 143);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCityName);

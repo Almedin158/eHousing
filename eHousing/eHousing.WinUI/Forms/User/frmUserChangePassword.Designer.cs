@@ -46,7 +46,7 @@ namespace eHousing.WinUI.Forms.User
             this.txtOldPassword.Location = new System.Drawing.Point(12, 43);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.PasswordChar = '*';
-            this.txtOldPassword.Size = new System.Drawing.Size(325, 22);
+            this.txtOldPassword.Size = new System.Drawing.Size(227, 22);
             this.txtOldPassword.TabIndex = 0;
             this.txtOldPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtOldPassword_Validating);
             // 
@@ -73,7 +73,7 @@ namespace eHousing.WinUI.Forms.User
             this.txtNewPassword.Location = new System.Drawing.Point(11, 128);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(326, 22);
+            this.txtNewPassword.Size = new System.Drawing.Size(228, 22);
             this.txtNewPassword.TabIndex = 2;
             this.txtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPassword_Validating);
             // 
@@ -91,15 +91,15 @@ namespace eHousing.WinUI.Forms.User
             this.txtNewPasswordConfirmation.Location = new System.Drawing.Point(11, 212);
             this.txtNewPasswordConfirmation.Name = "txtNewPasswordConfirmation";
             this.txtNewPasswordConfirmation.PasswordChar = '*';
-            this.txtNewPasswordConfirmation.Size = new System.Drawing.Size(326, 22);
+            this.txtNewPasswordConfirmation.Size = new System.Drawing.Size(228, 22);
             this.txtNewPasswordConfirmation.TabIndex = 4;
             this.txtNewPasswordConfirmation.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPasswordConfirmation_Validating);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(205, 240);
+            this.btnSave.Location = new System.Drawing.Point(11, 249);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(132, 50);
+            this.btnSave.Size = new System.Drawing.Size(153, 69);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@ namespace eHousing.WinUI.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 299);
+            this.ClientSize = new System.Drawing.Size(281, 342);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNewPasswordConfirmation);

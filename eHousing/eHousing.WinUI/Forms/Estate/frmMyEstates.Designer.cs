@@ -56,7 +56,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.groupBox1.Controls.Add(this.dgvMyEstates);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 425);
+            this.groupBox1.Size = new System.Drawing.Size(777, 468);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "My Estates";
@@ -88,7 +88,7 @@ namespace eHousing.WinUI.Forms.Estate
             this.dgvMyEstates.Name = "dgvMyEstates";
             this.dgvMyEstates.ReadOnly = true;
             this.dgvMyEstates.RowHeadersWidth = 51;
-            this.dgvMyEstates.Size = new System.Drawing.Size(769, 404);
+            this.dgvMyEstates.Size = new System.Drawing.Size(771, 447);
             this.dgvMyEstates.TabIndex = 0;
             this.dgvMyEstates.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvMyEstates_MouseDoubleClick);
             // 
@@ -249,7 +249,7 @@ namespace eHousing.WinUI.Forms.Estate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 454);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMyEstates";
             this.Text = "frmMyEstates";

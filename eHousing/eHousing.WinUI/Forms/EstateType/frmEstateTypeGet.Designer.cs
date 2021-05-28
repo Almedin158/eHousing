@@ -44,9 +44,9 @@ namespace eHousing.WinUI.Forms.EstateType
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvEstateType);
-            this.groupBox1.Location = new System.Drawing.Point(13, 103);
+            this.groupBox1.Location = new System.Drawing.Point(13, 107);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 335);
+            this.groupBox1.Size = new System.Drawing.Size(777, 374);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estate Types";
@@ -66,7 +66,7 @@ namespace eHousing.WinUI.Forms.EstateType
             this.dgvEstateType.ReadOnly = true;
             this.dgvEstateType.RowHeadersWidth = 51;
             this.dgvEstateType.RowTemplate.Height = 24;
-            this.dgvEstateType.Size = new System.Drawing.Size(769, 314);
+            this.dgvEstateType.Size = new System.Drawing.Size(771, 353);
             this.dgvEstateType.TabIndex = 0;
             this.dgvEstateType.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvEstateType_MouseDoubleClick);
             // 
@@ -104,12 +104,12 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.txtSearch.Location = new System.Drawing.Point(13, 40);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(772, 22);
+            this.txtSearch.Size = new System.Drawing.Size(727, 22);
             this.txtSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(666, 68);
+            this.btnSearch.Location = new System.Drawing.Point(621, 68);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(119, 47);
             this.btnSearch.TabIndex = 2;
@@ -130,7 +130,7 @@ namespace eHousing.WinUI.Forms.EstateType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);

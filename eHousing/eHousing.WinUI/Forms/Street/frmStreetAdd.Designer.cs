@@ -39,9 +39,9 @@ namespace eHousing.WinUI.Forms.Street
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(202, 61);
+            this.btnSave.Location = new System.Drawing.Point(663, 428);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(127, 53);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@ namespace eHousing.WinUI.Forms.Street
             // 
             this.txtStreetName.Location = new System.Drawing.Point(12, 33);
             this.txtStreetName.Name = "txtStreetName";
-            this.txtStreetName.Size = new System.Drawing.Size(265, 22);
+            this.txtStreetName.Size = new System.Drawing.Size(740, 22);
             this.txtStreetName.TabIndex = 1;
             this.txtStreetName.Validating += new System.ComponentModel.CancelEventHandler(this.txtStreetName_Validating);
             // 
@@ -72,7 +72,7 @@ namespace eHousing.WinUI.Forms.Street
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 92);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtStreetName);
             this.Controls.Add(this.btnSave);

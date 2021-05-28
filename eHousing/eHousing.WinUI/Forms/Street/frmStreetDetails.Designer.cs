@@ -50,7 +50,7 @@ namespace eHousing.WinUI.Forms.Street
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(663, 32);
+            this.btnSave.Location = new System.Drawing.Point(664, 32);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(126, 29);
             this.btnSave.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace eHousing.WinUI.Forms.Street
             this.txtStreetName.Location = new System.Drawing.Point(16, 32);
             this.txtStreetName.Multiline = true;
             this.txtStreetName.Name = "txtStreetName";
-            this.txtStreetName.Size = new System.Drawing.Size(641, 29);
+            this.txtStreetName.Size = new System.Drawing.Size(614, 29);
             this.txtStreetName.TabIndex = 1;
             this.txtStreetName.Validating += new System.ComponentModel.CancelEventHandler(this.txtStreetName_Validating);
             // 
@@ -72,7 +72,7 @@ namespace eHousing.WinUI.Forms.Street
             this.groupBox1.Controls.Add(this.dgvEstates);
             this.groupBox1.Location = new System.Drawing.Point(16, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(773, 348);
+            this.groupBox1.Size = new System.Drawing.Size(774, 414);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estates";
@@ -96,7 +96,7 @@ namespace eHousing.WinUI.Forms.Street
             this.dgvEstates.ReadOnly = true;
             this.dgvEstates.RowHeadersWidth = 51;
             this.dgvEstates.RowTemplate.Height = 24;
-            this.dgvEstates.Size = new System.Drawing.Size(767, 327);
+            this.dgvEstates.Size = new System.Drawing.Size(768, 393);
             this.dgvEstates.TabIndex = 0;
             // 
             // EstateName
@@ -179,7 +179,7 @@ namespace eHousing.WinUI.Forms.Street
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 422);
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtStreetName);
