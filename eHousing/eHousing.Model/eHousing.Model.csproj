@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="MCity.cs" />
     <Compile Include="MEstate.cs" />
-    <Compile Include="MEstateStatus.cs" />
+    <Compile Include="MRent.cs" />
     <Compile Include="MEstateType.cs" />
     <Compile Include="MPicture.cs" />
     <Compile Include="MRole.cs" />

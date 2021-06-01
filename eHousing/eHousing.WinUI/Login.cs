@@ -25,6 +25,7 @@ namespace eHousing.WinUI
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+
             APIService.Username = txtUsername.Text;
             APIService.Password = txtPassword.Text;
 

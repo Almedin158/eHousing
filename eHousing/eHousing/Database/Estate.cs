@@ -21,8 +21,10 @@ namespace eHousing.Database
         public int NumberOfRooms { get; set; }
         public bool PetsAllowed { get; set; }
         public DateTime CreationDate { get; set; }
-        public List<EstateStatus> EstateStatus { get; set; }
+        public List<Rent> Rents { get; set; }
         public byte[] Image { get; set; }
+
+        //Dodati rating
         public List<Picture> Picture { get; set; }
         public bool IsOccupied { get; set; }
     }
