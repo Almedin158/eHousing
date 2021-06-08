@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="e1127a4c-1872-4533-942d-9c165b7f0bb2"
-    Publisher="CN=64dce893-cff4-4491-9ba3-e8e6f257e708"
+    Name="72cfd38b-c2b2-4554-aa74-18b921b85ab5"
+    Publisher="CN=c0f4816a-41d0-43a3-bae8-b6d0646c3b08"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>eHousing.Mobile.UWP</DisplayName>
-    <PublisherDisplayName>64dce893-cff4-4491-9ba3-e8e6f257e708</PublisherDisplayName>
+    <PublisherDisplayName>c0f4816a-41d0-43a3-bae8-b6d0646c3b08</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

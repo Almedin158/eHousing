@@ -1,5 +1,5 @@
-﻿using eHousing.Mobile.Services;
-using eHousing.Mobile.Views;
+﻿using eHousing.Mobile.Views;
+using eHousing.Mobile.Views.Account;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,13 +8,11 @@ namespace eHousing.Mobile
 {
     public partial class App : Application
     {
-
         public App()
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

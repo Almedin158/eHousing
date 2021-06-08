@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:converters="clr-namespace:eHousing.Mobile.Converters" 
+             xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Account"
+             x:Class="eHousing.Mobile.Views.Account.EditProfilePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImageConverter" />
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Teal"></Setter>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Padding="30,0,30,0" VerticalOptions="StartAndExpand">
+                <Label Text="Edit profile" Margin="0,30,0,0" FontAttributes="Bold" FontSize="18"></Label>
+                <Label Text="First name"></Label>
+                <Entry x:Name="FirstName"></Entry>
+                <Label Text="Last name"></Label>
+                <Entry x:Name="LastName"></Entry>
+                <Label Text="Email"></Label>
+                <Entry x:Name="Email"></Entry>
+                <Label Text="Phone"></Label>
+                <Entry x:Name="Phone"></Entry>
+                <Label Text="Username"></Label>
+                <Entry x:Name="Username"></Entry>
+                <Button Clicked="Button_Clicked" HorizontalOptions="FillAndExpand" Text="Save" Style="{StaticResource buttonStyle}"></Button>
+                <Button Clicked="Button_ChangePw" HorizontalOptions="FillAndExpand" Text="Change Password" Style="{StaticResource buttonStyle}"></Button>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
