@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace eHousing.Mobile.ViewModels.Estates
 {
-    public class SearchEstateVM:BaseVM
+    public class SearchEstateVM : BaseVM
     {
         private readonly APIService cityService = new APIService("City");
         private readonly APIService streetService = new APIService("Street");
@@ -53,9 +53,6 @@ namespace eHousing.Mobile.ViewModels.Estates
             set
             {
                 SetProperty(ref _selectedStreet, value);
-                //subcategoryList.Clear();
-                //getSubcategories();
-
             }
         }
 
@@ -96,71 +93,147 @@ namespace eHousing.Mobile.ViewModels.Estates
                         estateTypeList.Add(type);
                     }
                 }
+
+                
+
                 if (SelectedEstateType != null)
                 {
-                    EstateSearchRequest search = new EstateSearchRequest
+                    estateList.Clear();
+                    if (SelectedCity != null)
                     {
-                        EstateTypeId = SelectedEstateType.EstateTypeId
-                    };
+                        if (SelectedStreet != null)
+                        {
+                            EstateSearchRequest search = new EstateSearchRequest
+                            {
+                                EstateTypeId = SelectedEstateType.EstateTypeId,
+                                CityId = SelectedCity.CityId,
+                                StreetId=SelectedStreet.StreetId
+                            };
 
-                    var estates = await estateService.Get<List<MEstate>>(search);
-                    foreach (var estate in estates)
+                            var estates = await estateService.Get<List<MEstate>>(search);
+                            foreach (var estate in estates)
+                            {
+                                estateList.Add(estate);
+                            }
+                        }
+                        else { 
+                            EstateSearchRequest search = new EstateSearchRequest
+                            {
+                                EstateTypeId = SelectedEstateType.EstateTypeId,
+                                CityId = SelectedCity.CityId
+                            };
+
+                            var estates = await estateService.Get<List<MEstate>>(search);
+                            foreach (var estate in estates)
+                            {
+                                estateList.Add(estate);
+                            }
+                        }
+                    }
+                    else
                     {
-                        estateList.Add(estate);
+                        EstateSearchRequest search = new EstateSearchRequest
+                        {
+                            EstateTypeId = SelectedEstateType.EstateTypeId
+                        };
+
+                        var estates = await estateService.Get<List<MEstate>>(search);
+                        foreach (var estate in estates)
+                        {
+                            estateList.Add(estate);
+                        }
                     }
                 }
 
                 if (SelectedCity != null)
                 {
-                    int userID;
-                    //if (SelectedStreet == null)
-                    //{
-                        //EstateSearchRequest search1 = new EstateSearchRequest
-                        //{
-                        //    StreetId = SelectedStreet.StreetId
-                        //};
-                        //estateList.Clear();
+                    StreetSearchRequest streetSearchRequest = new StreetSearchRequest()
+                    {
+                        CityId = SelectedCity.CityId
+                    };
 
+                    streetList.Clear();
+                    var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
+                    foreach (var street in streets)
+                    {
+                        streetList.Add(street);
+                    }
 
-                        StreetSearchRequest streetSearchRequest = new StreetSearchRequest()
+                    if (SelectedEstateType != null)
+                    {
+                        estateList.Clear();
+                        EstateSearchRequest search = new EstateSearchRequest
+                        {
+                            EstateTypeId = SelectedEstateType.EstateTypeId,
+                            CityId = SelectedCity.CityId
+                        };
+                        var estates = await estateService.Get<List<MEstate>>(search);
+                        foreach (var estate in estates)
+                        {
+                            estateList.Add(estate);
+                        }
+                    }
+                    else
+                    {
+                        estateList.Clear();
+                        EstateSearchRequest search = new EstateSearchRequest
                         {
                             CityId = SelectedCity.CityId
                         };
-
-                        streetList.Clear();
-                        var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
-                        foreach (var street in streets)
+                        var estates = await estateService.Get<List<MEstate>>(search);
+                        foreach (var estate in estates)
                         {
-                            streetList.Add(street);
+                            estateList.Add(estate);
                         }
-
-
-                        //var estates = await estateService.Get<List<MEstate>>(search1);
-
-                        //foreach (var x in estates)
-                        //{
-
-                        //    userID = SignedInUser.User.UserId;
-                        //    //var usersRentEstates = await estateService.GetRentedEstates(userId);
-                        //    //var DoesItContain = usersRentEstates.Where(m => m.EstateId == x.EstateId).Any();
-                        //    if (x.UserId != user.UserId)
-                        //    {
-                        //        estateList.Add(x);
-                        //    }
-                        //    //if (usersBoughtCourses.Count > 0)
-                        //    //{
-                        //        //if (DoesItContain == false && x.UserID != user.UserID)
-                        //        //{
-                        //            //courseList.Add(new CourseVM(x));
-                        //        //}
-                        //    //}
-                        //    //else if (x.UserID != user.UserID)
-                        //    //{
-                        //    //    courseList.Add(new CourseVM(x));
-                        //    //}
-                        //}
-                    //}
+                    }
                 }
+                int userID;
+                //if (SelectedStreet == null)
+                //{
+                //EstateSearchRequest search1 = new EstateSearchRequest
+                //{
+                //    StreetId = SelectedStreet.StreetId
+                //};
+                //estateList.Clear();
+
+                //StreetSearchRequest streetSearchRequest = new StreetSearchRequest()
+                //{
+                //    CityId = SelectedCity.CityId
+                //};
+
+                //streetList.Clear();
+                //var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
+                //foreach (var street in streets)
+                //{
+                //    streetList.Add(street);
+                //}
+
+
+                //var estates = await estateService.Get<List<MEstate>>(search1);
+
+                //foreach (var x in estates)
+                //{
+
+                //    userID = SignedInUser.User.UserId;
+                //    //var usersRentEstates = await estateService.GetRentedEstates(userId);
+                //    //var DoesItContain = usersRentEstates.Where(m => m.EstateId == x.EstateId).Any();
+                //    if (x.UserId != user.UserId)
+                //    {
+                //        estateList.Add(x);
+                //    }
+                //    //if (usersBoughtCourses.Count > 0)
+                //    //{
+                //        //if (DoesItContain == false && x.UserID != user.UserID)
+                //        //{
+                //            //courseList.Add(new CourseVM(x));
+                //        //}
+                //    //}
+                //    //else if (x.UserID != user.UserID)
+                //    //{
+                //    //    courseList.Add(new CourseVM(x));
+                //    //}
+                //}
+                //}
             }
             catch (Exception)
             {
