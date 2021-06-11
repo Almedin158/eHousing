@@ -1,6 +1,6 @@
 # eHousing
 
-Upon opening applications, do a update-database in the Package Manager Console,
+Upon opening applications, input "update-database" command in the Package Manager Console,
 also set startup projects to eHousing, eHousing.WinUI and eHousing.Mobile.UWP
 
 
