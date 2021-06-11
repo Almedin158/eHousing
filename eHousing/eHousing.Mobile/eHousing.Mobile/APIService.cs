@@ -16,7 +16,7 @@ namespace eHousing.Mobile
 
         private readonly string _route;
 
-        private readonly string ApiURL = "http://localhost:31186/api";
+        private readonly string ApiURL = "http://localhost:31186/api"; 
         public APIService(string route)
         {
             _route = route;

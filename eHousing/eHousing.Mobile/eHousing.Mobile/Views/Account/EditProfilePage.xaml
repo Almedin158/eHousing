@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:converters="clr-namespace:eHousing.Mobile.Converters" 
              xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Account"
-             x:Class="eHousing.Mobile.Views.Account.EditProfilePage">
+             x:Class="eHousing.Mobile.Views.Account.EditProfilePage" Title="Edit profile">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:ImageConverter x:Key="ImageConverter" />

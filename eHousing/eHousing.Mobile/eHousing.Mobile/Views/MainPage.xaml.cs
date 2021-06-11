@@ -1,5 +1,6 @@
 ﻿using eHousing.Mobile.Models;
 using eHousing.Mobile.Views.Account;
+using eHousing.Mobile.Views.Estates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,11 @@ namespace eHousing.Mobile.Views
             {
                 switch (ID)
                 {
+                    case (int)MenuType.Estates:
+                        MenuPages.Add(ID, new NavigationPage(new EstatePage()));
+                        break;
                     case (int)MenuType.EditProfile:
-                        MenuPages.Add(ID, new NavigationPage(new EditProfilePage()));
+                        MenuPages.Add(ID, new NavigationPage(new AccountPage()));
                         break;
                     case (int)MenuType.Logout:
                         MenuPages.Add(ID, new NavigationPage(new LogoutPage()));

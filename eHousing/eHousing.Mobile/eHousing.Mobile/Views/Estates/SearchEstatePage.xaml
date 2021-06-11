@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Estates" 
+             xmlns:system="clr-namespace:System;assembly=netstandard" 
+             xmlns:converters="clr-namespace:eHousing.Mobile.Converters"
+             mc:Ignorable="d"
+             x:Class="eHousing.Mobile.Views.Estates.SearchEstatePage"
+             Title="Categories">
+    <ContentPage.BindingContext>
+        <vm:SearchEstateVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImageConverter"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="15" Padding="0, 10, 0, 10">
+                <Label Text="Choose city:" 
+                   FontSize="18"
+                   TextColor="DimGray"
+                   Margin="5"
+                   VerticalTextAlignment="End"
+                   HorizontalOptions="Center"/>
+                <Picker  ItemsSource="{Binding cityList}" SelectedItem="{Binding SelectedCity}" ItemDisplayBinding="{Binding CityName}" WidthRequest="250" HorizontalOptions="CenterAndExpand" Margin="29,0,0,0"></Picker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="15" Padding="0, 10, 0, 10">
+                <Label Text="Choose street:" 
+                   FontSize="18"
+                   TextColor="DimGray"
+                   Margin="5"
+                   VerticalTextAlignment="End"
+                   HorizontalOptions="Center"/>
+                <Picker  ItemsSource="{Binding streetList}" SelectedItem="{Binding SelectedStreet}" ItemDisplayBinding="{Binding StreetName}" WidthRequest="250" HorizontalOptions="CenterAndExpand"></Picker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="15" Padding="0, 10, 0, 10">
+                <Label Text="Choose estate type:" 
+                   FontSize="18"
+                   TextColor="DimGray"
+                   Margin="5"
+                   VerticalTextAlignment="End"
+                   HorizontalOptions="Center"/>
+                <Picker  ItemsSource="{Binding estateTypeList}" SelectedItem="{Binding SelectedEstateType}" ItemDisplayBinding="{Binding EstateTypeName}" WidthRequest="250" HorizontalOptions="CenterAndExpand"></Picker>
+            </StackLayout>
+
+            <ListView ItemsSource="{Binding estateList}"  WidthRequest="500">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <Label Text="{Binding EstateName}" 
+                                               LineBreakMode="NoWrap" 
+                                                FontAttributes="Bold"
+                                               Padding="10, 10, 0, 0"
+                                             
+                                               FontSize="14" />
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

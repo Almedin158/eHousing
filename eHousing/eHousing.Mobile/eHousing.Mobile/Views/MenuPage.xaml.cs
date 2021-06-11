@@ -20,6 +20,7 @@ namespace eHousing.Mobile.Views
             InitializeComponent();
             menuItems = new List<MenuItems>
             {
+                new MenuItems {ID = MenuType.Estates, Title="Estates" },
                 new MenuItems {ID = MenuType.EditProfile, Title="Edit profile" },
                 new MenuItems {ID = MenuType.Logout, Title="Logout" }
             };

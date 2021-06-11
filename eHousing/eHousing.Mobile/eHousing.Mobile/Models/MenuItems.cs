@@ -6,6 +6,7 @@ namespace eHousing.Mobile.Models
 {
     public enum MenuType
     {
+        Estates,
         EditProfile,
         Logout
     }

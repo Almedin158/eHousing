@@ -18,13 +18,13 @@ namespace eHousing.Controllers
         {
             _service = service;
         }
-        //[Authorize]
+        [Authorize]
         [HttpGet]
         public async Task<List<T>> Get([FromQuery] Tsearch search)
         {
             return await _service.Get(search);
         }
-        //[Authorize]
+        [Authorize]
         [HttpGet("{ID}")]
         public async Task<T> GetById(int ID)
         {

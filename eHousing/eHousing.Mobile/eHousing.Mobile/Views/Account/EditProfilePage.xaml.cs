@@ -43,7 +43,7 @@ namespace eHousing.Mobile.Views.Account
 
         private async void Button_ChangePw(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new ChangePasswordPage());
+            await Navigation.PushAsync(new ChangePasswordPage());
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
