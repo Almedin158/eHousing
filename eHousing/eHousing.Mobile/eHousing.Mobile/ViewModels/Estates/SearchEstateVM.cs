@@ -30,6 +30,19 @@ namespace eHousing.Mobile.ViewModels.Estates
             InitCommand = new Command(async () => await Init(user));
         }
 
+
+        StreetSearchRequest streetSearchRequest = new StreetSearchRequest();
+
+        public async void FillStreets(int Id)
+        {
+            streetSearchRequest.CityId = Id;
+            var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
+            foreach (var street in streets)
+            {
+                streetList.Add(street);
+            }
+        }
+
         MCity _selectedCity = null;
 
         public MCity SelectedCity
@@ -37,11 +50,12 @@ namespace eHousing.Mobile.ViewModels.Estates
             get { return _selectedCity; }
             set
             {
+                
                 SetProperty(ref _selectedCity, value);
+                streetList.Clear();
+                FillStreets(_selectedCity.CityId);
                 if (value != null)
                     InitCommand.Execute(null);
-                //subcategoryList.Clear();
-                //getSubcategories();
 
             }
         }
@@ -100,15 +114,6 @@ namespace eHousing.Mobile.ViewModels.Estates
 
             if (SelectedCity != null)
             {
-                StreetSearchRequest streetSearchRequest = new StreetSearchRequest
-                {
-                    CityId = SelectedCity.CityId
-                };
-                var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
-                foreach(var street in streets)
-                {
-                    streetList.Add(street);
-                }
                 estateSearchRequest.CityId = SelectedCity.CityId;
             }
             if (SelectedStreet != null)
