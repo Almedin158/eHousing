@@ -4,6 +4,7 @@ using eHousing.Model.Request;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -53,6 +54,8 @@ namespace eHousing.Mobile.ViewModels.Estates
             set
             {
                 SetProperty(ref _selectedStreet, value);
+                if (value != null)
+                    InitCommand.Execute(null);
             }
         }
 
@@ -69,177 +72,61 @@ namespace eHousing.Mobile.ViewModels.Estates
 
             }
         }
+
         public async Task Init(MUser user)
         {
-
-            try
+            if (cityList.Count == 0)
             {
-                if (cityList.Count == 0)
+                cityList.Clear();
+                var cities = await cityService.Get<List<MCity>>(null);
+                foreach (var city in cities)
                 {
-                    cityList.Clear();
-                    var cities = await cityService.Get<List<MCity>>(null);
-                    foreach (var city in cities)
-                    {
-                        cityList.Add(city);
-                    }
+                    cityList.Add(city);
                 }
-
-                if (estateTypeList.Count == 0)
-                {
-                    estateTypeList.Clear();
-                    var types = await estateTypeService.Get<List<MEstateType>>(null);
-                    foreach (var type in types)
-                    {
-                        estateTypeList.Add(type);
-                    }
-                }
-
-                
-
-                if (SelectedEstateType != null)
-                {
-                    estateList.Clear();
-                    if (SelectedCity != null)
-                    {
-                        if (SelectedStreet != null)
-                        {
-                            EstateSearchRequest search = new EstateSearchRequest
-                            {
-                                EstateTypeId = SelectedEstateType.EstateTypeId,
-                                CityId = SelectedCity.CityId,
-                                StreetId=SelectedStreet.StreetId
-                            };
-
-                            var estates = await estateService.Get<List<MEstate>>(search);
-                            foreach (var estate in estates)
-                            {
-                                estateList.Add(estate);
-                            }
-                        }
-                        else { 
-                            EstateSearchRequest search = new EstateSearchRequest
-                            {
-                                EstateTypeId = SelectedEstateType.EstateTypeId,
-                                CityId = SelectedCity.CityId
-                            };
-
-                            var estates = await estateService.Get<List<MEstate>>(search);
-                            foreach (var estate in estates)
-                            {
-                                estateList.Add(estate);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        EstateSearchRequest search = new EstateSearchRequest
-                        {
-                            EstateTypeId = SelectedEstateType.EstateTypeId
-                        };
-
-                        var estates = await estateService.Get<List<MEstate>>(search);
-                        foreach (var estate in estates)
-                        {
-                            estateList.Add(estate);
-                        }
-                    }
-                }
-
-                if (SelectedCity != null)
-                {
-                    StreetSearchRequest streetSearchRequest = new StreetSearchRequest()
-                    {
-                        CityId = SelectedCity.CityId
-                    };
-
-                    streetList.Clear();
-                    var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
-                    foreach (var street in streets)
-                    {
-                        streetList.Add(street);
-                    }
-
-                    if (SelectedEstateType != null)
-                    {
-                        estateList.Clear();
-                        EstateSearchRequest search = new EstateSearchRequest
-                        {
-                            EstateTypeId = SelectedEstateType.EstateTypeId,
-                            CityId = SelectedCity.CityId
-                        };
-                        var estates = await estateService.Get<List<MEstate>>(search);
-                        foreach (var estate in estates)
-                        {
-                            estateList.Add(estate);
-                        }
-                    }
-                    else
-                    {
-                        estateList.Clear();
-                        EstateSearchRequest search = new EstateSearchRequest
-                        {
-                            CityId = SelectedCity.CityId
-                        };
-                        var estates = await estateService.Get<List<MEstate>>(search);
-                        foreach (var estate in estates)
-                        {
-                            estateList.Add(estate);
-                        }
-                    }
-                }
-                int userID;
-                //if (SelectedStreet == null)
-                //{
-                //EstateSearchRequest search1 = new EstateSearchRequest
-                //{
-                //    StreetId = SelectedStreet.StreetId
-                //};
-                //estateList.Clear();
-
-                //StreetSearchRequest streetSearchRequest = new StreetSearchRequest()
-                //{
-                //    CityId = SelectedCity.CityId
-                //};
-
-                //streetList.Clear();
-                //var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
-                //foreach (var street in streets)
-                //{
-                //    streetList.Add(street);
-                //}
-
-
-                //var estates = await estateService.Get<List<MEstate>>(search1);
-
-                //foreach (var x in estates)
-                //{
-
-                //    userID = SignedInUser.User.UserId;
-                //    //var usersRentEstates = await estateService.GetRentedEstates(userId);
-                //    //var DoesItContain = usersRentEstates.Where(m => m.EstateId == x.EstateId).Any();
-                //    if (x.UserId != user.UserId)
-                //    {
-                //        estateList.Add(x);
-                //    }
-                //    //if (usersBoughtCourses.Count > 0)
-                //    //{
-                //        //if (DoesItContain == false && x.UserID != user.UserID)
-                //        //{
-                //            //courseList.Add(new CourseVM(x));
-                //        //}
-                //    //}
-                //    //else if (x.UserID != user.UserID)
-                //    //{
-                //    //    courseList.Add(new CourseVM(x));
-                //    //}
-                //}
-                //}
-            }
-            catch (Exception)
-            {
-
             }
 
+            if (estateTypeList.Count == 0)
+            {
+                estateTypeList.Clear();
+                var types = await estateTypeService.Get<List<MEstateType>>(null);
+                foreach (var type in types)
+                {
+                    estateTypeList.Add(type);
+                }
+            }
+            estateList.Clear();
+
+            EstateSearchRequest estateSearchRequest = new EstateSearchRequest();
+
+            if (SelectedCity != null)
+            {
+                StreetSearchRequest streetSearchRequest = new StreetSearchRequest
+                {
+                    CityId = SelectedCity.CityId
+                };
+                var streets = await streetService.Get<List<MStreet>>(streetSearchRequest);
+                foreach(var street in streets)
+                {
+                    streetList.Add(street);
+                }
+                estateSearchRequest.CityId = SelectedCity.CityId;
+            }
+            if (SelectedStreet != null)
+            {
+                estateSearchRequest.StreetId = SelectedStreet.StreetId;
+            }
+            if (SelectedEstateType != null)
+            {
+                estateSearchRequest.EstateTypeId = _selectedEstateType.EstateTypeId;
+            }
+
+            var estates = await estateService.Get<List<MEstate>>(estateSearchRequest);
+            foreach (var estate in estates)
+            {
+                estateList.Add(estate);
+            }
         }
+
+       
     }
 }
