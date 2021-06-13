@@ -20,12 +20,12 @@ namespace eHousing.Model
         public string EstateDescription { get; set; }
         public int FloorSpace { get; set; }
         public int NumberOfRooms { get; set; }
-        public bool PetsAllowed { get; set; }
+        public bool? PetsAllowed { get; set; }
         public DateTime CreationDate { get; set; }
         public List<MEstateStatus> Rents { get; set; }
         public byte[] Image { get; set; }
         public List<MPicture> Picture { get; set; }
-        public bool IsOccupied { get; set; }
+        public bool? IsOccupied { get; set; }
         public string Status { get; set; }
     }
 }

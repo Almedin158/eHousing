@@ -42,30 +42,30 @@ namespace eHousing.Service
             {
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.EstateTypeId == request.EstateTypeId);
             }
-            if (request.PetsAllowed == true)
+            if (request?.PetsAllowed == true)
             {
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.PetsAllowed == request.PetsAllowed);
             }
-            if (request.PetsAllowed == false)
+            if (request?.PetsAllowed == false)
             {
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.PetsAllowed == request.PetsAllowed);
             }
-            if (request.IsOccupied == true)
+            if (request?.IsOccupied == true)
             {
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.IsOccupied == request.IsOccupied);
             }
-            if (request.IsOccupied == false)
+            if (request?.IsOccupied == false)
             {
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.IsOccupied == request.IsOccupied);
             }
 
-            if (request.MaxPrice != 0 && request.MinPrice == 0)
+            if (request?.MaxPrice != 0 && request?.MinPrice == 0)
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.Price <= request.MaxPrice);
 
-            if (request.MaxPrice == 0 && request.MinPrice != 0)
+            if (request?.MaxPrice == 0 && request?.MinPrice != 0)
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.Price >= request.MinPrice);
 
-            if (request.MaxPrice!=0 && request.MinPrice!=0)
+            if (request?.MaxPrice!=null && request?.MinPrice!=null)
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.Price >= request.MinPrice && x.Price <= request.MaxPrice);
 
             var list = await query.ToListAsync();

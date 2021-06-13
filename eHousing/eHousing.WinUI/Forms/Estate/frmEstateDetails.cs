@@ -43,8 +43,8 @@ namespace eHousing.WinUI.Forms.Estate
             txtPrice.Text = estate.Price.ToString();
             txtFloorSpace.Text = estate.FloorSpace.ToString();
             txtNumberOfRooms.Text = estate.NumberOfRooms.ToString();
-            cbPetsAllowed.Checked = estate.PetsAllowed;
-            cbOccupied.Checked = estate.IsOccupied;
+            cbPetsAllowed.Checked = (bool)estate.PetsAllowed;
+            cbOccupied.Checked = (bool)estate.IsOccupied;
             txtEstateDescription.Text = estate.EstateDescription;
             if (estate.Image.Length > 3)
             {

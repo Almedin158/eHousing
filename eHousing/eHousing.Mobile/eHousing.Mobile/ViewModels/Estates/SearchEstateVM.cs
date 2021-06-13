@@ -87,8 +87,8 @@ namespace eHousing.Mobile.ViewModels.Estates
             }
         }
 
-        bool _petsAllowed;
-        public bool PetsAllowed
+        bool? _petsAllowed;
+        public bool? PetsAllowed
         {
             get { return _petsAllowed; }
             set
@@ -99,9 +99,9 @@ namespace eHousing.Mobile.ViewModels.Estates
             }
         }
 
-        int _minPrice;
+        int? _minPrice;
 
-        public int MinPrice
+        public int? MinPrice
         {
             get { return _minPrice; }
             set
@@ -112,9 +112,9 @@ namespace eHousing.Mobile.ViewModels.Estates
             }
         }
 
-        int _maxPrice;
+        int? _maxPrice;
 
-        public int MaxPrice
+        public int? MaxPrice
         {
             get { return _maxPrice; }
             set
@@ -125,8 +125,8 @@ namespace eHousing.Mobile.ViewModels.Estates
             }
         }
 
-        bool _occupied;
-        public bool Occupied
+        bool? _occupied;
+        public bool? Occupied
         {
             get { return _occupied; }
             set
@@ -185,7 +185,7 @@ namespace eHousing.Mobile.ViewModels.Estates
             var estates = await estateService.Get<List<MEstate>>(estateSearchRequest);
             foreach (var estate in estates)
             {
-                if (estate.IsOccupied)
+                if ((bool)estate.IsOccupied)
                 {
                     estate.Status = "Occupied";
                 }
