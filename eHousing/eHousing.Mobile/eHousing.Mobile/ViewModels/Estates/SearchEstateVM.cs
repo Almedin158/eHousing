@@ -28,6 +28,7 @@ namespace eHousing.Mobile.ViewModels.Estates
         public SearchEstateVM()
         {
             InitCommand = new Command(async () => await Init(user));
+            
         }
 
 
@@ -44,7 +45,6 @@ namespace eHousing.Mobile.ViewModels.Estates
         }
 
         MCity _selectedCity = null;
-
         public MCity SelectedCity
         {
             get { return _selectedCity; }
@@ -87,6 +87,58 @@ namespace eHousing.Mobile.ViewModels.Estates
             }
         }
 
+        bool _petsAllowed;
+        public bool PetsAllowed
+        {
+            get { return _petsAllowed; }
+            set
+            {
+                SetProperty(ref _petsAllowed, value);
+                if (value != null)
+                    InitCommand.Execute(null);
+            }
+        }
+
+        int _minPrice;
+
+        public int MinPrice
+        {
+            get { return _minPrice; }
+            set
+            {
+                SetProperty(ref _minPrice, value);
+                if (value != null)
+                    InitCommand.Execute(null);
+            }
+        }
+
+        int _maxPrice;
+
+        public int MaxPrice
+        {
+            get { return _maxPrice; }
+            set
+            {
+                SetProperty(ref _maxPrice, value);
+                if (value != null)
+                    InitCommand.Execute(null);
+            }
+        }
+
+        bool _occupied;
+        public bool Occupied
+        {
+            get { return _occupied; }
+            set
+            {
+                SetProperty(ref _occupied, value);
+                if (value != null)
+                    InitCommand.Execute(null);
+            }
+        }
+
+   
+
         public async Task Init(MUser user)
         {
             if (cityList.Count == 0)
@@ -112,6 +164,11 @@ namespace eHousing.Mobile.ViewModels.Estates
 
             EstateSearchRequest estateSearchRequest = new EstateSearchRequest();
 
+            estateSearchRequest.PetsAllowed = _petsAllowed;
+            estateSearchRequest.IsOccupied = _occupied;
+            estateSearchRequest.MinPrice = _minPrice;
+            estateSearchRequest.MaxPrice = _maxPrice;
+
             if (SelectedCity != null)
             {
                 estateSearchRequest.CityId = SelectedCity.CityId;
@@ -128,7 +185,17 @@ namespace eHousing.Mobile.ViewModels.Estates
             var estates = await estateService.Get<List<MEstate>>(estateSearchRequest);
             foreach (var estate in estates)
             {
+                if (estate.IsOccupied)
+                {
+                    estate.Status = "Occupied";
+                }
+                else
+                {
+                    estate.Status = "Available";
+                }
                 estateList.Add(estate);
+                
+                
             }
         }
 

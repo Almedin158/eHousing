@@ -22,7 +22,8 @@ namespace eHousing.Service
         }
         public override async Task<List<MEstate>> Get(EstateSearchRequest request)
         {
-            var query = _context.Estates.Include(c => c.Picture).AsQueryable().OrderBy(c => c.EstateName);
+            var query = _context.Estates.Include(c => c.Picture).Include(i => i.Street).ThenInclude(i => i.City).AsQueryable().OrderBy(c => c.EstateName);
+
 
             if (request.UserId != 0)
             {
@@ -41,6 +42,31 @@ namespace eHousing.Service
             {
                 query = (IOrderedQueryable<Estate>)query.Where(x => x.EstateTypeId == request.EstateTypeId);
             }
+            if (request.PetsAllowed == true)
+            {
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.PetsAllowed == request.PetsAllowed);
+            }
+            if (request.PetsAllowed == false)
+            {
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.PetsAllowed == request.PetsAllowed);
+            }
+            if (request.IsOccupied == true)
+            {
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.IsOccupied == request.IsOccupied);
+            }
+            if (request.IsOccupied == false)
+            {
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.IsOccupied == request.IsOccupied);
+            }
+
+            if (request.MaxPrice != 0 && request.MinPrice == 0)
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.Price <= request.MaxPrice);
+
+            if (request.MaxPrice == 0 && request.MinPrice != 0)
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.Price >= request.MinPrice);
+
+            if (request.MaxPrice!=0 && request.MinPrice!=0)
+                query = (IOrderedQueryable<Estate>)query.Where(x => x.Price >= request.MinPrice && x.Price <= request.MaxPrice);
 
             var list = await query.ToListAsync();
             return _mapper.Map<List<MEstate>>(list);

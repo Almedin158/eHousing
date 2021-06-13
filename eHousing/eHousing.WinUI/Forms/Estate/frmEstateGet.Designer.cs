@@ -52,6 +52,8 @@ namespace eHousing.WinUI.Forms.Estate
             this.EstateType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbPetsAllowed = new System.Windows.Forms.CheckBox();
+            this.cbOccupied = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstates)).BeginInit();
             this.SuspendLayout();
@@ -295,11 +297,35 @@ namespace eHousing.WinUI.Forms.Estate
             this.User.Visible = false;
             this.User.Width = 125;
             // 
+            // cbPetsAllowed
+            // 
+            this.cbPetsAllowed.AutoSize = true;
+            this.cbPetsAllowed.Location = new System.Drawing.Point(342, 34);
+            this.cbPetsAllowed.Name = "cbPetsAllowed";
+            this.cbPetsAllowed.Size = new System.Drawing.Size(117, 21);
+            this.cbPetsAllowed.TabIndex = 7;
+            this.cbPetsAllowed.Text = "Pets allowed?";
+            this.cbPetsAllowed.UseVisualStyleBackColor = true;
+            this.cbPetsAllowed.CheckedChanged += new System.EventHandler(this.cbPetsAllowed_CheckedChanged);
+            // 
+            // cbOccupied
+            // 
+            this.cbOccupied.AutoSize = true;
+            this.cbOccupied.Location = new System.Drawing.Point(342, 89);
+            this.cbOccupied.Name = "cbOccupied";
+            this.cbOccupied.Size = new System.Drawing.Size(98, 21);
+            this.cbOccupied.TabIndex = 8;
+            this.cbOccupied.Text = "Occupied?";
+            this.cbOccupied.UseVisualStyleBackColor = true;
+            this.cbOccupied.CheckedChanged += new System.EventHandler(this.cbPetsAllowed_CheckedChanged);
+            // 
             // frmEstateGet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 493);
+            this.Controls.Add(this.cbOccupied);
+            this.Controls.Add(this.cbPetsAllowed);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbEstateType);
             this.Controls.Add(this.label3);
@@ -342,5 +368,7 @@ namespace eHousing.WinUI.Forms.Estate
         private System.Windows.Forms.DataGridViewTextBoxColumn EstateType;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
+        private System.Windows.Forms.CheckBox cbPetsAllowed;
+        private System.Windows.Forms.CheckBox cbOccupied;
     }
 }

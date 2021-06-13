@@ -82,6 +82,8 @@ namespace eHousing.WinUI.Forms.Estate
             dgvEstates.DataSource = result;
         }
 
+      
+
         private async void cbStreet_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbStreet.ValueMember = "StreetId";
@@ -113,6 +115,19 @@ namespace eHousing.WinUI.Forms.Estate
             int Id = Convert.ToInt32(dgvEstates.CurrentRow.Cells["EstateId"].Value);
             frmEstateDetails frm = new frmEstateDetails(int.Parse(Id.ToString()));
             frm.Show();
+        }
+
+        private async void cbPetsAllowed_CheckedChanged(object sender, EventArgs e)
+        {
+            EstateSearchRequest request = new EstateSearchRequest()
+            {
+                CityId = Convert.ToInt32(cbCity.SelectedValue),
+                StreetId = Convert.ToInt32(cbStreet.SelectedValue),
+                EstateTypeId = Convert.ToInt32(cbEstateType.SelectedValue),
+                PetsAllowed = cbPetsAllowed.Checked,
+                IsOccupied = cbOccupied.Checked
+            };
+            await LoadList(request);
         }
     }
 }

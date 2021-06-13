@@ -18,5 +18,7 @@ namespace eHousing.Model.Request
         public int NumberOfRooms { get; set; }
         public bool PetsAllowed { get; set; }
         public bool IsOccupied { get; set; }
+        public int MinPrice { get; set; }
+        public int MaxPrice { get; set; }
     }
 }

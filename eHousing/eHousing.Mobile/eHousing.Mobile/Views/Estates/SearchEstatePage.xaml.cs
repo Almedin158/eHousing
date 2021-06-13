@@ -18,6 +18,7 @@ namespace eHousing.Mobile.Views.Estates
         public APIService estateService = new APIService("Estate");
         private SearchEstateVM modelSearchEstate= null;
         MUser _user;
+
         public SearchEstatePage()
         {
             InitializeComponent();
@@ -29,13 +30,16 @@ namespace eHousing.Mobile.Views.Estates
             _user = user;
             SignedInUser.User = user;
             BindingContext = modelSearchEstate = new SearchEstateVM();
-
+           
         }
         protected async override void OnAppearing()
         {
+
             base.OnAppearing();
             await modelSearchEstate.Init(_user);
-
+            
+            
+            
         }
     }
 }
