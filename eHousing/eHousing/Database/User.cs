@@ -21,6 +21,6 @@ namespace eHousing.Database
         public List<Estate> Estate { get; set; }
         public int FavoriteEstateId { get; set; }
         public List<FavoriteEstate> FavoriteEstate { get; set; }
-        public List<Rent> Rents { get; set; }
+        public List<EstateStatus> EstateStatus { get; set; }
     }
 }

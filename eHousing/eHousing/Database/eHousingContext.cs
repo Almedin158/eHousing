@@ -18,7 +18,7 @@ namespace eHousing.Database
         public DbSet<User> Users { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Estate> Estates { get; set; }
-        public DbSet<Rent> Rents { get; set; }
+        public DbSet<EstateStatus> EstateStatuses { get; set; }
         public DbSet<EstateType> EstateTypes { get; set; }
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<Street> Streets { get; set; }

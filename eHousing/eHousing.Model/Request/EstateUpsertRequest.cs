@@ -21,7 +21,7 @@ namespace eHousing.Model.Request
         public int NumberOfRooms { get; set; }
         public bool PetsAllowed { get; set; }
         public DateTime CreationDate { get; set; }
-        public List<MRent> EstateStatus { get; set; }
+        public List<MEstateStatus> EstateStatus { get; set; }
         public byte[] Image { get; set; }
         public List<MPicture> Picture { get; set; }
         public bool IsOccupied { get; set; }

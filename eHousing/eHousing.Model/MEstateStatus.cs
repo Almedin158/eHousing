@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eHousing.Model
 {
-    public class MRent
+    public class MEstateStatus
     {
         public int EstateStatusId { get; set; }
         public int EstateId { get; set; }

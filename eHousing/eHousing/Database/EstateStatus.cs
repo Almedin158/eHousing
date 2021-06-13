@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace eHousing.Database
 {
-    public class Rent
+    public class EstateStatus
     {
         [Key]//Drugi nacin dodjeljivanja primarnog kljuca
-        public int RentId { get; set; }
+        public int EstateStatusId { get; set; }
         public int EstateId { get; set; }
         public Estate Estate { get; set; }
         public int UserId { get; set; }
