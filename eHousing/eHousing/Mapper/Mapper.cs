@@ -13,6 +13,9 @@ namespace eHousing.Mapper
     {
         public Mapper()
         {
+            CreateMap<EstateStatus, MEstateStatus>();
+            CreateMap<EstateStatus, EstateStatusUpsertRequest>().ReverseMap();
+
             CreateMap<Picture, MPicture>();
             CreateMap<Picture, PictureUpsertRequest>().ReverseMap();
 

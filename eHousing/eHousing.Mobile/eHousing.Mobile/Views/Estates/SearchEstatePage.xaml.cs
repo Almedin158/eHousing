@@ -17,29 +17,24 @@ namespace eHousing.Mobile.Views.Estates
     {
         public APIService estateService = new APIService("Estate");
         private SearchEstateVM modelSearchEstate= null;
-        MUser _user;
 
         public SearchEstatePage()
         {
             InitializeComponent();
             BindingContext = modelSearchEstate = new SearchEstateVM();
         }
-        public SearchEstatePage(MUser user)
-        {
-            InitializeComponent();
-            _user = user;
-            SignedInUser.User = user;
-            BindingContext = modelSearchEstate = new SearchEstateVM();
-           
-        }
         protected async override void OnAppearing()
         {
 
             base.OnAppearing();
-            await modelSearchEstate.Init(_user);
-            
-            
-            
+            await modelSearchEstate.Init();
+
+        }
+
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var estate = e.SelectedItem as MEstate;
+            await Navigation.PushAsync(new EstateDetailPage(estate));
         }
     }
 }

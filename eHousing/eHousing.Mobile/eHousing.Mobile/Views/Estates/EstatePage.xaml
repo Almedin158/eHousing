@@ -9,5 +9,5 @@
             Title="Estates">
 
     <views:SearchEstatePage></views:SearchEstatePage>
-
+    <views:MyEstatesPage></views:MyEstatesPage>
 </TabbedPage>

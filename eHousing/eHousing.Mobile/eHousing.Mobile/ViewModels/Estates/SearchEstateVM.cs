@@ -24,10 +24,10 @@ namespace eHousing.Mobile.ViewModels.Estates
         public ObservableCollection<MEstate> estateList { get; set; } = new ObservableCollection<MEstate>();
         public ICommand InitCommand { get; set; }
 
-        readonly MUser user = SignedInUser.User;
+        
         public SearchEstateVM()
         {
-            InitCommand = new Command(async () => await Init(user));
+            InitCommand = new Command(async () => await Init());
             
         }
 
@@ -139,7 +139,7 @@ namespace eHousing.Mobile.ViewModels.Estates
 
    
 
-        public async Task Init(MUser user)
+        public async Task Init()
         {
             if (cityList.Count == 0)
             {
@@ -193,9 +193,14 @@ namespace eHousing.Mobile.ViewModels.Estates
                 {
                     estate.Status = "Available";
                 }
-                estateList.Add(estate);
                 
-                
+            }
+            foreach (var estate in estates)
+            {
+                if (SignedInUser.User.UserId != estate.UserId)
+                {
+                    estateList.Add(estate);
+                }
             }
         }
 

@@ -106,8 +106,6 @@ namespace eHousing.WinUI
 
         private void getToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmUserGet frm = new frmUserGet(_user);
-            //frm.Show();
             frmUserGet frm = new frmUserGet(_user)
             {
                 MdiParent = this,

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Estates" 
+             xmlns:converters="clr-namespace:eHousing.Mobile.Converters"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             mc:Ignorable="d"
+             x:Class="eHousing.Mobile.Views.Estates.EstateDetailPage"
+             Title="Estate detail">
+    <ContentPage.BindingContext>
+        <vm:EstateDetailsVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImageConverter"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Frame 
+                                            Padding="0"
+                                            WidthRequest="350"
+                                            HeightRequest="350" 
+                                            IsClippedToBounds="True"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center"
+                                            BorderColor="Black">
+                <Image Source="{Binding Estate.Image, Converter={StaticResource ImageConverter}}"
+                                                   Aspect="AspectFill">
+                </Image>
+            </Frame>
+            <StackLayout Margin="60,30,0,0">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Estate name:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                                <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.EstateName}" FontSize="18" TextColor="Black"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="City:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Span Text=" "></Span>
+                            <Span Text="{Binding Estate.Street.City.CityName}" FontSize="18" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                                <Span Text="Street:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.Street.StreetName}" FontSize="18" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                                <Span Text="Price:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.Price,StringFormat='${0:F2}'}" FontSize="18" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                                <Span Text="Square meter:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.FloorSpace,StringFormat='{0:F2} m²'}" FontSize="18" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                                <Span Text="Number of rooms:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.NumberOfRooms}" FontSize="18" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                                <Span Text="Status" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.Status}" FontSize="18" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Estate description:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                                <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.EstateDescription}" FontSize="18" TextColor="Black"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" Margin="60,0,20,0" IsEnabled="False">
+                    <CheckBox  IsChecked="{Binding Estate.PetsAllowed}" ></CheckBox>
+                    <Label Text="Pets Allowed?" FontSize="18" FontAttributes="Bold"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="60,0,20,0"  IsEnabled="False">
+                    <CheckBox  IsChecked="{Binding Estate.IsOccupied}"></CheckBox>
+                    <Label Text="Occupied?" FontSize="18" FontAttributes="Bold"></Label>
+                </StackLayout>
+            </StackLayout>
+
+            <Button x:Name="btnGallery" Clicked="btnGallery_Clicked" Command="{Binding OpenGalleryCommand}" Text="Estate gallery" HeightRequest="45" Padding="10, 0, 10, 0" 
+                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

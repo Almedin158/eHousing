@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:eHousing.Mobile.Converters" xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Estates"
+             x:Class="eHousing.Mobile.Views.Estates.EstateGalleryPage" Title="Gallery">
+   
+    <ContentPage.BindingContext>
+        <vm:EstateGalleryVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImageConverter"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding pictureList}"  WidthRequest="400" Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <Frame 
+                                            Padding="0"
+                                            WidthRequest="400"
+                                            HeightRequest="400"
+                                            IsClippedToBounds="True"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center"
+                                            BorderColor="Black">
+                                    <Image Source="{Binding Image, Converter={StaticResource ImageConverter}}"
+                                                   Aspect="AspectFill">
+                                    </Image>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
