@@ -12,38 +12,31 @@ using Xamarin.Forms.Xaml;
 namespace eHousing.Mobile.Views.Estates
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EstateDetailPage : ContentPage
+    public partial class RentedEstateDetailPage : ContentPage
     {
-        private EstateDetailsVM model = null;
-        public EstateDetailPage(MEstate estate)
+        private RentedEstateDetailVM model = null;
+        public RentedEstateDetailPage(MEstate estate)
         {
-
             InitializeComponent();
-            BindingContext = model = new EstateDetailsVM()
+            BindingContext = model = new RentedEstateDetailVM()
             {
                 Estate = estate
             };
-            
-
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            
+            await model.Init();
+
+
+
         }
 
         private async void btnGallery_Clicked(object sender, EventArgs e)
         {
             var estate = model.Estate;
             await Navigation.PushAsync(new EstateGalleryPage(estate));
-        }
-
-        private async void btnRent_Clicked(object sender, EventArgs e)
-        {
-            var estate = model.Estate;
-            var months = model.Months;
-            await Navigation.PushAsync(new PaymentPage(estate,months));
         }
     }
 }

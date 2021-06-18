@@ -30,7 +30,11 @@ namespace eHousing.Service
                 query = (IOrderedQueryable<EstateStatus>)query.Where(x => x.UserId == request.UserId);
             }
 
-            
+            if (request.EstateId != 0)
+            {
+                query = (IOrderedQueryable<EstateStatus>)query.Where(x => x.EstateId == request.EstateId);
+            }
+
             var list = await query.ToListAsync();
             return _mapper.Map<List<MEstateStatus>>(list);
         }

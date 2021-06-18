@@ -14,7 +14,8 @@ namespace eHousing.Mobile.ViewModels.Estates
     public class MyEstatesVM:BaseVM
     {
         private readonly APIService EstateStatusService=new APIService("EstateStatus");
-        public ObservableCollection<MEstateStatus> myEstateList { get; set; } = new ObservableCollection<MEstateStatus>();
+ 
+        public ObservableCollection<MEstate> myEstateList { get; set; } = new ObservableCollection<MEstate>();
         public ICommand InitCommand { get; set; }
         public MyEstatesVM()
         {
@@ -43,7 +44,7 @@ namespace eHousing.Mobile.ViewModels.Estates
                 {
                     es.Estate.Status = "Available";
                 }
-                myEstateList.Add(es);
+                myEstateList.Add(es.Estate);
             }
 
 

@@ -14,7 +14,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding myEstateList}"  WidthRequest="500" Margin="0,20,0,0">
+            <ListView ItemsSource="{Binding myEstateList}" ItemSelected="ListView_ItemSelected"  WidthRequest="500" Margin="0,20,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -38,7 +38,7 @@
                                             HorizontalOptions="Center"
                                             VerticalOptions="Center"
                                             BorderColor="Black">
-                                            <Image Source="{Binding Estate.Image, Converter={StaticResource ImageConverter}}"
+                                            <Image Source="{Binding Image, Converter={StaticResource ImageConverter}}"
                                                    Aspect="AspectFill">
                                             </Image>
                                         </Frame>
@@ -50,7 +50,7 @@
                                                     <FormattedString.Spans>
                                                         <Span Text="City:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
-                                                        <Span Text="{Binding Estate.Street.City.CityName}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text="{Binding Street.City.CityName}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
@@ -62,7 +62,7 @@
                                                     <FormattedString.Spans>
                                                         <Span Text="Street:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
-                                                        <Span Text="{Binding Estate.Street.StreetName}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text="{Binding Street.StreetName}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
@@ -74,7 +74,7 @@
                                                     <FormattedString.Spans>
                                                         <Span Text="Price:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
-                                                        <Span Text="{Binding Estate.Price,StringFormat='${0:F2}'}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text="{Binding Price,StringFormat='${0:F2}'}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
@@ -86,7 +86,7 @@
                                                     <FormattedString.Spans>
                                                         <Span Text="Square meter:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
-                                                        <Span Text="{Binding Estate.FloorSpace,StringFormat='{0:F2} m²'}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text="{Binding FloorSpace,StringFormat='{0:F2} m²'}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
@@ -98,7 +98,7 @@
                                                     <FormattedString.Spans>
                                                         <Span Text="Number of rooms:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
-                                                        <Span Text="{Binding Estate.NumberOfRooms}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text="{Binding NumberOfRooms}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
@@ -109,7 +109,7 @@
                                                     <FormattedString.Spans>
                                                         <Span Text="Status" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
-                                                        <Span Text="{Binding Estate.Status}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text="{Binding Status}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>

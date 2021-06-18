@@ -1,4 +1,5 @@
 ﻿using eHousing.Mobile.ViewModels.Estates;
+using eHousing.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace eHousing.Mobile.Views.Estates
 
             base.OnAppearing();
             await modelMyEstates.Init();
+        }
+
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var estate = e.SelectedItem as MEstate;
+            await Navigation.PushAsync(new RentedEstateDetailPage(estate));
         }
     }
 }
