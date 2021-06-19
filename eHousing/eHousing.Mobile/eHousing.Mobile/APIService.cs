@@ -145,5 +145,72 @@ namespace eHousing.Mobile
                 return false;
             }
         }
+        public async Task<List<MEstate>> GetFavoriteEstates(int ID)
+        {
+            try
+            {
+                var url = $"{ApiURL}/User/{ID}/FavoriteEstate";
+               
+
+                return await url.WithBasicAuth(Username, Password).GetJsonAsync<List<MEstate>>();
+            }
+            catch (FlurlHttpException ex)
+            {
+                var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
+
+                var stringBuilder = new StringBuilder();
+                foreach (var error in errors)
+                {
+                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                }
+
+                await Application.Current.MainPage.DisplayAlert("Error", stringBuilder.ToString(), "OK");
+                return default;
+            }
+        }
+        public async Task<MEstate> InsertFavoriteEstate(int UserId,int EstateId)
+        {
+            try
+            {
+                var url = $"{ApiURL}/User/FavoriteEstate/{EstateId}?UserId={UserId}";
+
+                return await url.WithBasicAuth(Username, Password).PostJsonAsync(null).ReceiveJson<MEstate>();
+            }
+            catch (FlurlHttpException ex)
+            {
+                var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
+
+                var stringBuilder = new StringBuilder();
+                foreach (var error in errors)
+                {
+                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                }
+
+                await Application.Current.MainPage.DisplayAlert("Error", stringBuilder.ToString(), "OK");
+                return default;
+            }
+        }
+        public async Task<MEstate> DeleteFavoriteEstate(int UserId, int EstateId)
+        {
+            try
+            {
+                var url = $"{ApiURL}/User/FavoriteEstate/{EstateId}?UserId={UserId}";
+
+                return await url.WithBasicAuth(Username, Password).DeleteAsync().ReceiveJson<MEstate>();
+            }
+            catch (FlurlHttpException ex)
+            {
+                var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
+
+                var stringBuilder = new StringBuilder();
+                foreach (var error in errors)
+                {
+                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                }
+
+                await Application.Current.MainPage.DisplayAlert("Error", stringBuilder.ToString(), "OK");
+                return default;
+            }
+        }
     }
 }

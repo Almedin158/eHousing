@@ -1,4 +1,5 @@
-﻿using eHousing.Mobile.Views.Estates;
+﻿using eHousing.Mobile.Helpers;
+using eHousing.Mobile.Views.Estates;
 using eHousing.Model;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,9 @@ namespace eHousing.Mobile.ViewModels.Estates
     public class EstateDetailsVM:BaseVM
     {
 
-
-
+        private readonly APIService favoriteEstateService = new APIService("FavoriteEstate");
+        private readonly APIService userService = new APIService("User");
+   
         private MEstate _estate;
         public MEstate Estate
         {
@@ -33,16 +35,18 @@ namespace eHousing.Mobile.ViewModels.Estates
 
         public EstateDetailsVM()
         {
-           
+            
         }
         public EstateDetailsVM(MEstate estate)
         {
             Estate = estate;
-            
+           
+
 
         }
+        
 
-       
+
 
     }
 }

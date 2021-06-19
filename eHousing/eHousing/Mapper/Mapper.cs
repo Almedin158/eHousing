@@ -13,6 +13,10 @@ namespace eHousing.Mapper
     {
         public Mapper()
         {
+            CreateMap<FavoriteEstate, MEstate>().ReverseMap();
+            CreateMap<FavoriteEstate, MFavoriteEstate>();
+            CreateMap<FavoriteEstate, FavoriteEstateUpsertRequest>().ReverseMap();
+
             CreateMap<EstateStatus, MEstateStatus>();
             CreateMap<EstateStatus, EstateStatusUpsertRequest>().ReverseMap();
 

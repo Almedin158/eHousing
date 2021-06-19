@@ -1,6 +1,7 @@
 ﻿using eHousing.Interface;
 using eHousing.Model;
 using eHousing.Model.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -28,6 +29,25 @@ namespace eHousing.Controllers
         public async Task<MUser> Register(UserUpsertRequest request)
         {
             return await _service.Insert(request);
+
+        }
+        [HttpGet("FavoriteEstate")]
+        [Authorize]
+        public async Task<List<MEstate>> GetFavoriteEstates(int UserId)
+        {
+            return await _service.GetFavoriteEstates(UserId);
+        }
+        [HttpPost("FavoriteEstate/{EstateId}")]
+        [Authorize]
+        public async Task<MEstate> InsertFavoriteEstate(int UserId, int EstateId)
+        {
+            return await _service.InsertFavoriteEstate(UserId, EstateId);
+        }
+        [HttpDelete("FavoriteEstate/{EstateId}")]
+        [Authorize]
+        public async Task<MEstate> DeleteFavoriteEstate(int UserId, int EstateId)
+        {
+            return await _service.DeleteFavoriteEstate(UserId, EstateId);
         }
     }
 }

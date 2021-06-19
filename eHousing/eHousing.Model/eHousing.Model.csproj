@@ -49,6 +49,7 @@
     <Compile Include="MEstate.cs" />
     <Compile Include="MEstateStatus.cs" />
     <Compile Include="MEstateType.cs" />
+    <Compile Include="MFavoriteEstate.cs" />
     <Compile Include="MPicture.cs" />
     <Compile Include="MRole.cs" />
     <Compile Include="MStreet.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="Request\EstateTypeSearchRequest.cs" />
     <Compile Include="Request\EstateTypeUpsertRequest.cs" />
     <Compile Include="Request\EstateUpsertRequest.cs" />
+    <Compile Include="Request\FavoriteEstateSearchRequest.cs" />
+    <Compile Include="Request\FavoriteEstateUpsertRequest.cs" />
     <Compile Include="Request\PictureSearchRequest.cs" />
     <Compile Include="Request\PictureUpsertRequest.cs" />
     <Compile Include="Request\RoleSearchRequest.cs" />

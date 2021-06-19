@@ -205,5 +205,46 @@ namespace eHousing.Service
             byte[] inArray = algorithm.ComputeHash(dst);
             return Convert.ToBase64String(inArray);
         }
+        public async Task <List<MEstate>> GetFavoriteEstates(int UserId)
+        {
+            var query = _context.FavoriteEstates
+                 .Include(i => i.Estate)
+                 .ThenInclude(i => i.User)
+                 .Where(i => i.UserId == UserId)
+                 .AsQueryable();
+
+           
+            var list = await query.ToListAsync();
+
+            return _mapper.Map<List<MEstate>>(list.Select(i => i.Estate).ToList());
+        }
+        public async Task<MEstate> InsertFavoriteEstate(int UserId, int EstateId)
+        {
+            var entity = new FavoriteEstate()
+            {
+               UserId=UserId,
+               EstateId=EstateId
+            };
+
+            await _context.FavoriteEstates.AddAsync(entity);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<MEstate>(entity.Estate);
+        }
+
+        public async Task<MEstate> DeleteFavoriteEstate(int UserId, int EstateId)
+        {
+            var entity = await _context.FavoriteEstates
+               .Where(i => i.UserId == UserId && i.EstateId == EstateId)
+               .SingleOrDefaultAsync();
+            if (entity != null)
+            {
+                _context.FavoriteEstates.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
+            return _mapper.Map<MEstate>(entity);
+        }
+
+        
     }
 }

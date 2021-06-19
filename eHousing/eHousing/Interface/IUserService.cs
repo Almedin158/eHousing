@@ -11,5 +11,8 @@ namespace eHousing.Interface
     {
         Task<MUser> Authenticate(UserAuthenticationRequest request);
         Task<MUser> Register(UserUpsertRequest request);
+        Task<List<MEstate>> GetFavoriteEstates(int UserId);
+        Task<MEstate> InsertFavoriteEstate(int UserId, int EstateId);
+        Task<MEstate> DeleteFavoriteEstate(int UserId, int EstateId);
     }
 }

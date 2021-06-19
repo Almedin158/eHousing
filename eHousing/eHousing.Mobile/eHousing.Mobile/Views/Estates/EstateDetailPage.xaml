@@ -26,12 +26,25 @@
                                             IsClippedToBounds="True"
                                             HorizontalOptions="Center"
                                             VerticalOptions="Center"
-                                            BorderColor="Black">
+                                            BorderColor="Black"
+                                            Margin="20,0,20,0">
                 <Image Source="{Binding Estate.Image, Converter={StaticResource ImageConverter}}"
                                                    Aspect="AspectFill">
                 </Image>
             </Frame>
-            <StackLayout Margin="60,30,0,0">
+
+            <StackLayout>
+                <Button x:Name="btnAddFavorite" Clicked="btnAddFavorite_Clicked" Text="Add to favorites" HeightRequest="45" Padding="10, 0, 10, 0" 
+                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="false">
+                    
+                </Button>
+                <Button x:Name="btnRemoveFavorite" Clicked="btnRemoveFavorite_Clicked" Text="Remove from favorites" HeightRequest="45" Padding="10, 0, 10, 0" 
+                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="false">
+
+                </Button>
+            </StackLayout>
+            
+            <StackLayout Margin="20,10,0,0">
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -127,22 +140,22 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Horizontal" Margin="60,0,20,0" IsEnabled="False">
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" IsEnabled="False">
                     <CheckBox  IsChecked="{Binding Estate.PetsAllowed}" ></CheckBox>
                     <Label Text="Pets Allowed?" FontSize="18" FontAttributes="Bold"></Label>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="60,0,20,0"  IsEnabled="False">
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0"  IsEnabled="False">
                     <CheckBox  IsChecked="{Binding Estate.IsOccupied}"></CheckBox>
                     <Label Text="Occupied?" FontSize="18" FontAttributes="Bold"></Label>
                 </StackLayout>
             </StackLayout>
 
             <Button x:Name="btnGallery" Clicked="btnGallery_Clicked" Text="Estate gallery" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="60,0,20,0" IsVisible="true"></Button>
+                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true"></Button>
 
 
-            <StackLayout Orientation="Horizontal" Margin="60,0,20,0">
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -150,7 +163,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="75"/>
                         <ColumnDefinition Width="75"/>
-                        <ColumnDefinition Width="237"/>
+                        <ColumnDefinition Width="277"/>
                         
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Row="0" Grid.Column="0">
