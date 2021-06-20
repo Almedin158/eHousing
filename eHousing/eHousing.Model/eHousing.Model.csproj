@@ -54,6 +54,7 @@
     <Compile Include="MRole.cs" />
     <Compile Include="MStreet.cs" />
     <Compile Include="MUser.cs" />
+    <Compile Include="MUserEstateReview.cs" />
     <Compile Include="MUserRoles.cs" />
     <Compile Include="ObjectExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="Request\StreetSearchRequest.cs" />
     <Compile Include="Request\StreetUpsertRequest.cs" />
     <Compile Include="Request\UserAuthenticationRequest.cs" />
+    <Compile Include="Request\UserEstateReviewSearchRequest.cs" />
+    <Compile Include="Request\UserEstateReviewUpsertRequest.cs" />
     <Compile Include="Request\UserSearchRequest.cs" />
     <Compile Include="Request\UserUpsertRequest.cs" />
   </ItemGroup>

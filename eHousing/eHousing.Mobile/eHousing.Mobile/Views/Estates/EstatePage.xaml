@@ -11,4 +11,5 @@
     <views:SearchEstatePage></views:SearchEstatePage>
     <views:MyEstatesPage></views:MyEstatesPage>
     <views:FavoriteEstatePage></views:FavoriteEstatePage>
+    <views:RecommendedEstatesPage></views:RecommendedEstatesPage>
 </TabbedPage>

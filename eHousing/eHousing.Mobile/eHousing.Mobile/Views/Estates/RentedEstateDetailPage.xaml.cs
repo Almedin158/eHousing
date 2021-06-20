@@ -1,5 +1,7 @@
-﻿using eHousing.Mobile.ViewModels.Estates;
+﻿using eHousing.Mobile.Helpers;
+using eHousing.Mobile.ViewModels.Estates;
 using eHousing.Model;
+using eHousing.Model.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ namespace eHousing.Mobile.Views.Estates
     public partial class RentedEstateDetailPage : ContentPage
     {
         private RentedEstateDetailVM model = null;
+        private readonly APIService reviewService = new APIService("UserEstateReview");
         public RentedEstateDetailPage(MEstate estate)
         {
             InitializeComponent();
@@ -37,6 +40,30 @@ namespace eHousing.Mobile.Views.Estates
         {
             var estate = model.Estate;
             await Navigation.PushAsync(new EstateGalleryPage(estate));
+        }
+
+        private async void SfRating_ValueChanged(object sender, Syncfusion.SfRating.XForms.ValueEventArgs e)
+        {
+            int Rate = Convert.ToInt32(e.Value);
+            var request = new UserEstateReviewSearchRequest()
+            {
+                UserId = SignedInUser.User.UserId,
+                EstateId = model.Estate.EstateId,
+                Rating = Rate
+            };
+
+            if (model.EstateReview == null)
+            {
+                model.EstateReview = await reviewService.Insert<MUserEstateReview>(request);
+            }
+            else if (model.EstateReview != null && model.Rating == 0)
+            {
+                await reviewService.Delete<MUserEstateReview>(model.EstateReview.UserEstateReviewId);
+            }
+            else
+            {
+                await reviewService.Update<MUserEstateReview>(model.EstateReview.UserEstateReviewId, request);
+            }
         }
     }
 }

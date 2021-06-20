@@ -1,20 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:converters="clr-namespace:eHousing.Mobile.Converters" 
-             xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Estates"
-             x:Class="eHousing.Mobile.Views.Estates.MyEstatesPage" Title="My estates">
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Estates" 
+             xmlns:system="clr-namespace:System;assembly=netstandard" 
+             xmlns:converters="clr-namespace:eHousing.Mobile.Converters"
+             mc:Ignorable="d"
+             x:Class="eHousing.Mobile.Views.Estates.RecommendedEstatesPage"
+             Title="Recommended estates">
     <ContentPage.BindingContext>
-        <vm:MyEstatesVM/>
+        <vm:RecommendedEstatesVM/>
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:ImageConverter x:Key="ImageConverter"></converters:ImageConverter>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding myEstateList}" ItemSelected="ListView_ItemSelected"  WidthRequest="500" Margin="0,20,0,0">
+            
+
+
+
+            <ListView ItemsSource="{Binding recommendedEstatesList}" ItemSelected="ListView_ItemSelected_1" WidthRequest="500" Margin="0,20,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -113,11 +123,13 @@
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>
+
+
                                         <Label>
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
-                                                        <Span Text="Status" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+                                                        <Span Text="Status:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
                                                         <Span Text="{Binding Status}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
@@ -132,6 +144,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

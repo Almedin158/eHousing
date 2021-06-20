@@ -23,6 +23,7 @@ namespace eHousing.Database
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<Street> Streets { get; set; }
         public DbSet<FavoriteEstate> FavoriteEstates { get; set; }
+        public DbSet<UserEstateReview> UserEstateReviews { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<FavoriteEstate>().HasKey(f => new { f.UserId, f.EstateId });//Prvi nacin dodjeljivanja primarnog kljuca

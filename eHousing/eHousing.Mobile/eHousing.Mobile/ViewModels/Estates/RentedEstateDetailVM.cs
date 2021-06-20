@@ -4,6 +4,7 @@ using eHousing.Model.Request;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -11,10 +12,11 @@ using Xamarin.Forms;
 
 namespace eHousing.Mobile.ViewModels.Estates
 {
-    public class RentedEstateDetailVM:BaseVM
+    public class RentedEstateDetailVM : BaseVM
     {
         private readonly APIService estateStatusService = new APIService("EstateStatus");
-        
+        private readonly APIService reviewService = new APIService("UserEstateReview");
+
         public ICommand InitCommand { get; set; }
 
         private MEstate _estate;
@@ -22,6 +24,20 @@ namespace eHousing.Mobile.ViewModels.Estates
         {
             get { return _estate; }
             set { SetProperty(ref _estate, value); }
+        }
+
+        private int _rating;
+        public int Rating
+        {
+            get { return _rating; }
+            set { SetProperty(ref _rating, value); }
+        }
+
+        private MUserEstateReview estateReview;
+        public MUserEstateReview EstateReview
+        {
+            get { return estateReview; }
+            set { SetProperty(ref estateReview, value); }
         }
 
         private DateTime since;
@@ -49,11 +65,15 @@ namespace eHousing.Mobile.ViewModels.Estates
         public RentedEstateDetailVM()
         {
             InitCommand = new Command(async () => await Init());
+
+
         }
         public RentedEstateDetailVM(MEstate estate)
         {
             Estate = estate;
             InitCommand = new Command(async () => await Init());
+            
+
 
         }
 
@@ -68,6 +88,16 @@ namespace eHousing.Mobile.ViewModels.Estates
 
             Since = estateStatuses[0].OccupiedSince;
             Till = estateStatuses[0].OccupiedTill;
+            var req = new UserEstateReviewSearchRequest()
+            {
+                EstateId = Estate.EstateId,
+                UserId = SignedInUser.User.UserId
+            };
+
+            var list = await reviewService.Get<List<MUserEstateReview>>(req);
+            if (list != null)
+                estateReview = list.FirstOrDefault();
+            Rating = (int)(decimal)(estateReview != null ? estateReview.Rating : 0);
         }
     }
 }

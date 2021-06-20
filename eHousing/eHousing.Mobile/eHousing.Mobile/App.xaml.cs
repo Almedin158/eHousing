@@ -11,7 +11,7 @@ namespace eHousing.Mobile
         public App()
         {
             InitializeComponent();
-
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDYxNTIwQDMxMzkyZTMxMmUzMExiMkl3T0JSOXZsdW43c0lRNDZwNlBGdzk4U0MvWUloMjY0STUwSjRsRVU9");
             MainPage = new LoginPage();
         }
 

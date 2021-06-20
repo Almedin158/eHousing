@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eHousing.Mobile\eHousing.Mobile\eHousing.Mobile.csproj" />
     <ProjectReference Include="..\eHousing.Model\eHousing.Model.csproj" />
   </ItemGroup>
 

@@ -32,8 +32,8 @@
                                     <StackLayout Grid.Row="0" Grid.Column="0">
                                         <Frame 
                                             Padding="0"
-                                            WidthRequest="150"
-                                            HeightRequest="150"
+                                            WidthRequest="175"
+                                            HeightRequest="175"
                                             IsClippedToBounds="True"
                                             HorizontalOptions="Center"
                                             VerticalOptions="Center"
@@ -44,6 +44,30 @@
                                         </Frame>
                                     </StackLayout>
                                     <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0">
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Estate name:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+                                                        <Span Text=" "></Span>
+                                                        <Span Text="{Binding EstateName}" FontSize="12" TextColor="Black"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Owner:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+                                                        <Span Text=" "></Span>
+                                                        <Span Text="{Binding User.FirstName}" FontSize="12" TextColor="Black"/>
+                                                        <Span Text=" "></Span>
+                                                        <Span Text="{Binding User.LastName}" FontSize="12" TextColor="Black"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
                                         <Label>
                                             <Label.FormattedText>
                                                 <FormattedString>
@@ -67,7 +91,17 @@
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>
-
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Estate type:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+                                                        <Span Text=" "></Span>
+                                                        <Span Text="{Binding EstateType.EstateTypeName}" FontSize="12" TextColor="Black"/>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
                                         <Label>
                                             <Label.FormattedText>
                                                 <FormattedString>
@@ -75,30 +109,6 @@
                                                         <Span Text="Price:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
                                                         <Span Text=" "></Span>
                                                         <Span Text="{Binding Price,StringFormat='${0:F2}'}" FontSize="12" TextColor="Black"/>
-                                                    </FormattedString.Spans>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-
-                                        <Label>
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <FormattedString.Spans>
-                                                        <Span Text="Square meter:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
-                                                        <Span Text=" "></Span>
-                                                        <Span Text="{Binding FloorSpace,StringFormat='{0:F2} m²'}" FontSize="12" TextColor="Black"/>
-                                                    </FormattedString.Spans>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-
-                                        <Label>
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <FormattedString.Spans>
-                                                        <Span Text="Number of rooms:" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
-                                                        <Span Text=" "></Span>
-                                                        <Span Text="{Binding NumberOfRooms}" FontSize="12" TextColor="Black"/>
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>

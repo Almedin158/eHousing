@@ -64,6 +64,7 @@ namespace eHousing
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
+            services.AddScoped<ICRUDService<MUserEstateReview, UserEstateReviewSearchRequest, UserEstateReviewUpsertRequest, UserEstateReviewUpsertRequest>, UserEstateReviewService>();
             services.AddScoped<ICRUDService<MFavoriteEstate, FavoriteEstateSearchRequest, FavoriteEstateUpsertRequest, FavoriteEstateUpsertRequest>, FavoriteEstateService>();
             services.AddScoped<ICRUDService<MEstateStatus, EstateStatusSearchRequest, EstateStatusUpsertRequest, EstateStatusUpsertRequest>, EstateStatusService>();
             services.AddScoped<ICRUDService<MPicture, PictureSearchRequest, PictureUpsertRequest, PictureUpsertRequest>, PictureService>();
@@ -73,7 +74,7 @@ namespace eHousing
             services.AddScoped<ICRUDService<MCity, CitySearchRequest, CityUpsertRequest, CityUpsertRequest>, CityService>();
             services.AddScoped<IBaseService<MRole, object>, RoleService>();
             services.AddScoped<IUserService, UserService>();
-
+            services.AddScoped<IRecommendationService, RecommendationService>();
             services.AddAuthentication("BasicAuthentication")
               .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
         }

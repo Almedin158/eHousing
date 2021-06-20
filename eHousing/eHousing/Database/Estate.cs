@@ -27,5 +27,6 @@ namespace eHousing.Database
         //Dodati rating
         public List<Picture> Picture { get; set; }
         public bool IsOccupied { get; set; }
+        public List<UserEstateReview> UserEstateReviews { get; set; }
     }
 }

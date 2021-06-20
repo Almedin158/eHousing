@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:vm="clr-namespace:eHousing.Mobile.ViewModels.Estates" 
              xmlns:converters="clr-namespace:eHousing.Mobile.Converters"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              mc:Ignorable="d"
              x:Class="eHousing.Mobile.Views.Estates.RentedEstateDetailPage"
@@ -19,6 +20,16 @@
 
     <ContentPage.Content>
         <StackLayout Margin="20">
+            <StackLayout Padding="10">
+                <Label Text="Rate this estate!" FontSize="20" TextColor="Black"  HorizontalOptions="Center"></Label>
+                <rating:SfRating 
+                    Value="{Binding Rating}"
+                    Margin="0, 5"
+                    ItemCount="5"
+                    Precision="Standard"
+                    HorizontalOptions="Center"
+                    ValueChanged="SfRating_ValueChanged" />
+            </StackLayout>
             <Frame 
                                             Padding="0"
                                             WidthRequest="350"
@@ -31,7 +42,7 @@
                                                    Aspect="AspectFill">
                 </Image>
             </Frame>
-            <StackLayout Margin="60,30,0,0">
+            <StackLayout Margin="20,30,0,0">
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -39,6 +50,19 @@
                                 <Span Text="Estate name:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
                                 <Span Text=" "></Span>
                                 <Span Text="{Binding Estate.EstateName}" FontSize="18" TextColor="Black"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Owner:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                                <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.User.FirstName}" FontSize="18" TextColor="Black"/>
+                                <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.User.LastName}" FontSize="18" TextColor="Black"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -127,26 +151,27 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Horizontal" Margin="60,0,20,0" IsEnabled="False">
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" IsEnabled="False">
                     <CheckBox  IsChecked="{Binding Estate.PetsAllowed}" ></CheckBox>
                     <Label Text="Pets Allowed?" FontSize="18" FontAttributes="Bold"></Label>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="60,0,20,0"  IsEnabled="False">
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0"  IsEnabled="False">
                     <CheckBox  IsChecked="{Binding Estate.IsOccupied}"></CheckBox>
                     <Label Text="Occupied?" FontSize="18" FontAttributes="Bold"></Label>
                 </StackLayout>
             </StackLayout>
 
-            <Label Margin="60,0,20,0" FontSize="18" FontAttributes="Bold" Text="Occupation date: "></Label>
-            <StackLayout Orientation="Horizontal" Margin="60,0,20,0">
+            <Label Margin="20,0,20,0" FontSize="18" FontAttributes="Bold" Text="Occupation date: "></Label>
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
                 <Label Text="{Binding Since, StringFormat='{0:MMMM dd, yyyy}'}" FontSize="18" FontAttributes="Bold"></Label>
                 <Label Text=" - " FontSize="18" FontAttributes="Bold"></Label>
                 <Label Text="{Binding Till, StringFormat='{0:MMMM dd, yyyy}'}"  FontSize="18" FontAttributes="Bold"></Label>
             </StackLayout>
 
+            
             <Button x:Name="btnGallery" Clicked="btnGallery_Clicked" Text="Estate gallery" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="60,0,20,0" IsVisible="true"></Button>
+                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true"></Button>
 
 
             

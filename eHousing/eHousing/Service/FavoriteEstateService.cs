@@ -22,7 +22,7 @@ namespace eHousing.Service
         }
         public override async Task<List<MFavoriteEstate>> Get(FavoriteEstateSearchRequest request)
         {
-            var query = _context.FavoriteEstates.Include(x => x.User).Include(x => x.Estate).ThenInclude(x => x.Street).ThenInclude(x => x.City).AsQueryable();
+            var query = _context.FavoriteEstates.Include(x => x.Estate.EstateType).Include(x => x.Estate.User).Include(x => x.Estate).ThenInclude(x => x.Street).ThenInclude(x => x.City).AsQueryable();
 
             if (request.UserId != 0)
             {

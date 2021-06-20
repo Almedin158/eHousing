@@ -22,7 +22,7 @@ namespace eHousing.Service
         }
         public override async Task<List<MEstate>> Get(EstateSearchRequest request)
         {
-            var query = _context.Estates.Include(x=>x.User).Include(c => c.Picture).Include(i => i.Street).ThenInclude(i => i.City).AsQueryable().OrderBy(c => c.EstateName);
+            var query = _context.Estates.Include(x=>x.EstateType).Include(x=>x.User).Include(c => c.Picture).Include(i => i.Street).ThenInclude(i => i.City).AsQueryable().OrderBy(c => c.EstateName);
 
 
             if (request.UserId != 0)

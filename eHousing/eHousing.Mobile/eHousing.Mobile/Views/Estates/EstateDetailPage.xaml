@@ -57,6 +57,19 @@
                     </Label.FormattedText>
                 </Label>
                 <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Owner:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                                <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.User.FirstName}" FontSize="18" TextColor="Black"/>
+                                <Span Text=" "></Span>
+                                <Span Text="{Binding Estate.User.LastName}" FontSize="18" TextColor="Black"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
