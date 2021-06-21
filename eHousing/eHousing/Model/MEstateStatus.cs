@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace eHousing.Model
@@ -16,6 +15,6 @@ namespace eHousing.Model
         public int Months { get; set; }
         public int TotalPrice { get; set; }
         public DateTime OccupiedSince { get; set; }
-        public DateTime OccupiedTill { get; set; } 
+        public DateTime OccupiedTill { get; set; }
     }
 }
