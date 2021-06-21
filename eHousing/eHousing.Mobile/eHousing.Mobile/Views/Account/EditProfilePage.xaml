@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <converters:ImageConverter x:Key="ImageConverter" />
             <Style x:Key="buttonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="Teal"></Setter>
+                <Setter Property="BackgroundColor" Value="Red"></Setter>
 
             </Style>
         </ResourceDictionary>

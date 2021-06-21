@@ -112,7 +112,7 @@
                    FontSize="17" 
                    Margin="0,-45,0,0"/>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="End" >
-                <Button x:Name="Submit_Button" BorderRadius="10" Text="Submit" Command="{Binding SubmitCommand}" BackgroundColor="Teal" Padding="10, 10, 10 ,10" TextColor="black" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"/>
+                <Button x:Name="Submit_Button" BorderRadius="10" Text="Submit" Command="{Binding SubmitCommand}" BackgroundColor="Red" Padding="10, 10, 10 ,10" TextColor="black" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"/>
             </StackLayout>
         </StackLayout>
     </ContentView>

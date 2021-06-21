@@ -11,13 +11,13 @@
         <ResourceDictionary>
             <converters:ImageConverter x:Key="ImageConverter" />
             <Style x:Key="buttonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="Teal"></Setter>
+                <Setter Property="BackgroundColor" Value="Red"></Setter>
 
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Padding="80,0,80,0"  HorizontalOptions="FillAndExpand">
+        <StackLayout Padding="80,0,80,0"  HorizontalOptions="FillAndExpand" VerticalOptions="Center">
             <Label Text="Username"/>
             <Entry Text="{Binding Username}"/>
             <Label Text="Password"/>

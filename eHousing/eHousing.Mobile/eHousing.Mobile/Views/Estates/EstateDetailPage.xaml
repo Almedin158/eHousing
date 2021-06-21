@@ -35,16 +35,16 @@
 
             <StackLayout>
                 <Button x:Name="btnAddFavorite" Clicked="btnAddFavorite_Clicked" Text="Add to favorites" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="false">
+                    BackgroundColor="Red" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="false">
                     
                 </Button>
                 <Button x:Name="btnRemoveFavorite" Clicked="btnRemoveFavorite_Clicked" Text="Remove from favorites" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="false">
+                    BackgroundColor="Red" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="false">
 
                 </Button>
             </StackLayout>
             <Button x:Name="btnContact" Clicked="btnContact_Clicked" Text="Contact the owner" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true">
+                    BackgroundColor="Red" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true">
 
             </Button>
             <StackLayout>
@@ -172,7 +172,7 @@
             </StackLayout>
 
             <Button x:Name="btnGallery" Clicked="btnGallery_Clicked" Text="Estate gallery" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true"></Button>
+                    BackgroundColor="Red" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true"></Button>
 
 
             <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
@@ -194,7 +194,7 @@
                     </StackLayout>
                     <StackLayout Grid.Row="0" Grid.Column="2" >
                         <Button x:Name="btnRent" Clicked="btnRent_Clicked" Text="Rent estate" HeightRequest="45" Padding="10, 0, 10, 0" 
-                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="10,0,20,0" IsVisible="true"></Button>
+                    BackgroundColor="Red" TextColor="Black" FontSize="Medium" Margin="10,0,20,0" IsVisible="true"></Button>
                     </StackLayout>
                     
                 </Grid>
