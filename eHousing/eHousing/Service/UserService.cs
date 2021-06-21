@@ -28,7 +28,7 @@ namespace eHousing.Service
 
             if (!string.IsNullOrWhiteSpace(search?.FirstName))
             {
-                query = query.Where(x => x.Username.ToLower().StartsWith(search.FirstName.ToLower())).OrderBy(c => c.FirstName);
+                query = query.Where(x => x.Username.ToLower().Contains(search.FirstName.ToLower())).OrderBy(c => c.FirstName);
             }
             var list = await query.ToListAsync();
             return _mapper.Map<List<MUser>>(list);

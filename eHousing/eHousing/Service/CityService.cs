@@ -27,7 +27,7 @@ namespace eHousing.Service
 
             if (!string.IsNullOrWhiteSpace(request?.CityName))
             {
-                query = query.Where(x => x.CityName.StartsWith(request.CityName.ToUpper())).OrderBy(c => c.CityName);
+                query = query.Where(x => x.CityName.ToUpper().Contains(request.CityName.ToUpper())).OrderBy(c => c.CityName);
             }
             var list = await query.ToListAsync();
 

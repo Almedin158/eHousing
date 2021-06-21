@@ -153,9 +153,9 @@ namespace eHousing.WinUI.Forms.User
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 17);
+            this.label1.Size = new System.Drawing.Size(180, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Search User By Name:";
+            this.label1.Text = "Search User By Username:";
             // 
             // frmUserGet
             // 

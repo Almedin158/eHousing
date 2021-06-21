@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  ehousing-sql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWElkj132!
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    networks:
+      - ehousing
+
+    
+  ehousing-api:
+    image: ehousing/api
+    restart: unless-stopped
+    build: .
+    environment:
+      - ConnectionStrings:eHousing=Server=ehousing-sql,1433;Database=150148;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+    ports:
+      -  31186:5000
+    networks:
+      - ehousing
+    links:
+      - ehousing-sql
+    depends_on:
+      - ehousing-sql
+      
+networks:
+  ehousing:
+    driver: bridge
+
+        

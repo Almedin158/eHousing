@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,8 +18,10 @@ namespace eHousing.Mobile.Views.Estates
     {
         private RentedEstateDetailVM model = null;
         private readonly APIService reviewService = new APIService("UserEstateReview");
+        public MEstate est;
         public RentedEstateDetailPage(MEstate estate)
         {
+            est = estate;
             InitializeComponent();
             BindingContext = model = new RentedEstateDetailVM()
             {
@@ -63,6 +65,24 @@ namespace eHousing.Mobile.Views.Estates
             else
             {
                 await reviewService.Update<MUserEstateReview>(model.EstateReview.UserEstateReviewId, request);
+            }
+        }
+
+        void ProcessException(Exception ex)
+        {
+            if (ex != null)
+                Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+        }
+
+        private async void btnContact_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Email.ComposeAsync(string.Empty, string.Empty, est.User.Email);
+            }
+            catch (Exception ex)
+            {
+                ProcessException(ex);
             }
         }
     }

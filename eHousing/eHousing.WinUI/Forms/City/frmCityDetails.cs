@@ -49,8 +49,6 @@ namespace eHousing.WinUI.Forms.City
             await cityService.Update<MCity>(_Id, request);
             MessageBox.Show("City has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-            frmCityGet frm = new frmCityGet();
-            frm.Show();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)

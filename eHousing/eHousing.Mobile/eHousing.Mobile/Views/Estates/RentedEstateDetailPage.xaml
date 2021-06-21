@@ -42,6 +42,10 @@
                                                    Aspect="AspectFill">
                 </Image>
             </Frame>
+            <Button x:Name="btnContact" Clicked="btnContact_Clicked" Text="Contact the owner" HeightRequest="45" Padding="10, 0, 10, 0" 
+                    BackgroundColor="Teal" TextColor="Black" FontSize="Medium" Margin="20,0,20,0" IsVisible="true">
+
+            </Button>
             <StackLayout Margin="20,30,0,0">
                 <Label>
                     <Label.FormattedText>
